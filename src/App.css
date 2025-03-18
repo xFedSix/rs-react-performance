@@ -5,38 +5,34 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.countries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.country-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.country-flag {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
 }
 
-.card {
-  padding: 2em;
+.country-card h2 {
+  margin: 1rem 0;
+  font-size: 1.2rem;
 }
 
-.read-the-docs {
-  color: #888;
+.country-card p {
+  margin: 0.5rem 0;
+  color: #666;
 }

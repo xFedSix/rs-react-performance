@@ -1,34 +1,32 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
+import { useFetchCountries } from "./api/fetchCountries";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const { countries, isLoading, error } = useFetchCountries();
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank" rel="noreferrer">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank" rel="noreferrer">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="countries-grid">
+      {countries.map((country) => (
+        <div key={country.name.common} className="country-card">
+          <img
+            src={country.flags.png}
+            alt={`Flag of ${country.name.common}`}
+            className="country-flag"
+          />
+          <h2>{country.name.common}</h2>
+          <p>Population: {country.population.toLocaleString()}</p>
+          <p>Region: {country.region}</p>
+        </div>
+      ))}
+    </div>
   );
 }
 
