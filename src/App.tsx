@@ -3,6 +3,7 @@ import "./App.css";
 import { useFetchCountries } from "./api/fetchCountries";
 import { Filters } from "./components/filters/filters";
 import { CountryCard } from "./components/countryCard/countryCard";
+import { ProfileWrapper } from "./utils/profiler";
 
 function App() {
   const { countries, isLoading, error } = useFetchCountries();
@@ -39,28 +40,38 @@ function App() {
     });
 
   return (
-    <div className="container">
-      <Filters
-        searchQuery={searchQuery}
-        selectedRegion={selectedRegion}
-        sortBy={sortBy}
-        onSearchChange={setSearchQuery}
-        onRegionChange={setSelectedRegion}
-        onSortChange={setSortBy}
-      />
-
-      <div className="countries-grid">
-        {filteredCountries.map((country) => (
-          <CountryCard
-            key={country.name.common}
-            name={country.name.common}
-            flagUrl={country.flags.png}
-            population={country.population}
-            region={country.region}
+    <ProfileWrapper id="App">
+      <div className="container">
+        <ProfileWrapper id="Filters">
+          <Filters
+            searchQuery={searchQuery}
+            selectedRegion={selectedRegion}
+            sortBy={sortBy}
+            onSearchChange={setSearchQuery}
+            onRegionChange={setSelectedRegion}
+            onSortChange={setSortBy}
           />
-        ))}
+        </ProfileWrapper>
+        <ProfileWrapper id="CountriesGrid">
+          <div className="countries-grid">
+            {filteredCountries.map((country) => (
+              <ProfileWrapper
+                id={`CountryCard-${country.name.common}`}
+                key={country.name.common}
+              >
+                <CountryCard
+                  key={country.name.common}
+                  name={country.name.common}
+                  flagUrl={country.flags.png}
+                  population={country.population}
+                  region={country.region}
+                />
+              </ProfileWrapper>
+            ))}
+          </div>
+        </ProfileWrapper>
       </div>
-    </div>
+    </ProfileWrapper>
   );
 }
 

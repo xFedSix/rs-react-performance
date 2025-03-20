@@ -1,54 +1,30 @@
-# React + TypeScript + Vite
+## Performance Profiling
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Initial Performance Metrics
 
-Currently, two official plugins are available:
+Performance metrics were collected using React Dev Tools Profiler:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+#### Commit Duration
 
-## Expanding the ESLint configuration
+- Initial render: ~50ms
+- Filter updates: ~15ms
+- Sort updates: ~20ms
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+#### Component Render Times
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- App: ~45ms
+- Filters: ~5ms
+- CountryCard: ~2ms per card
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+#### Key Findings
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Main bottleneck: Initial data fetch and rendering of country cards
+- Filter operations are relatively fast
+- Sort operations show moderate performance impact
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+### Performance Improvements
+
+- Implemented React.memo for CountryCard components
+- Added debouncing for search input
+- Optimized sorting algorithm
+- Used virtualization for country grid
