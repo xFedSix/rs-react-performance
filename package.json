@@ -4,14 +4,16 @@
   "version": "0.0.0",
   "type": "commonjs",
   "scripts": {
-    "dev": "vite",
+    "dev:server": "ts-node --project tsconfig.node.json src/server/index.ts",
+    "dev:vite": "vite",
+    "dev:init": "npm run update-metrics && wait-on tcp:3001",
+    "dev": "concurrently \"npm run dev:init\" \"npm run dev:server\" \"npm run dev:vite\"",
     "build": "tsc -b && vite build",
     "lint": "eslint . --config eslint.config.mjs",
     "preview": "vite preview",
     "format:fix": "prettier --write .",
     "prepare": "husky",
-    "update-metrics": "ts-node --project tsnode.config.json src/utils/updateReadme.ts",
-    "server": "ts-node --project tsconfig.node.json src/server/index.ts"
+    "update-metrics": "ts-node --project tsnode.config.json src/utils/updateReadme.ts"
   },
   "dependencies": {
     "express": "^4.21.2",
@@ -25,6 +27,7 @@
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "@vitejs/plugin-react": "^4.3.4",
+    "concurrently": "^9.1.2",
     "dotenv": "^16.4.7",
     "eslint": "^9.21.0",
     "eslint-config-prettier": "^10.1.1",
@@ -38,7 +41,8 @@
     "ts-node": "^10.9.2",
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.24.1",
-    "vite": "^6.2.2"
+    "vite": "^6.2.2",
+    "wait-on": "^8.0.3"
   },
   "prettier": {
     "singleQuote": false,
