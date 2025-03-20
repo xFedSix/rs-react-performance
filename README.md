@@ -1,6 +1,5470 @@
+
+
+
+
+
+
+
 ## Performance Profiling
 
 ### Initial Performance Metrics
+
+Performance metrics were collected using React Dev Tools Profiler:
+
+#### Commit Duration
+- Initial render: ~26.72ms
+- Average commit: ~13.36ms
+
+#### Component Render Times
+- Filters: ~1.80ms
+- CountryCard-South Georgia: ~2.20ms
+- CountryCard-Grenada: ~1.10ms
+- CountryCard-Switzerland: ~1.00ms
+- CountryCard-Sierra Leone: ~0.70ms
+- CountryCard-Hungary: ~0.90ms
+- CountryCard-Taiwan: ~0.70ms
+- CountryCard-Wallis and Futuna: ~0.80ms
+- CountryCard-Barbados: ~3.80ms
+- CountryCard-Pitcairn Islands: ~0.70ms
+- CountryCard-Ivory Coast: ~0.30ms
+- CountryCard-Tunisia: ~0.40ms
+- CountryCard-Italy: ~0.50ms
+- CountryCard-Benin: ~0.50ms
+- CountryCard-Indonesia: ~0.40ms
+- CountryCard-Cape Verde: ~0.50ms
+- CountryCard-Saint Kitts and Nevis: ~0.40ms
+- CountryCard-Laos: ~0.40ms
+- CountryCard-Caribbean Netherlands: ~0.40ms
+- CountryCard-Uganda: ~0.60ms
+- CountryCard-Andorra: ~0.50ms
+- CountryCard-Burundi: ~0.40ms
+- CountryCard-South Africa: ~0.50ms
+- CountryCard-France: ~0.40ms
+- CountryCard-Libya: ~0.50ms
+- CountryCard-Mexico: ~0.40ms
+- CountryCard-Gabon: ~0.60ms
+- CountryCard-Northern Mariana Islands: ~0.50ms
+- CountryCard-North Macedonia: ~0.50ms
+- CountryCard-China: ~0.50ms
+- CountryCard-Yemen: ~0.50ms
+- CountryCard-Saint Barthélemy: ~0.70ms
+- CountryCard-Guernsey: ~0.50ms
+- CountryCard-Solomon Islands: ~0.60ms
+- CountryCard-Svalbard and Jan Mayen: ~0.60ms
+- CountryCard-Faroe Islands: ~0.50ms
+- CountryCard-Uzbekistan: ~0.50ms
+- CountryCard-Egypt: ~0.60ms
+- CountryCard-Senegal: ~0.40ms
+- CountryCard-Sri Lanka: ~0.60ms
+- CountryCard-Palestine: ~0.40ms
+- CountryCard-Bangladesh: ~0.60ms
+- CountryCard-Peru: ~0.50ms
+- CountryCard-Singapore: ~0.50ms
+- CountryCard-Turkey: ~0.40ms
+- CountryCard-Afghanistan: ~0.40ms
+- CountryCard-Aruba: ~0.50ms
+- CountryCard-Cook Islands: ~0.60ms
+- CountryCard-United Kingdom: ~0.60ms
+- CountryCard-Zambia: ~0.50ms
+- CountryCard-Finland: ~0.60ms
+- CountryCard-Niger: ~0.80ms
+- CountryCard-Christmas Island: ~0.70ms
+- CountryCard-Tokelau: ~0.70ms
+- CountryCard-Guinea-Bissau: ~0.50ms
+- CountryCard-Azerbaijan: ~0.70ms
+- CountryCard-Réunion: ~1.00ms
+- CountryCard-Djibouti: ~1.00ms
+- CountryCard-North Korea: ~0.70ms
+- CountryCard-Mauritius: ~0.70ms
+- CountryCard-Montserrat: ~0.90ms
+- CountryCard-United States Virgin Islands: ~0.70ms
+- CountryCard-Colombia: ~0.60ms
+- CountryCard-Greece: ~0.50ms
+- CountryCard-Croatia: ~0.60ms
+- CountryCard-Morocco: ~0.70ms
+- CountryCard-Algeria: ~0.40ms
+- CountryCard-Antarctica: ~0.40ms
+- CountryCard-Netherlands: ~0.50ms
+- CountryCard-Sudan: ~0.40ms
+- CountryCard-Fiji: ~0.60ms
+- CountryCard-Liechtenstein: ~0.70ms
+- CountryCard-Nepal: ~0.70ms
+- CountryCard-Puerto Rico: ~0.60ms
+- CountryCard-Georgia: ~0.60ms
+- CountryCard-Pakistan: ~0.40ms
+- CountryCard-Monaco: ~0.60ms
+- CountryCard-Botswana: ~0.70ms
+- CountryCard-Lebanon: ~0.50ms
+- CountryCard-Papua New Guinea: ~0.80ms
+- CountryCard-Mayotte: ~0.80ms
+- CountryCard-Dominican Republic: ~0.80ms
+- CountryCard-Norfolk Island: ~0.50ms
+- CountryCard-Bouvet Island: ~0.60ms
+- CountryCard-Qatar: ~1.00ms
+- CountryCard-Madagascar: ~0.60ms
+- CountryCard-India: ~0.60ms
+- CountryCard-Syria: ~0.40ms
+- CountryCard-Montenegro: ~0.40ms
+- CountryCard-Eswatini: ~0.50ms
+- CountryCard-Paraguay: ~0.50ms
+- CountryCard-El Salvador: ~0.50ms
+- CountryCard-Ukraine: ~0.40ms
+- CountryCard-Isle of Man: ~0.60ms
+- CountryCard-Namibia: ~0.40ms
+- CountryCard-United Arab Emirates: ~0.40ms
+- CountryCard-Bulgaria: ~0.30ms
+- CountryCard-Greenland: ~0.40ms
+- CountryCard-Germany: ~0.50ms
+- CountryCard-Cambodia: ~0.90ms
+- CountryCard-Iraq: ~0.90ms
+- CountryCard-French Southern and Antarctic Lands: ~0.90ms
+- CountryCard-Sweden: ~0.80ms
+- CountryCard-Cuba: ~0.80ms
+- CountryCard-Kyrgyzstan: ~0.60ms
+- CountryCard-Russia: ~0.80ms
+- CountryCard-Malaysia: ~0.50ms
+- CountryCard-São Tomé and Príncipe: ~0.60ms
+- CountryCard-Cyprus: ~0.60ms
+- CountryCard-Canada: ~0.60ms
+- CountryCard-Malawi: ~0.60ms
+- CountryCard-Saudi Arabia: ~0.60ms
+- CountryCard-Bosnia and Herzegovina: ~0.50ms
+- CountryCard-Ethiopia: ~0.60ms
+- CountryCard-Spain: ~0.60ms
+- CountryCard-Slovenia: ~0.60ms
+- CountryCard-Oman: ~0.40ms
+- CountryCard-Saint Pierre and Miquelon: ~0.50ms
+- CountryCard-Macau: ~0.60ms
+- CountryCard-San Marino: ~0.50ms
+- CountryCard-Lesotho: ~0.60ms
+- CountryCard-Marshall Islands: ~0.60ms
+- CountryCard-Sint Maarten: ~0.60ms
+- CountryCard-Iceland: ~0.60ms
+- CountryCard-Luxembourg: ~0.40ms
+- CountryCard-Argentina: ~0.40ms
+- CountryCard-Turks and Caicos Islands: ~0.40ms
+- CountryCard-Nauru: ~0.40ms
+- CountryCard-Cocos (Keeling) Islands: ~0.40ms
+- CountryCard-Western Sahara: ~0.40ms
+- CountryCard-Dominica: ~0.40ms
+- CountryCard-Costa Rica: ~0.30ms
+- CountryCard-Australia: ~0.50ms
+- CountryCard-Thailand: ~0.70ms
+- CountryCard-Haiti: ~0.60ms
+- CountryCard-Tuvalu: ~0.50ms
+- CountryCard-Honduras: ~0.80ms
+- CountryCard-Equatorial Guinea: ~0.50ms
+- CountryCard-Saint Lucia: ~0.40ms
+- CountryCard-French Polynesia: ~0.50ms
+- CountryCard-Belarus: ~0.40ms
+- CountryCard-Latvia: ~0.40ms
+- CountryCard-Palau: ~0.40ms
+- CountryCard-Guadeloupe: ~0.40ms
+- CountryCard-Philippines: ~0.40ms
+- CountryCard-Gibraltar: ~0.30ms
+- CountryCard-Denmark: ~0.40ms
+- CountryCard-Cameroon: ~0.40ms
+- CountryCard-Guinea: ~0.30ms
+- CountryCard-Bahrain: ~0.30ms
+- CountryCard-Suriname: ~0.40ms
+- CountryCard-DR Congo: ~0.40ms
+- CountryCard-Somalia: ~0.40ms
+- CountryCard-Czechia: ~0.40ms
+- CountryCard-New Caledonia: ~0.50ms
+- CountryCard-Vanuatu: ~0.40ms
+- CountryCard-Saint Helena, Ascension and Tristan da Cunha: ~0.40ms
+- CountryCard-Togo: ~0.30ms
+- CountryCard-British Virgin Islands: ~0.40ms
+- CountryCard-Kenya: ~0.30ms
+- CountryCard-Niue: ~0.40ms
+- CountryCard-Heard Island and McDonald Islands: ~0.30ms
+- CountryCard-Rwanda: ~0.40ms
+- CountryCard-Estonia: ~0.40ms
+- CountryCard-Romania: ~0.30ms
+- CountryCard-Trinidad and Tobago: ~0.30ms
+- CountryCard-Guyana: ~0.20ms
+- CountryCard-Timor-Leste: ~0.30ms
+- CountryCard-Vietnam: ~0.30ms
+- CountryCard-Uruguay: ~0.30ms
+- CountryCard-Vatican City: ~0.40ms
+- CountryCard-Hong Kong: ~0.30ms
+- CountryCard-Austria: ~0.50ms
+- CountryCard-Antigua and Barbuda: ~0.30ms
+- CountryCard-Turkmenistan: ~0.40ms
+- CountryCard-Mozambique: ~0.40ms
+- CountryCard-Panama: ~0.30ms
+- CountryCard-Micronesia: ~0.30ms
+- CountryCard-Ireland: ~0.30ms
+- CountryCard-Curaçao: ~0.20ms
+- CountryCard-French Guiana: ~0.30ms
+- CountryCard-Norway: ~0.30ms
+- CountryCard-Åland Islands: ~0.40ms
+- CountryCard-Central African Republic: ~0.30ms
+- CountryCard-Burkina Faso: ~0.20ms
+- CountryCard-Eritrea: ~0.30ms
+- CountryCard-Tanzania: ~0.30ms
+- CountryCard-South Korea: ~0.40ms
+- CountryCard-Jordan: ~0.30ms
+- CountryCard-Mauritania: ~0.30ms
+- CountryCard-Lithuania: ~0.30ms
+- CountryCard-United States Minor Outlying Islands: ~0.40ms
+- CountryCard-Slovakia: ~0.30ms
+- CountryCard-Angola: ~0.30ms
+- CountryCard-Kazakhstan: ~0.30ms
+- CountryCard-Moldova: ~0.40ms
+- CountryCard-Mali: ~0.30ms
+- CountryCard-Falkland Islands: ~0.40ms
+- CountryCard-Armenia: ~0.30ms
+- CountryCard-Samoa: ~0.30ms
+- CountryCard-Jersey: ~0.30ms
+- CountryCard-Japan: ~0.30ms
+- CountryCard-Bolivia: ~0.30ms
+- CountryCard-Chile: ~0.30ms
+- CountryCard-United States: ~0.30ms
+- CountryCard-Saint Vincent and the Grenadines: ~0.40ms
+- CountryCard-Bermuda: ~0.30ms
+- CountryCard-Seychelles: ~0.40ms
+- CountryCard-British Indian Ocean Territory: ~0.30ms
+- CountryCard-Guatemala: ~0.40ms
+- CountryCard-Ecuador: ~0.40ms
+- CountryCard-Martinique: ~0.30ms
+- CountryCard-Tajikistan: ~0.40ms
+- CountryCard-Malta: ~0.40ms
+- CountryCard-Gambia: ~0.50ms
+- CountryCard-Nigeria: ~0.30ms
+- CountryCard-Bahamas: ~0.20ms
+- CountryCard-Kosovo: ~0.50ms
+- CountryCard-Kuwait: ~0.40ms
+- CountryCard-Maldives: ~0.30ms
+- CountryCard-South Sudan: ~0.40ms
+- CountryCard-Iran: ~0.40ms
+- CountryCard-Albania: ~0.40ms
+- CountryCard-Brazil: ~0.40ms
+- CountryCard-Serbia: ~0.30ms
+- CountryCard-Belize: ~0.40ms
+- CountryCard-Myanmar: ~0.40ms
+- CountryCard-Bhutan: ~0.40ms
+- CountryCard-Venezuela: ~0.40ms
+- CountryCard-Liberia: ~0.40ms
+- CountryCard-Jamaica: ~0.40ms
+- CountryCard-Poland: ~0.40ms
+- CountryCard-Cayman Islands: ~0.30ms
+- CountryCard-Brunei: ~0.40ms
+- CountryCard-Comoros: ~0.30ms
+- CountryCard-Guam: ~0.30ms
+- CountryCard-Tonga: ~0.40ms
+- CountryCard-Kiribati: ~0.40ms
+- CountryCard-Ghana: ~0.40ms
+- CountryCard-Chad: ~0.40ms
+- CountryCard-Zimbabwe: ~0.30ms
+- CountryCard-Saint Martin: ~0.50ms
+- CountryCard-Mongolia: ~0.40ms
+- CountryCard-Portugal: ~0.30ms
+- CountryCard-American Samoa: ~0.30ms
+- CountryCard-Republic of the Congo: ~0.30ms
+- CountryCard-Belgium: ~0.30ms
+- CountryCard-Israel: ~0.30ms
+- CountryCard-New Zealand: ~0.30ms
+- CountryCard-Nicaragua: ~0.30ms
+- CountryCard-Anguilla: ~0.40ms
+- CountriesGrid: ~138.40ms
+- App: ~141.00ms
+- Filters: ~0.20ms
+- CountryCard-South Georgia: ~0.20ms
+- CountryCard-Grenada: ~0.00ms
+- CountryCard-Switzerland: ~0.30ms
+- CountryCard-Sierra Leone: ~0.10ms
+- CountryCard-Hungary: ~0.10ms
+- CountryCard-Taiwan: ~0.10ms
+- CountryCard-Wallis and Futuna: ~0.10ms
+- CountryCard-Barbados: ~0.10ms
+- CountryCard-Pitcairn Islands: ~0.20ms
+- CountryCard-Ivory Coast: ~0.10ms
+- CountryCard-Tunisia: ~0.20ms
+- CountryCard-Italy: ~0.20ms
+- CountryCard-Benin: ~0.10ms
+- CountryCard-Indonesia: ~0.10ms
+- CountryCard-Cape Verde: ~0.20ms
+- CountryCard-Saint Kitts and Nevis: ~0.10ms
+- CountryCard-Laos: ~0.10ms
+- CountryCard-Caribbean Netherlands: ~0.20ms
+- CountryCard-Uganda: ~0.10ms
+- CountryCard-Andorra: ~0.20ms
+- CountryCard-Burundi: ~0.20ms
+- CountryCard-South Africa: ~0.10ms
+- CountryCard-France: ~0.20ms
+- CountryCard-Libya: ~0.00ms
+- CountryCard-Mexico: ~0.20ms
+- CountryCard-Gabon: ~0.10ms
+- CountryCard-Northern Mariana Islands: ~0.00ms
+- CountryCard-North Macedonia: ~0.20ms
+- CountryCard-China: ~0.10ms
+- CountryCard-Yemen: ~0.00ms
+- CountryCard-Saint Barthélemy: ~0.10ms
+- CountryCard-Guernsey: ~0.10ms
+- CountryCard-Solomon Islands: ~0.10ms
+- CountryCard-Svalbard and Jan Mayen: ~0.00ms
+- CountryCard-Faroe Islands: ~0.10ms
+- CountryCard-Uzbekistan: ~0.10ms
+- CountryCard-Egypt: ~0.10ms
+- CountryCard-Senegal: ~0.00ms
+- CountryCard-Sri Lanka: ~0.00ms
+- CountryCard-Palestine: ~0.10ms
+- CountryCard-Bangladesh: ~0.10ms
+- CountryCard-Peru: ~0.10ms
+- CountryCard-Singapore: ~0.10ms
+- CountryCard-Turkey: ~0.10ms
+- CountryCard-Afghanistan: ~0.00ms
+- CountryCard-Aruba: ~0.10ms
+- CountryCard-Cook Islands: ~0.10ms
+- CountryCard-United Kingdom: ~0.10ms
+- CountryCard-Zambia: ~0.10ms
+- CountryCard-Finland: ~0.20ms
+- CountryCard-Niger: ~0.00ms
+- CountryCard-Christmas Island: ~0.10ms
+- CountryCard-Tokelau: ~0.10ms
+- CountryCard-Guinea-Bissau: ~0.10ms
+- CountryCard-Azerbaijan: ~0.00ms
+- CountryCard-Réunion: ~0.10ms
+- CountryCard-Djibouti: ~0.10ms
+- CountryCard-North Korea: ~0.20ms
+- CountryCard-Mauritius: ~0.00ms
+- CountryCard-Montserrat: ~0.30ms
+- CountryCard-United States Virgin Islands: ~0.10ms
+- CountryCard-Colombia: ~0.00ms
+- CountryCard-Greece: ~0.10ms
+- CountryCard-Croatia: ~0.10ms
+- CountryCard-Morocco: ~0.00ms
+- CountryCard-Algeria: ~0.10ms
+- CountryCard-Antarctica: ~0.00ms
+- CountryCard-Netherlands: ~0.10ms
+- CountryCard-Sudan: ~0.10ms
+- CountryCard-Fiji: ~0.10ms
+- CountryCard-Liechtenstein: ~0.10ms
+- CountryCard-Nepal: ~0.20ms
+- CountryCard-Puerto Rico: ~0.10ms
+- CountryCard-Georgia: ~0.10ms
+- CountryCard-Pakistan: ~0.00ms
+- CountryCard-Monaco: ~0.20ms
+- CountryCard-Botswana: ~0.10ms
+- CountryCard-Lebanon: ~0.20ms
+- CountryCard-Papua New Guinea: ~0.00ms
+- CountryCard-Mayotte: ~0.00ms
+- CountryCard-Dominican Republic: ~0.00ms
+- CountryCard-Norfolk Island: ~0.00ms
+- CountryCard-Bouvet Island: ~0.20ms
+- CountryCard-Qatar: ~0.10ms
+- CountryCard-Madagascar: ~0.00ms
+- CountryCard-India: ~0.00ms
+- CountryCard-Syria: ~0.10ms
+- CountryCard-Montenegro: ~0.00ms
+- CountryCard-Eswatini: ~0.10ms
+- CountryCard-Paraguay: ~0.00ms
+- CountryCard-El Salvador: ~0.10ms
+- CountryCard-Ukraine: ~0.10ms
+- CountryCard-Isle of Man: ~0.10ms
+- CountryCard-Namibia: ~0.10ms
+- CountryCard-United Arab Emirates: ~0.10ms
+- CountryCard-Bulgaria: ~0.10ms
+- CountryCard-Greenland: ~0.20ms
+- CountryCard-Germany: ~0.10ms
+- CountryCard-Cambodia: ~0.10ms
+- CountryCard-Iraq: ~0.20ms
+- CountryCard-French Southern and Antarctic Lands: ~0.10ms
+- CountryCard-Sweden: ~0.10ms
+- CountryCard-Cuba: ~0.20ms
+- CountryCard-Kyrgyzstan: ~0.00ms
+- CountryCard-Russia: ~0.10ms
+- CountryCard-Malaysia: ~0.10ms
+- CountryCard-São Tomé and Príncipe: ~0.10ms
+- CountryCard-Cyprus: ~0.20ms
+- CountryCard-Canada: ~0.10ms
+- CountryCard-Malawi: ~0.10ms
+- CountryCard-Saudi Arabia: ~0.10ms
+- CountryCard-Bosnia and Herzegovina: ~0.00ms
+- CountryCard-Ethiopia: ~0.10ms
+- CountryCard-Spain: ~0.10ms
+- CountryCard-Slovenia: ~0.10ms
+- CountryCard-Oman: ~0.00ms
+- CountryCard-Saint Pierre and Miquelon: ~0.10ms
+- CountryCard-Macau: ~0.10ms
+- CountryCard-San Marino: ~0.10ms
+- CountryCard-Lesotho: ~0.10ms
+- CountryCard-Marshall Islands: ~0.10ms
+- CountryCard-Sint Maarten: ~0.10ms
+- CountryCard-Iceland: ~0.10ms
+- CountryCard-Luxembourg: ~0.00ms
+- CountryCard-Argentina: ~0.20ms
+- CountryCard-Turks and Caicos Islands: ~0.00ms
+- CountryCard-Nauru: ~0.10ms
+- CountryCard-Cocos (Keeling) Islands: ~0.10ms
+- CountryCard-Western Sahara: ~0.20ms
+- CountryCard-Dominica: ~0.10ms
+- CountryCard-Costa Rica: ~0.10ms
+- CountryCard-Australia: ~0.00ms
+- CountryCard-Thailand: ~0.10ms
+- CountryCard-Haiti: ~0.10ms
+- CountryCard-Tuvalu: ~0.10ms
+- CountryCard-Honduras: ~0.00ms
+- CountryCard-Equatorial Guinea: ~0.20ms
+- CountryCard-Saint Lucia: ~0.00ms
+- CountryCard-French Polynesia: ~0.10ms
+- CountryCard-Belarus: ~0.10ms
+- CountryCard-Latvia: ~0.00ms
+- CountryCard-Palau: ~0.10ms
+- CountryCard-Guadeloupe: ~0.10ms
+- CountryCard-Philippines: ~0.10ms
+- CountryCard-Gibraltar: ~0.10ms
+- CountryCard-Denmark: ~0.10ms
+- CountryCard-Cameroon: ~0.00ms
+- CountryCard-Guinea: ~0.00ms
+- CountryCard-Bahrain: ~0.00ms
+- CountryCard-Suriname: ~0.20ms
+- CountryCard-DR Congo: ~0.20ms
+- CountryCard-Somalia: ~0.10ms
+- CountryCard-Czechia: ~0.10ms
+- CountryCard-New Caledonia: ~0.20ms
+- CountryCard-Vanuatu: ~0.00ms
+- CountryCard-Saint Helena, Ascension and Tristan da Cunha: ~0.20ms
+- CountryCard-Togo: ~0.10ms
+- CountryCard-British Virgin Islands: ~0.10ms
+- CountryCard-Kenya: ~0.10ms
+- CountryCard-Niue: ~0.00ms
+- CountryCard-Heard Island and McDonald Islands: ~0.10ms
+- CountryCard-Rwanda: ~0.10ms
+- CountryCard-Estonia: ~0.10ms
+- CountryCard-Romania: ~0.00ms
+- CountryCard-Trinidad and Tobago: ~0.00ms
+- CountryCard-Guyana: ~0.10ms
+- CountryCard-Timor-Leste: ~0.00ms
+- CountryCard-Vietnam: ~0.10ms
+- CountryCard-Uruguay: ~0.20ms
+- CountryCard-Vatican City: ~0.10ms
+- CountryCard-Hong Kong: ~0.10ms
+- CountryCard-Austria: ~0.10ms
+- CountryCard-Antigua and Barbuda: ~0.10ms
+- CountryCard-Turkmenistan: ~0.10ms
+- CountryCard-Mozambique: ~0.00ms
+- CountryCard-Panama: ~0.10ms
+- CountryCard-Micronesia: ~0.00ms
+- CountryCard-Ireland: ~0.10ms
+- CountryCard-Curaçao: ~0.10ms
+- CountryCard-French Guiana: ~0.10ms
+- CountryCard-Norway: ~0.00ms
+- CountryCard-Åland Islands: ~0.00ms
+- CountryCard-Central African Republic: ~0.10ms
+- CountryCard-Burkina Faso: ~0.00ms
+- CountryCard-Eritrea: ~0.10ms
+- CountryCard-Tanzania: ~0.10ms
+- CountryCard-South Korea: ~0.10ms
+- CountryCard-Jordan: ~0.00ms
+- CountryCard-Mauritania: ~0.10ms
+- CountryCard-Lithuania: ~0.10ms
+- CountryCard-United States Minor Outlying Islands: ~0.10ms
+- CountryCard-Slovakia: ~0.10ms
+- CountryCard-Angola: ~0.10ms
+- CountryCard-Kazakhstan: ~0.10ms
+- CountryCard-Moldova: ~0.10ms
+- CountryCard-Mali: ~0.20ms
+- CountryCard-Falkland Islands: ~0.20ms
+- CountryCard-Armenia: ~0.10ms
+- CountryCard-Samoa: ~0.10ms
+- CountryCard-Jersey: ~0.10ms
+- CountryCard-Japan: ~0.10ms
+- CountryCard-Bolivia: ~0.10ms
+- CountryCard-Chile: ~0.20ms
+- CountryCard-United States: ~0.10ms
+- CountryCard-Saint Vincent and the Grenadines: ~0.20ms
+- CountryCard-Bermuda: ~0.10ms
+- CountryCard-Seychelles: ~0.20ms
+- CountryCard-British Indian Ocean Territory: ~0.10ms
+- CountryCard-Guatemala: ~0.10ms
+- CountryCard-Ecuador: ~0.10ms
+- CountryCard-Martinique: ~0.10ms
+- CountryCard-Tajikistan: ~0.00ms
+- CountryCard-Malta: ~0.10ms
+- CountryCard-Gambia: ~0.10ms
+- CountryCard-Nigeria: ~0.10ms
+- CountryCard-Bahamas: ~0.00ms
+- CountryCard-Kosovo: ~0.20ms
+- CountryCard-Kuwait: ~0.10ms
+- CountryCard-Maldives: ~0.00ms
+- CountryCard-South Sudan: ~0.10ms
+- CountryCard-Iran: ~0.10ms
+- CountryCard-Albania: ~0.10ms
+- CountryCard-Brazil: ~0.10ms
+- CountryCard-Serbia: ~0.10ms
+- CountryCard-Belize: ~0.10ms
+- CountryCard-Myanmar: ~0.10ms
+- CountryCard-Bhutan: ~0.00ms
+- CountryCard-Venezuela: ~0.10ms
+- CountryCard-Liberia: ~0.10ms
+- CountryCard-Jamaica: ~0.10ms
+- CountryCard-Poland: ~0.10ms
+- CountryCard-Cayman Islands: ~0.00ms
+- CountryCard-Brunei: ~0.10ms
+- CountryCard-Comoros: ~0.10ms
+- CountryCard-Guam: ~0.10ms
+- CountryCard-Tonga: ~0.10ms
+- CountryCard-Kiribati: ~0.10ms
+- CountryCard-Ghana: ~0.20ms
+- CountryCard-Chad: ~0.10ms
+- CountryCard-Zimbabwe: ~0.10ms
+- CountryCard-Saint Martin: ~0.10ms
+- CountryCard-Mongolia: ~0.20ms
+- CountryCard-Portugal: ~0.20ms
+- CountryCard-American Samoa: ~0.20ms
+- CountryCard-Republic of the Congo: ~0.10ms
+- CountryCard-Belgium: ~0.10ms
+- CountryCard-Israel: ~0.00ms
+- CountryCard-New Zealand: ~0.00ms
+- CountryCard-Nicaragua: ~0.20ms
+- CountryCard-Anguilla: ~0.20ms
+- CountriesGrid: ~47.10ms
+- App: ~47.70ms
+- Filters: ~0.30ms
+- CountryCard-Barbados: ~0.20ms
+- CountryCard-Benin: ~0.00ms
+- CountryCard-Caribbean Netherlands: ~0.10ms
+- CountryCard-Burundi: ~0.10ms
+- CountryCard-Libya: ~0.10ms
+- CountryCard-Gabon: ~0.00ms
+- CountryCard-Saint Barthélemy: ~0.00ms
+- CountryCard-Svalbard and Jan Mayen: ~0.00ms
+- CountryCard-Uzbekistan: ~0.00ms
+- CountryCard-Bangladesh: ~0.10ms
+- CountryCard-Aruba: ~0.10ms
+- CountryCard-Zambia: ~0.10ms
+- CountryCard-Guinea-Bissau: ~0.10ms
+- CountryCard-Azerbaijan: ~0.00ms
+- CountryCard-Djibouti: ~0.00ms
+- CountryCard-Colombia: ~0.00ms
+- CountryCard-Botswana: ~0.00ms
+- CountryCard-Lebanon: ~0.10ms
+- CountryCard-Dominican Republic: ~0.00ms
+- CountryCard-Bouvet Island: ~0.00ms
+- CountryCard-Namibia: ~0.00ms
+- CountryCard-United Arab Emirates: ~0.00ms
+- CountryCard-Bulgaria: ~0.10ms
+- CountryCard-Cambodia: ~0.00ms
+- CountryCard-Cuba: ~0.00ms
+- CountryCard-Saudi Arabia: ~0.10ms
+- CountryCard-Bosnia and Herzegovina: ~0.10ms
+- CountryCard-Luxembourg: ~0.10ms
+- CountryCard-Belarus: ~0.00ms
+- CountryCard-Gibraltar: ~0.20ms
+- CountryCard-Bahrain: ~0.00ms
+- CountryCard-British Virgin Islands: ~0.00ms
+- CountryCard-Trinidad and Tobago: ~0.20ms
+- CountryCard-Antigua and Barbuda: ~0.00ms
+- CountryCard-Mozambique: ~0.10ms
+- CountryCard-Central African Republic: ~0.10ms
+- CountryCard-Burkina Faso: ~0.00ms
+- CountryCard-Bolivia: ~0.10ms
+- CountryCard-Bermuda: ~0.10ms
+- CountryCard-British Indian Ocean Territory: ~0.00ms
+- CountryCard-Gambia: ~0.10ms
+- CountryCard-Bahamas: ~0.10ms
+- CountryCard-Albania: ~0.00ms
+- CountryCard-Brazil: ~0.00ms
+- CountryCard-Serbia: ~0.00ms
+- CountryCard-Belize: ~0.20ms
+- CountryCard-Bhutan: ~0.00ms
+- CountryCard-Liberia: ~0.00ms
+- CountryCard-Brunei: ~0.00ms
+- CountryCard-Kiribati: ~0.10ms
+- CountryCard-Zimbabwe: ~0.10ms
+- CountryCard-Republic of the Congo: ~0.00ms
+- CountryCard-Belgium: ~0.10ms
+- CountriesGrid: ~5.10ms
+- App: ~5.50ms
+- Filters: ~0.40ms
+- CountryCard-Benin: ~0.00ms
+- CountryCard-Caribbean Netherlands: ~0.10ms
+- CountryCard-Uzbekistan: ~0.10ms
+- CountryCard-Belarus: ~0.10ms
+- CountryCard-Bermuda: ~0.00ms
+- CountryCard-Belize: ~0.00ms
+- CountryCard-Liberia: ~0.00ms
+- CountryCard-Belgium: ~0.00ms
+- CountriesGrid: ~0.80ms
+- App: ~1.20ms
+- Filters: ~0.20ms
+- CountryCard-Belarus: ~0.10ms
+- CountryCard-Belize: ~0.10ms
+- CountryCard-Belgium: ~0.10ms
+- CountriesGrid: ~0.50ms
+- App: ~0.70ms
+- Filters: ~0.20ms
+- CountriesGrid: ~0.00ms
+- App: ~0.30ms
+- Filters: ~0.20ms
+- CountryCard-Sierra Leone: ~0.40ms
+- CountryCard-Ivory Coast: ~0.00ms
+- CountryCard-Tunisia: ~0.20ms
+- CountryCard-Benin: ~0.20ms
+- CountryCard-Cape Verde: ~0.10ms
+- CountryCard-Uganda: ~0.10ms
+- CountryCard-Burundi: ~0.10ms
+- CountryCard-South Africa: ~0.20ms
+- CountryCard-Libya: ~0.20ms
+- CountryCard-Gabon: ~0.00ms
+- CountryCard-Egypt: ~0.10ms
+- CountryCard-Senegal: ~0.40ms
+- CountryCard-Zambia: ~0.20ms
+- CountryCard-Niger: ~0.20ms
+- CountryCard-Guinea-Bissau: ~0.30ms
+- CountryCard-Réunion: ~0.30ms
+- CountryCard-Djibouti: ~0.10ms
+- CountryCard-Mauritius: ~0.20ms
+- CountryCard-Morocco: ~0.10ms
+- CountryCard-Algeria: ~0.20ms
+- CountryCard-Sudan: ~0.20ms
+- CountryCard-Botswana: ~0.20ms
+- CountryCard-Mayotte: ~0.20ms
+- CountryCard-Madagascar: ~0.20ms
+- CountryCard-Eswatini: ~0.10ms
+- CountryCard-Namibia: ~0.10ms
+- CountryCard-São Tomé and Príncipe: ~0.10ms
+- CountryCard-Malawi: ~0.20ms
+- CountryCard-Ethiopia: ~0.20ms
+- CountryCard-Lesotho: ~0.20ms
+- CountryCard-Western Sahara: ~0.20ms
+- CountryCard-Equatorial Guinea: ~0.00ms
+- CountryCard-Cameroon: ~0.20ms
+- CountryCard-Guinea: ~0.10ms
+- CountryCard-DR Congo: ~0.30ms
+- CountryCard-Somalia: ~0.20ms
+- CountryCard-Saint Helena, Ascension and Tristan da Cunha: ~0.20ms
+- CountryCard-Togo: ~0.20ms
+- CountryCard-Kenya: ~0.20ms
+- CountryCard-Rwanda: ~0.20ms
+- CountryCard-Mozambique: ~0.20ms
+- CountryCard-Central African Republic: ~0.10ms
+- CountryCard-Burkina Faso: ~0.10ms
+- CountryCard-Eritrea: ~0.20ms
+- CountryCard-Tanzania: ~0.20ms
+- CountryCard-Mauritania: ~0.10ms
+- CountryCard-Angola: ~0.30ms
+- CountryCard-Mali: ~0.10ms
+- CountryCard-Seychelles: ~0.10ms
+- CountryCard-British Indian Ocean Territory: ~0.10ms
+- CountryCard-Gambia: ~0.20ms
+- CountryCard-Nigeria: ~0.20ms
+- CountryCard-South Sudan: ~0.20ms
+- CountryCard-Liberia: ~0.00ms
+- CountryCard-Comoros: ~0.10ms
+- CountryCard-Ghana: ~0.20ms
+- CountryCard-Chad: ~0.10ms
+- CountryCard-Zimbabwe: ~0.20ms
+- CountryCard-Republic of the Congo: ~0.20ms
+- CountriesGrid: ~12.30ms
+- App: ~12.60ms
+- CountryCard-Sierra Leone: ~0.30ms
+- CountryCard-Ivory Coast: ~0.20ms
+- CountryCard-Tunisia: ~0.00ms
+- CountryCard-Benin: ~0.10ms
+- CountryCard-Cape Verde: ~0.10ms
+- CountryCard-Uganda: ~0.20ms
+- CountryCard-Burundi: ~0.10ms
+- CountryCard-South Africa: ~0.10ms
+- CountryCard-Libya: ~0.20ms
+- CountryCard-Gabon: ~0.10ms
+- CountryCard-Egypt: ~0.20ms
+- CountryCard-Senegal: ~0.20ms
+- CountryCard-Zambia: ~0.10ms
+- CountryCard-Niger: ~0.10ms
+- CountryCard-Guinea-Bissau: ~0.10ms
+- CountryCard-Réunion: ~0.20ms
+- CountryCard-Djibouti: ~0.20ms
+- CountryCard-Mauritius: ~0.10ms
+- CountryCard-Morocco: ~0.00ms
+- CountryCard-Algeria: ~0.00ms
+- CountryCard-Sudan: ~0.10ms
+- CountryCard-Botswana: ~0.00ms
+- CountryCard-Mayotte: ~0.30ms
+- CountryCard-Madagascar: ~0.10ms
+- CountryCard-Eswatini: ~0.10ms
+- CountryCard-Namibia: ~0.10ms
+- CountryCard-São Tomé and Príncipe: ~0.20ms
+- CountryCard-Malawi: ~0.20ms
+- CountryCard-Ethiopia: ~0.10ms
+- CountryCard-Lesotho: ~0.10ms
+- CountryCard-Western Sahara: ~0.20ms
+- CountryCard-Equatorial Guinea: ~0.10ms
+- CountryCard-Cameroon: ~0.10ms
+- CountryCard-Guinea: ~0.20ms
+- CountryCard-DR Congo: ~0.00ms
+- CountryCard-Somalia: ~0.20ms
+- CountryCard-Saint Helena, Ascension and Tristan da Cunha: ~0.10ms
+- CountryCard-Togo: ~0.20ms
+- CountryCard-Kenya: ~0.00ms
+- CountryCard-Rwanda: ~0.20ms
+- CountryCard-Mozambique: ~0.20ms
+- CountryCard-Central African Republic: ~0.10ms
+- CountryCard-Burkina Faso: ~0.10ms
+- CountryCard-Eritrea: ~0.10ms
+- CountryCard-Tanzania: ~0.30ms
+- CountryCard-Mauritania: ~0.10ms
+- CountryCard-Angola: ~0.20ms
+- CountryCard-Mali: ~0.10ms
+- CountryCard-Seychelles: ~0.00ms
+- CountryCard-British Indian Ocean Territory: ~0.20ms
+- CountryCard-Gambia: ~0.00ms
+- CountryCard-Nigeria: ~0.20ms
+- CountryCard-South Sudan: ~0.10ms
+- CountryCard-Liberia: ~0.10ms
+- CountryCard-Comoros: ~0.20ms
+- CountryCard-Ghana: ~0.10ms
+- CountryCard-Chad: ~0.10ms
+- CountryCard-Zimbabwe: ~0.10ms
+- CountryCard-Republic of the Congo: ~0.10ms
+- CountriesGrid: ~7.60ms
+- App: ~7.60ms
+- Filters: ~0.10ms
+- CountryCard-Taiwan: ~0.30ms
+- CountryCard-Indonesia: ~0.20ms
+- CountryCard-Laos: ~0.10ms
+- CountryCard-China: ~0.30ms
+- CountryCard-Yemen: ~0.10ms
+- CountryCard-Uzbekistan: ~0.20ms
+- CountryCard-Sri Lanka: ~0.10ms
+- CountryCard-Palestine: ~0.00ms
+- CountryCard-Bangladesh: ~0.10ms
+- CountryCard-Singapore: ~0.10ms
+- CountryCard-Turkey: ~0.20ms
+- CountryCard-Afghanistan: ~0.30ms
+- CountryCard-Azerbaijan: ~0.20ms
+- CountryCard-North Korea: ~0.30ms
+- CountryCard-Nepal: ~0.20ms
+- CountryCard-Georgia: ~0.10ms
+- CountryCard-Pakistan: ~0.00ms
+- CountryCard-Lebanon: ~0.30ms
+- CountryCard-Qatar: ~0.10ms
+- CountryCard-India: ~0.20ms
+- CountryCard-Syria: ~0.20ms
+- CountryCard-United Arab Emirates: ~0.10ms
+- CountryCard-Cambodia: ~0.20ms
+- CountryCard-Iraq: ~0.10ms
+- CountryCard-Kyrgyzstan: ~0.00ms
+- CountryCard-Malaysia: ~0.20ms
+- CountryCard-Saudi Arabia: ~0.20ms
+- CountryCard-Oman: ~0.20ms
+- CountryCard-Macau: ~0.20ms
+- CountryCard-Thailand: ~0.10ms
+- CountryCard-Philippines: ~0.10ms
+- CountryCard-Bahrain: ~0.10ms
+- CountryCard-Timor-Leste: ~0.20ms
+- CountryCard-Vietnam: ~0.10ms
+- CountryCard-Hong Kong: ~0.10ms
+- CountryCard-Turkmenistan: ~0.10ms
+- CountryCard-South Korea: ~0.00ms
+- CountryCard-Jordan: ~0.20ms
+- CountryCard-Kazakhstan: ~0.20ms
+- CountryCard-Armenia: ~0.20ms
+- CountryCard-Japan: ~0.10ms
+- CountryCard-Tajikistan: ~0.10ms
+- CountryCard-Kuwait: ~0.10ms
+- CountryCard-Maldives: ~0.10ms
+- CountryCard-Iran: ~0.20ms
+- CountryCard-Myanmar: ~0.10ms
+- CountryCard-Bhutan: ~0.10ms
+- CountryCard-Brunei: ~0.10ms
+- CountryCard-Mongolia: ~0.20ms
+- CountryCard-Israel: ~0.00ms
+- CountriesGrid: ~9.60ms
+- App: ~9.90ms
+- CountryCard-Taiwan: ~0.10ms
+- CountryCard-Indonesia: ~0.20ms
+- CountryCard-Laos: ~0.10ms
+- CountryCard-China: ~0.10ms
+- CountryCard-Yemen: ~0.10ms
+- CountryCard-Uzbekistan: ~0.20ms
+- CountryCard-Sri Lanka: ~0.00ms
+- CountryCard-Palestine: ~0.20ms
+- CountryCard-Bangladesh: ~0.20ms
+- CountryCard-Singapore: ~0.00ms
+- CountryCard-Turkey: ~0.00ms
+- CountryCard-Afghanistan: ~0.10ms
+- CountryCard-Azerbaijan: ~0.10ms
+- CountryCard-North Korea: ~0.10ms
+- CountryCard-Nepal: ~0.10ms
+- CountryCard-Georgia: ~0.10ms
+- CountryCard-Pakistan: ~0.00ms
+- CountryCard-Lebanon: ~0.20ms
+- CountryCard-Qatar: ~0.00ms
+- CountryCard-India: ~0.10ms
+- CountryCard-Syria: ~0.10ms
+- CountryCard-United Arab Emirates: ~0.10ms
+- CountryCard-Cambodia: ~0.10ms
+- CountryCard-Iraq: ~0.00ms
+- CountryCard-Kyrgyzstan: ~0.20ms
+- CountryCard-Malaysia: ~0.10ms
+- CountryCard-Saudi Arabia: ~0.00ms
+- CountryCard-Oman: ~0.10ms
+- CountryCard-Macau: ~0.10ms
+- CountryCard-Thailand: ~0.10ms
+- CountryCard-Philippines: ~0.10ms
+- CountryCard-Bahrain: ~0.00ms
+- CountryCard-Timor-Leste: ~0.20ms
+- CountryCard-Vietnam: ~0.10ms
+- CountryCard-Hong Kong: ~0.10ms
+- CountryCard-Turkmenistan: ~0.20ms
+- CountryCard-South Korea: ~0.00ms
+- CountryCard-Jordan: ~0.10ms
+- CountryCard-Kazakhstan: ~0.00ms
+- CountryCard-Armenia: ~0.10ms
+- CountryCard-Japan: ~0.10ms
+- CountryCard-Tajikistan: ~0.10ms
+- CountryCard-Kuwait: ~0.00ms
+- CountryCard-Maldives: ~0.20ms
+- CountryCard-Iran: ~0.10ms
+- CountryCard-Myanmar: ~0.00ms
+- CountryCard-Bhutan: ~0.10ms
+- CountryCard-Brunei: ~0.00ms
+- CountryCard-Mongolia: ~0.10ms
+- CountryCard-Israel: ~0.10ms
+- CountriesGrid: ~4.60ms
+- App: ~4.60ms
+
+#### Key Findings
+- Average base duration: 0.40ms
+- Average actual duration: 0.79ms
+    ### Initial Performance Metrics
+
+Performance metrics were collected using React Dev Tools Profiler:
+
+#### Commit Duration
+- Initial render: ~26.72ms
+- Average commit: ~13.36ms
+
+#### Component Render Times
+- Filters: ~1.80ms
+- CountryCard-South Georgia: ~2.20ms
+- CountryCard-Grenada: ~1.10ms
+- CountryCard-Switzerland: ~1.00ms
+- CountryCard-Sierra Leone: ~0.70ms
+- CountryCard-Hungary: ~0.90ms
+- CountryCard-Taiwan: ~0.70ms
+- CountryCard-Wallis and Futuna: ~0.80ms
+- CountryCard-Barbados: ~3.80ms
+- CountryCard-Pitcairn Islands: ~0.70ms
+- CountryCard-Ivory Coast: ~0.30ms
+- CountryCard-Tunisia: ~0.40ms
+- CountryCard-Italy: ~0.50ms
+- CountryCard-Benin: ~0.50ms
+- CountryCard-Indonesia: ~0.40ms
+- CountryCard-Cape Verde: ~0.50ms
+- CountryCard-Saint Kitts and Nevis: ~0.40ms
+- CountryCard-Laos: ~0.40ms
+- CountryCard-Caribbean Netherlands: ~0.40ms
+- CountryCard-Uganda: ~0.60ms
+- CountryCard-Andorra: ~0.50ms
+- CountryCard-Burundi: ~0.40ms
+- CountryCard-South Africa: ~0.50ms
+- CountryCard-France: ~0.40ms
+- CountryCard-Libya: ~0.50ms
+- CountryCard-Mexico: ~0.40ms
+- CountryCard-Gabon: ~0.60ms
+- CountryCard-Northern Mariana Islands: ~0.50ms
+- CountryCard-North Macedonia: ~0.50ms
+- CountryCard-China: ~0.50ms
+- CountryCard-Yemen: ~0.50ms
+- CountryCard-Saint Barthélemy: ~0.70ms
+- CountryCard-Guernsey: ~0.50ms
+- CountryCard-Solomon Islands: ~0.60ms
+- CountryCard-Svalbard and Jan Mayen: ~0.60ms
+- CountryCard-Faroe Islands: ~0.50ms
+- CountryCard-Uzbekistan: ~0.50ms
+- CountryCard-Egypt: ~0.60ms
+- CountryCard-Senegal: ~0.40ms
+- CountryCard-Sri Lanka: ~0.60ms
+- CountryCard-Palestine: ~0.40ms
+- CountryCard-Bangladesh: ~0.60ms
+- CountryCard-Peru: ~0.50ms
+- CountryCard-Singapore: ~0.50ms
+- CountryCard-Turkey: ~0.40ms
+- CountryCard-Afghanistan: ~0.40ms
+- CountryCard-Aruba: ~0.50ms
+- CountryCard-Cook Islands: ~0.60ms
+- CountryCard-United Kingdom: ~0.60ms
+- CountryCard-Zambia: ~0.50ms
+- CountryCard-Finland: ~0.60ms
+- CountryCard-Niger: ~0.80ms
+- CountryCard-Christmas Island: ~0.70ms
+- CountryCard-Tokelau: ~0.70ms
+- CountryCard-Guinea-Bissau: ~0.50ms
+- CountryCard-Azerbaijan: ~0.70ms
+- CountryCard-Réunion: ~1.00ms
+- CountryCard-Djibouti: ~1.00ms
+- CountryCard-North Korea: ~0.70ms
+- CountryCard-Mauritius: ~0.70ms
+- CountryCard-Montserrat: ~0.90ms
+- CountryCard-United States Virgin Islands: ~0.70ms
+- CountryCard-Colombia: ~0.60ms
+- CountryCard-Greece: ~0.50ms
+- CountryCard-Croatia: ~0.60ms
+- CountryCard-Morocco: ~0.70ms
+- CountryCard-Algeria: ~0.40ms
+- CountryCard-Antarctica: ~0.40ms
+- CountryCard-Netherlands: ~0.50ms
+- CountryCard-Sudan: ~0.40ms
+- CountryCard-Fiji: ~0.60ms
+- CountryCard-Liechtenstein: ~0.70ms
+- CountryCard-Nepal: ~0.70ms
+- CountryCard-Puerto Rico: ~0.60ms
+- CountryCard-Georgia: ~0.60ms
+- CountryCard-Pakistan: ~0.40ms
+- CountryCard-Monaco: ~0.60ms
+- CountryCard-Botswana: ~0.70ms
+- CountryCard-Lebanon: ~0.50ms
+- CountryCard-Papua New Guinea: ~0.80ms
+- CountryCard-Mayotte: ~0.80ms
+- CountryCard-Dominican Republic: ~0.80ms
+- CountryCard-Norfolk Island: ~0.50ms
+- CountryCard-Bouvet Island: ~0.60ms
+- CountryCard-Qatar: ~1.00ms
+- CountryCard-Madagascar: ~0.60ms
+- CountryCard-India: ~0.60ms
+- CountryCard-Syria: ~0.40ms
+- CountryCard-Montenegro: ~0.40ms
+- CountryCard-Eswatini: ~0.50ms
+- CountryCard-Paraguay: ~0.50ms
+- CountryCard-El Salvador: ~0.50ms
+- CountryCard-Ukraine: ~0.40ms
+- CountryCard-Isle of Man: ~0.60ms
+- CountryCard-Namibia: ~0.40ms
+- CountryCard-United Arab Emirates: ~0.40ms
+- CountryCard-Bulgaria: ~0.30ms
+- CountryCard-Greenland: ~0.40ms
+- CountryCard-Germany: ~0.50ms
+- CountryCard-Cambodia: ~0.90ms
+- CountryCard-Iraq: ~0.90ms
+- CountryCard-French Southern and Antarctic Lands: ~0.90ms
+- CountryCard-Sweden: ~0.80ms
+- CountryCard-Cuba: ~0.80ms
+- CountryCard-Kyrgyzstan: ~0.60ms
+- CountryCard-Russia: ~0.80ms
+- CountryCard-Malaysia: ~0.50ms
+- CountryCard-São Tomé and Príncipe: ~0.60ms
+- CountryCard-Cyprus: ~0.60ms
+- CountryCard-Canada: ~0.60ms
+- CountryCard-Malawi: ~0.60ms
+- CountryCard-Saudi Arabia: ~0.60ms
+- CountryCard-Bosnia and Herzegovina: ~0.50ms
+- CountryCard-Ethiopia: ~0.60ms
+- CountryCard-Spain: ~0.60ms
+- CountryCard-Slovenia: ~0.60ms
+- CountryCard-Oman: ~0.40ms
+- CountryCard-Saint Pierre and Miquelon: ~0.50ms
+- CountryCard-Macau: ~0.60ms
+- CountryCard-San Marino: ~0.50ms
+- CountryCard-Lesotho: ~0.60ms
+- CountryCard-Marshall Islands: ~0.60ms
+- CountryCard-Sint Maarten: ~0.60ms
+- CountryCard-Iceland: ~0.60ms
+- CountryCard-Luxembourg: ~0.40ms
+- CountryCard-Argentina: ~0.40ms
+- CountryCard-Turks and Caicos Islands: ~0.40ms
+- CountryCard-Nauru: ~0.40ms
+- CountryCard-Cocos (Keeling) Islands: ~0.40ms
+- CountryCard-Western Sahara: ~0.40ms
+- CountryCard-Dominica: ~0.40ms
+- CountryCard-Costa Rica: ~0.30ms
+- CountryCard-Australia: ~0.50ms
+- CountryCard-Thailand: ~0.70ms
+- CountryCard-Haiti: ~0.60ms
+- CountryCard-Tuvalu: ~0.50ms
+- CountryCard-Honduras: ~0.80ms
+- CountryCard-Equatorial Guinea: ~0.50ms
+- CountryCard-Saint Lucia: ~0.40ms
+- CountryCard-French Polynesia: ~0.50ms
+- CountryCard-Belarus: ~0.40ms
+- CountryCard-Latvia: ~0.40ms
+- CountryCard-Palau: ~0.40ms
+- CountryCard-Guadeloupe: ~0.40ms
+- CountryCard-Philippines: ~0.40ms
+- CountryCard-Gibraltar: ~0.30ms
+- CountryCard-Denmark: ~0.40ms
+- CountryCard-Cameroon: ~0.40ms
+- CountryCard-Guinea: ~0.30ms
+- CountryCard-Bahrain: ~0.30ms
+- CountryCard-Suriname: ~0.40ms
+- CountryCard-DR Congo: ~0.40ms
+- CountryCard-Somalia: ~0.40ms
+- CountryCard-Czechia: ~0.40ms
+- CountryCard-New Caledonia: ~0.50ms
+- CountryCard-Vanuatu: ~0.40ms
+- CountryCard-Saint Helena, Ascension and Tristan da Cunha: ~0.40ms
+- CountryCard-Togo: ~0.30ms
+- CountryCard-British Virgin Islands: ~0.40ms
+- CountryCard-Kenya: ~0.30ms
+- CountryCard-Niue: ~0.40ms
+- CountryCard-Heard Island and McDonald Islands: ~0.30ms
+- CountryCard-Rwanda: ~0.40ms
+- CountryCard-Estonia: ~0.40ms
+- CountryCard-Romania: ~0.30ms
+- CountryCard-Trinidad and Tobago: ~0.30ms
+- CountryCard-Guyana: ~0.20ms
+- CountryCard-Timor-Leste: ~0.30ms
+- CountryCard-Vietnam: ~0.30ms
+- CountryCard-Uruguay: ~0.30ms
+- CountryCard-Vatican City: ~0.40ms
+- CountryCard-Hong Kong: ~0.30ms
+- CountryCard-Austria: ~0.50ms
+- CountryCard-Antigua and Barbuda: ~0.30ms
+- CountryCard-Turkmenistan: ~0.40ms
+- CountryCard-Mozambique: ~0.40ms
+- CountryCard-Panama: ~0.30ms
+- CountryCard-Micronesia: ~0.30ms
+- CountryCard-Ireland: ~0.30ms
+- CountryCard-Curaçao: ~0.20ms
+- CountryCard-French Guiana: ~0.30ms
+- CountryCard-Norway: ~0.30ms
+- CountryCard-Åland Islands: ~0.40ms
+- CountryCard-Central African Republic: ~0.30ms
+- CountryCard-Burkina Faso: ~0.20ms
+- CountryCard-Eritrea: ~0.30ms
+- CountryCard-Tanzania: ~0.30ms
+- CountryCard-South Korea: ~0.40ms
+- CountryCard-Jordan: ~0.30ms
+- CountryCard-Mauritania: ~0.30ms
+- CountryCard-Lithuania: ~0.30ms
+- CountryCard-United States Minor Outlying Islands: ~0.40ms
+- CountryCard-Slovakia: ~0.30ms
+- CountryCard-Angola: ~0.30ms
+- CountryCard-Kazakhstan: ~0.30ms
+- CountryCard-Moldova: ~0.40ms
+- CountryCard-Mali: ~0.30ms
+- CountryCard-Falkland Islands: ~0.40ms
+- CountryCard-Armenia: ~0.30ms
+- CountryCard-Samoa: ~0.30ms
+- CountryCard-Jersey: ~0.30ms
+- CountryCard-Japan: ~0.30ms
+- CountryCard-Bolivia: ~0.30ms
+- CountryCard-Chile: ~0.30ms
+- CountryCard-United States: ~0.30ms
+- CountryCard-Saint Vincent and the Grenadines: ~0.40ms
+- CountryCard-Bermuda: ~0.30ms
+- CountryCard-Seychelles: ~0.40ms
+- CountryCard-British Indian Ocean Territory: ~0.30ms
+- CountryCard-Guatemala: ~0.40ms
+- CountryCard-Ecuador: ~0.40ms
+- CountryCard-Martinique: ~0.30ms
+- CountryCard-Tajikistan: ~0.40ms
+- CountryCard-Malta: ~0.40ms
+- CountryCard-Gambia: ~0.50ms
+- CountryCard-Nigeria: ~0.30ms
+- CountryCard-Bahamas: ~0.20ms
+- CountryCard-Kosovo: ~0.50ms
+- CountryCard-Kuwait: ~0.40ms
+- CountryCard-Maldives: ~0.30ms
+- CountryCard-South Sudan: ~0.40ms
+- CountryCard-Iran: ~0.40ms
+- CountryCard-Albania: ~0.40ms
+- CountryCard-Brazil: ~0.40ms
+- CountryCard-Serbia: ~0.30ms
+- CountryCard-Belize: ~0.40ms
+- CountryCard-Myanmar: ~0.40ms
+- CountryCard-Bhutan: ~0.40ms
+- CountryCard-Venezuela: ~0.40ms
+- CountryCard-Liberia: ~0.40ms
+- CountryCard-Jamaica: ~0.40ms
+- CountryCard-Poland: ~0.40ms
+- CountryCard-Cayman Islands: ~0.30ms
+- CountryCard-Brunei: ~0.40ms
+- CountryCard-Comoros: ~0.30ms
+- CountryCard-Guam: ~0.30ms
+- CountryCard-Tonga: ~0.40ms
+- CountryCard-Kiribati: ~0.40ms
+- CountryCard-Ghana: ~0.40ms
+- CountryCard-Chad: ~0.40ms
+- CountryCard-Zimbabwe: ~0.30ms
+- CountryCard-Saint Martin: ~0.50ms
+- CountryCard-Mongolia: ~0.40ms
+- CountryCard-Portugal: ~0.30ms
+- CountryCard-American Samoa: ~0.30ms
+- CountryCard-Republic of the Congo: ~0.30ms
+- CountryCard-Belgium: ~0.30ms
+- CountryCard-Israel: ~0.30ms
+- CountryCard-New Zealand: ~0.30ms
+- CountryCard-Nicaragua: ~0.30ms
+- CountryCard-Anguilla: ~0.40ms
+- CountriesGrid: ~138.40ms
+- App: ~141.00ms
+- Filters: ~0.20ms
+- CountryCard-South Georgia: ~0.20ms
+- CountryCard-Grenada: ~0.00ms
+- CountryCard-Switzerland: ~0.30ms
+- CountryCard-Sierra Leone: ~0.10ms
+- CountryCard-Hungary: ~0.10ms
+- CountryCard-Taiwan: ~0.10ms
+- CountryCard-Wallis and Futuna: ~0.10ms
+- CountryCard-Barbados: ~0.10ms
+- CountryCard-Pitcairn Islands: ~0.20ms
+- CountryCard-Ivory Coast: ~0.10ms
+- CountryCard-Tunisia: ~0.20ms
+- CountryCard-Italy: ~0.20ms
+- CountryCard-Benin: ~0.10ms
+- CountryCard-Indonesia: ~0.10ms
+- CountryCard-Cape Verde: ~0.20ms
+- CountryCard-Saint Kitts and Nevis: ~0.10ms
+- CountryCard-Laos: ~0.10ms
+- CountryCard-Caribbean Netherlands: ~0.20ms
+- CountryCard-Uganda: ~0.10ms
+- CountryCard-Andorra: ~0.20ms
+- CountryCard-Burundi: ~0.20ms
+- CountryCard-South Africa: ~0.10ms
+- CountryCard-France: ~0.20ms
+- CountryCard-Libya: ~0.00ms
+- CountryCard-Mexico: ~0.20ms
+- CountryCard-Gabon: ~0.10ms
+- CountryCard-Northern Mariana Islands: ~0.00ms
+- CountryCard-North Macedonia: ~0.20ms
+- CountryCard-China: ~0.10ms
+- CountryCard-Yemen: ~0.00ms
+- CountryCard-Saint Barthélemy: ~0.10ms
+- CountryCard-Guernsey: ~0.10ms
+- CountryCard-Solomon Islands: ~0.10ms
+- CountryCard-Svalbard and Jan Mayen: ~0.00ms
+- CountryCard-Faroe Islands: ~0.10ms
+- CountryCard-Uzbekistan: ~0.10ms
+- CountryCard-Egypt: ~0.10ms
+- CountryCard-Senegal: ~0.00ms
+- CountryCard-Sri Lanka: ~0.00ms
+- CountryCard-Palestine: ~0.10ms
+- CountryCard-Bangladesh: ~0.10ms
+- CountryCard-Peru: ~0.10ms
+- CountryCard-Singapore: ~0.10ms
+- CountryCard-Turkey: ~0.10ms
+- CountryCard-Afghanistan: ~0.00ms
+- CountryCard-Aruba: ~0.10ms
+- CountryCard-Cook Islands: ~0.10ms
+- CountryCard-United Kingdom: ~0.10ms
+- CountryCard-Zambia: ~0.10ms
+- CountryCard-Finland: ~0.20ms
+- CountryCard-Niger: ~0.00ms
+- CountryCard-Christmas Island: ~0.10ms
+- CountryCard-Tokelau: ~0.10ms
+- CountryCard-Guinea-Bissau: ~0.10ms
+- CountryCard-Azerbaijan: ~0.00ms
+- CountryCard-Réunion: ~0.10ms
+- CountryCard-Djibouti: ~0.10ms
+- CountryCard-North Korea: ~0.20ms
+- CountryCard-Mauritius: ~0.00ms
+- CountryCard-Montserrat: ~0.30ms
+- CountryCard-United States Virgin Islands: ~0.10ms
+- CountryCard-Colombia: ~0.00ms
+- CountryCard-Greece: ~0.10ms
+- CountryCard-Croatia: ~0.10ms
+- CountryCard-Morocco: ~0.00ms
+- CountryCard-Algeria: ~0.10ms
+- CountryCard-Antarctica: ~0.00ms
+- CountryCard-Netherlands: ~0.10ms
+- CountryCard-Sudan: ~0.10ms
+- CountryCard-Fiji: ~0.10ms
+- CountryCard-Liechtenstein: ~0.10ms
+- CountryCard-Nepal: ~0.20ms
+- CountryCard-Puerto Rico: ~0.10ms
+- CountryCard-Georgia: ~0.10ms
+- CountryCard-Pakistan: ~0.00ms
+- CountryCard-Monaco: ~0.20ms
+- CountryCard-Botswana: ~0.10ms
+- CountryCard-Lebanon: ~0.20ms
+- CountryCard-Papua New Guinea: ~0.00ms
+- CountryCard-Mayotte: ~0.00ms
+- CountryCard-Dominican Republic: ~0.00ms
+- CountryCard-Norfolk Island: ~0.00ms
+- CountryCard-Bouvet Island: ~0.20ms
+- CountryCard-Qatar: ~0.10ms
+- CountryCard-Madagascar: ~0.00ms
+- CountryCard-India: ~0.00ms
+- CountryCard-Syria: ~0.10ms
+- CountryCard-Montenegro: ~0.00ms
+- CountryCard-Eswatini: ~0.10ms
+- CountryCard-Paraguay: ~0.00ms
+- CountryCard-El Salvador: ~0.10ms
+- CountryCard-Ukraine: ~0.10ms
+- CountryCard-Isle of Man: ~0.10ms
+- CountryCard-Namibia: ~0.10ms
+- CountryCard-United Arab Emirates: ~0.10ms
+- CountryCard-Bulgaria: ~0.10ms
+- CountryCard-Greenland: ~0.20ms
+- CountryCard-Germany: ~0.10ms
+- CountryCard-Cambodia: ~0.10ms
+- CountryCard-Iraq: ~0.20ms
+- CountryCard-French Southern and Antarctic Lands: ~0.10ms
+- CountryCard-Sweden: ~0.10ms
+- CountryCard-Cuba: ~0.20ms
+- CountryCard-Kyrgyzstan: ~0.00ms
+- CountryCard-Russia: ~0.10ms
+- CountryCard-Malaysia: ~0.10ms
+- CountryCard-São Tomé and Príncipe: ~0.10ms
+- CountryCard-Cyprus: ~0.20ms
+- CountryCard-Canada: ~0.10ms
+- CountryCard-Malawi: ~0.10ms
+- CountryCard-Saudi Arabia: ~0.10ms
+- CountryCard-Bosnia and Herzegovina: ~0.00ms
+- CountryCard-Ethiopia: ~0.10ms
+- CountryCard-Spain: ~0.10ms
+- CountryCard-Slovenia: ~0.10ms
+- CountryCard-Oman: ~0.00ms
+- CountryCard-Saint Pierre and Miquelon: ~0.10ms
+- CountryCard-Macau: ~0.10ms
+- CountryCard-San Marino: ~0.10ms
+- CountryCard-Lesotho: ~0.10ms
+- CountryCard-Marshall Islands: ~0.10ms
+- CountryCard-Sint Maarten: ~0.10ms
+- CountryCard-Iceland: ~0.10ms
+- CountryCard-Luxembourg: ~0.00ms
+- CountryCard-Argentina: ~0.20ms
+- CountryCard-Turks and Caicos Islands: ~0.00ms
+- CountryCard-Nauru: ~0.10ms
+- CountryCard-Cocos (Keeling) Islands: ~0.10ms
+- CountryCard-Western Sahara: ~0.20ms
+- CountryCard-Dominica: ~0.10ms
+- CountryCard-Costa Rica: ~0.10ms
+- CountryCard-Australia: ~0.00ms
+- CountryCard-Thailand: ~0.10ms
+- CountryCard-Haiti: ~0.10ms
+- CountryCard-Tuvalu: ~0.10ms
+- CountryCard-Honduras: ~0.00ms
+- CountryCard-Equatorial Guinea: ~0.20ms
+- CountryCard-Saint Lucia: ~0.00ms
+- CountryCard-French Polynesia: ~0.10ms
+- CountryCard-Belarus: ~0.10ms
+- CountryCard-Latvia: ~0.00ms
+- CountryCard-Palau: ~0.10ms
+- CountryCard-Guadeloupe: ~0.10ms
+- CountryCard-Philippines: ~0.10ms
+- CountryCard-Gibraltar: ~0.10ms
+- CountryCard-Denmark: ~0.10ms
+- CountryCard-Cameroon: ~0.00ms
+- CountryCard-Guinea: ~0.00ms
+- CountryCard-Bahrain: ~0.00ms
+- CountryCard-Suriname: ~0.20ms
+- CountryCard-DR Congo: ~0.20ms
+- CountryCard-Somalia: ~0.10ms
+- CountryCard-Czechia: ~0.10ms
+- CountryCard-New Caledonia: ~0.20ms
+- CountryCard-Vanuatu: ~0.00ms
+- CountryCard-Saint Helena, Ascension and Tristan da Cunha: ~0.20ms
+- CountryCard-Togo: ~0.10ms
+- CountryCard-British Virgin Islands: ~0.10ms
+- CountryCard-Kenya: ~0.10ms
+- CountryCard-Niue: ~0.00ms
+- CountryCard-Heard Island and McDonald Islands: ~0.10ms
+- CountryCard-Rwanda: ~0.10ms
+- CountryCard-Estonia: ~0.10ms
+- CountryCard-Romania: ~0.00ms
+- CountryCard-Trinidad and Tobago: ~0.00ms
+- CountryCard-Guyana: ~0.10ms
+- CountryCard-Timor-Leste: ~0.00ms
+- CountryCard-Vietnam: ~0.10ms
+- CountryCard-Uruguay: ~0.20ms
+- CountryCard-Vatican City: ~0.10ms
+- CountryCard-Hong Kong: ~0.10ms
+- CountryCard-Austria: ~0.10ms
+- CountryCard-Antigua and Barbuda: ~0.10ms
+- CountryCard-Turkmenistan: ~0.10ms
+- CountryCard-Mozambique: ~0.00ms
+- CountryCard-Panama: ~0.10ms
+- CountryCard-Micronesia: ~0.00ms
+- CountryCard-Ireland: ~0.10ms
+- CountryCard-Curaçao: ~0.10ms
+- CountryCard-French Guiana: ~0.10ms
+- CountryCard-Norway: ~0.00ms
+- CountryCard-Åland Islands: ~0.00ms
+- CountryCard-Central African Republic: ~0.10ms
+- CountryCard-Burkina Faso: ~0.00ms
+- CountryCard-Eritrea: ~0.10ms
+- CountryCard-Tanzania: ~0.10ms
+- CountryCard-South Korea: ~0.10ms
+- CountryCard-Jordan: ~0.00ms
+- CountryCard-Mauritania: ~0.10ms
+- CountryCard-Lithuania: ~0.10ms
+- CountryCard-United States Minor Outlying Islands: ~0.10ms
+- CountryCard-Slovakia: ~0.10ms
+- CountryCard-Angola: ~0.10ms
+- CountryCard-Kazakhstan: ~0.10ms
+- CountryCard-Moldova: ~0.10ms
+- CountryCard-Mali: ~0.20ms
+- CountryCard-Falkland Islands: ~0.20ms
+- CountryCard-Armenia: ~0.10ms
+- CountryCard-Samoa: ~0.10ms
+- CountryCard-Jersey: ~0.10ms
+- CountryCard-Japan: ~0.10ms
+- CountryCard-Bolivia: ~0.10ms
+- CountryCard-Chile: ~0.20ms
+- CountryCard-United States: ~0.10ms
+- CountryCard-Saint Vincent and the Grenadines: ~0.20ms
+- CountryCard-Bermuda: ~0.10ms
+- CountryCard-Seychelles: ~0.20ms
+- CountryCard-British Indian Ocean Territory: ~0.10ms
+- CountryCard-Guatemala: ~0.10ms
+- CountryCard-Ecuador: ~0.10ms
+- CountryCard-Martinique: ~0.10ms
+- CountryCard-Tajikistan: ~0.00ms
+- CountryCard-Malta: ~0.10ms
+- CountryCard-Gambia: ~0.10ms
+- CountryCard-Nigeria: ~0.10ms
+- CountryCard-Bahamas: ~0.00ms
+- CountryCard-Kosovo: ~0.20ms
+- CountryCard-Kuwait: ~0.10ms
+- CountryCard-Maldives: ~0.00ms
+- CountryCard-South Sudan: ~0.10ms
+- CountryCard-Iran: ~0.10ms
+- CountryCard-Albania: ~0.10ms
+- CountryCard-Brazil: ~0.10ms
+- CountryCard-Serbia: ~0.10ms
+- CountryCard-Belize: ~0.10ms
+- CountryCard-Myanmar: ~0.10ms
+- CountryCard-Bhutan: ~0.00ms
+- CountryCard-Venezuela: ~0.10ms
+- CountryCard-Liberia: ~0.10ms
+- CountryCard-Jamaica: ~0.10ms
+- CountryCard-Poland: ~0.10ms
+- CountryCard-Cayman Islands: ~0.00ms
+- CountryCard-Brunei: ~0.10ms
+- CountryCard-Comoros: ~0.10ms
+- CountryCard-Guam: ~0.10ms
+- CountryCard-Tonga: ~0.10ms
+- CountryCard-Kiribati: ~0.10ms
+- CountryCard-Ghana: ~0.20ms
+- CountryCard-Chad: ~0.10ms
+- CountryCard-Zimbabwe: ~0.10ms
+- CountryCard-Saint Martin: ~0.10ms
+- CountryCard-Mongolia: ~0.20ms
+- CountryCard-Portugal: ~0.20ms
+- CountryCard-American Samoa: ~0.20ms
+- CountryCard-Republic of the Congo: ~0.10ms
+- CountryCard-Belgium: ~0.10ms
+- CountryCard-Israel: ~0.00ms
+- CountryCard-New Zealand: ~0.00ms
+- CountryCard-Nicaragua: ~0.20ms
+- CountryCard-Anguilla: ~0.20ms
+- CountriesGrid: ~47.10ms
+- App: ~47.70ms
+- Filters: ~0.30ms
+- CountryCard-Barbados: ~0.20ms
+- CountryCard-Benin: ~0.00ms
+- CountryCard-Caribbean Netherlands: ~0.10ms
+- CountryCard-Burundi: ~0.10ms
+- CountryCard-Libya: ~0.10ms
+- CountryCard-Gabon: ~0.00ms
+- CountryCard-Saint Barthélemy: ~0.00ms
+- CountryCard-Svalbard and Jan Mayen: ~0.00ms
+- CountryCard-Uzbekistan: ~0.00ms
+- CountryCard-Bangladesh: ~0.10ms
+- CountryCard-Aruba: ~0.10ms
+- CountryCard-Zambia: ~0.10ms
+- CountryCard-Guinea-Bissau: ~0.10ms
+- CountryCard-Azerbaijan: ~0.00ms
+- CountryCard-Djibouti: ~0.00ms
+- CountryCard-Colombia: ~0.00ms
+- CountryCard-Botswana: ~0.00ms
+- CountryCard-Lebanon: ~0.10ms
+- CountryCard-Dominican Republic: ~0.00ms
+- CountryCard-Bouvet Island: ~0.00ms
+- CountryCard-Namibia: ~0.00ms
+- CountryCard-United Arab Emirates: ~0.00ms
+- CountryCard-Bulgaria: ~0.10ms
+- CountryCard-Cambodia: ~0.00ms
+- CountryCard-Cuba: ~0.00ms
+- CountryCard-Saudi Arabia: ~0.10ms
+- CountryCard-Bosnia and Herzegovina: ~0.10ms
+- CountryCard-Luxembourg: ~0.10ms
+- CountryCard-Belarus: ~0.00ms
+- CountryCard-Gibraltar: ~0.20ms
+- CountryCard-Bahrain: ~0.00ms
+- CountryCard-British Virgin Islands: ~0.00ms
+- CountryCard-Trinidad and Tobago: ~0.20ms
+- CountryCard-Antigua and Barbuda: ~0.00ms
+- CountryCard-Mozambique: ~0.10ms
+- CountryCard-Central African Republic: ~0.10ms
+- CountryCard-Burkina Faso: ~0.00ms
+- CountryCard-Bolivia: ~0.10ms
+- CountryCard-Bermuda: ~0.10ms
+- CountryCard-British Indian Ocean Territory: ~0.00ms
+- CountryCard-Gambia: ~0.10ms
+- CountryCard-Bahamas: ~0.10ms
+- CountryCard-Albania: ~0.00ms
+- CountryCard-Brazil: ~0.00ms
+- CountryCard-Serbia: ~0.00ms
+- CountryCard-Belize: ~0.20ms
+- CountryCard-Bhutan: ~0.00ms
+- CountryCard-Liberia: ~0.00ms
+- CountryCard-Brunei: ~0.00ms
+- CountryCard-Kiribati: ~0.10ms
+- CountryCard-Zimbabwe: ~0.10ms
+- CountryCard-Republic of the Congo: ~0.00ms
+- CountryCard-Belgium: ~0.10ms
+- CountriesGrid: ~5.10ms
+- App: ~5.50ms
+- Filters: ~0.40ms
+- CountryCard-Benin: ~0.00ms
+- CountryCard-Caribbean Netherlands: ~0.10ms
+- CountryCard-Uzbekistan: ~0.10ms
+- CountryCard-Belarus: ~0.10ms
+- CountryCard-Bermuda: ~0.00ms
+- CountryCard-Belize: ~0.00ms
+- CountryCard-Liberia: ~0.00ms
+- CountryCard-Belgium: ~0.00ms
+- CountriesGrid: ~0.80ms
+- App: ~1.20ms
+- Filters: ~0.20ms
+- CountryCard-Belarus: ~0.10ms
+- CountryCard-Belize: ~0.10ms
+- CountryCard-Belgium: ~0.10ms
+- CountriesGrid: ~0.50ms
+- App: ~0.70ms
+- Filters: ~0.20ms
+- CountriesGrid: ~0.00ms
+- App: ~0.30ms
+- Filters: ~0.20ms
+- CountryCard-Sierra Leone: ~0.40ms
+- CountryCard-Ivory Coast: ~0.00ms
+- CountryCard-Tunisia: ~0.20ms
+- CountryCard-Benin: ~0.20ms
+- CountryCard-Cape Verde: ~0.10ms
+- CountryCard-Uganda: ~0.10ms
+- CountryCard-Burundi: ~0.10ms
+- CountryCard-South Africa: ~0.20ms
+- CountryCard-Libya: ~0.20ms
+- CountryCard-Gabon: ~0.00ms
+- CountryCard-Egypt: ~0.10ms
+- CountryCard-Senegal: ~0.40ms
+- CountryCard-Zambia: ~0.20ms
+- CountryCard-Niger: ~0.20ms
+- CountryCard-Guinea-Bissau: ~0.30ms
+- CountryCard-Réunion: ~0.30ms
+- CountryCard-Djibouti: ~0.10ms
+- CountryCard-Mauritius: ~0.20ms
+- CountryCard-Morocco: ~0.10ms
+- CountryCard-Algeria: ~0.20ms
+- CountryCard-Sudan: ~0.20ms
+- CountryCard-Botswana: ~0.20ms
+- CountryCard-Mayotte: ~0.20ms
+- CountryCard-Madagascar: ~0.20ms
+- CountryCard-Eswatini: ~0.10ms
+- CountryCard-Namibia: ~0.10ms
+- CountryCard-São Tomé and Príncipe: ~0.10ms
+- CountryCard-Malawi: ~0.20ms
+- CountryCard-Ethiopia: ~0.20ms
+- CountryCard-Lesotho: ~0.20ms
+- CountryCard-Western Sahara: ~0.20ms
+- CountryCard-Equatorial Guinea: ~0.00ms
+- CountryCard-Cameroon: ~0.20ms
+- CountryCard-Guinea: ~0.10ms
+- CountryCard-DR Congo: ~0.30ms
+- CountryCard-Somalia: ~0.20ms
+- CountryCard-Saint Helena, Ascension and Tristan da Cunha: ~0.20ms
+- CountryCard-Togo: ~0.20ms
+- CountryCard-Kenya: ~0.20ms
+- CountryCard-Rwanda: ~0.20ms
+- CountryCard-Mozambique: ~0.20ms
+- CountryCard-Central African Republic: ~0.10ms
+- CountryCard-Burkina Faso: ~0.10ms
+- CountryCard-Eritrea: ~0.20ms
+- CountryCard-Tanzania: ~0.20ms
+- CountryCard-Mauritania: ~0.10ms
+- CountryCard-Angola: ~0.30ms
+- CountryCard-Mali: ~0.10ms
+- CountryCard-Seychelles: ~0.10ms
+- CountryCard-British Indian Ocean Territory: ~0.10ms
+- CountryCard-Gambia: ~0.20ms
+- CountryCard-Nigeria: ~0.20ms
+- CountryCard-South Sudan: ~0.20ms
+- CountryCard-Liberia: ~0.00ms
+- CountryCard-Comoros: ~0.10ms
+- CountryCard-Ghana: ~0.20ms
+- CountryCard-Chad: ~0.10ms
+- CountryCard-Zimbabwe: ~0.20ms
+- CountryCard-Republic of the Congo: ~0.20ms
+- CountriesGrid: ~12.30ms
+- App: ~12.60ms
+- CountryCard-Sierra Leone: ~0.30ms
+- CountryCard-Ivory Coast: ~0.20ms
+- CountryCard-Tunisia: ~0.00ms
+- CountryCard-Benin: ~0.10ms
+- CountryCard-Cape Verde: ~0.10ms
+- CountryCard-Uganda: ~0.20ms
+- CountryCard-Burundi: ~0.10ms
+- CountryCard-South Africa: ~0.10ms
+- CountryCard-Libya: ~0.20ms
+- CountryCard-Gabon: ~0.10ms
+- CountryCard-Egypt: ~0.20ms
+- CountryCard-Senegal: ~0.20ms
+- CountryCard-Zambia: ~0.10ms
+- CountryCard-Niger: ~0.10ms
+- CountryCard-Guinea-Bissau: ~0.10ms
+- CountryCard-Réunion: ~0.20ms
+- CountryCard-Djibouti: ~0.20ms
+- CountryCard-Mauritius: ~0.10ms
+- CountryCard-Morocco: ~0.00ms
+- CountryCard-Algeria: ~0.00ms
+- CountryCard-Sudan: ~0.10ms
+- CountryCard-Botswana: ~0.00ms
+- CountryCard-Mayotte: ~0.30ms
+- CountryCard-Madagascar: ~0.10ms
+- CountryCard-Eswatini: ~0.10ms
+- CountryCard-Namibia: ~0.10ms
+- CountryCard-São Tomé and Príncipe: ~0.20ms
+- CountryCard-Malawi: ~0.20ms
+- CountryCard-Ethiopia: ~0.10ms
+- CountryCard-Lesotho: ~0.10ms
+- CountryCard-Western Sahara: ~0.20ms
+- CountryCard-Equatorial Guinea: ~0.10ms
+- CountryCard-Cameroon: ~0.10ms
+- CountryCard-Guinea: ~0.20ms
+- CountryCard-DR Congo: ~0.00ms
+- CountryCard-Somalia: ~0.20ms
+- CountryCard-Saint Helena, Ascension and Tristan da Cunha: ~0.10ms
+- CountryCard-Togo: ~0.20ms
+- CountryCard-Kenya: ~0.00ms
+- CountryCard-Rwanda: ~0.20ms
+- CountryCard-Mozambique: ~0.20ms
+- CountryCard-Central African Republic: ~0.10ms
+- CountryCard-Burkina Faso: ~0.10ms
+- CountryCard-Eritrea: ~0.10ms
+- CountryCard-Tanzania: ~0.30ms
+- CountryCard-Mauritania: ~0.10ms
+- CountryCard-Angola: ~0.20ms
+- CountryCard-Mali: ~0.10ms
+- CountryCard-Seychelles: ~0.00ms
+- CountryCard-British Indian Ocean Territory: ~0.20ms
+- CountryCard-Gambia: ~0.00ms
+- CountryCard-Nigeria: ~0.20ms
+- CountryCard-South Sudan: ~0.10ms
+- CountryCard-Liberia: ~0.10ms
+- CountryCard-Comoros: ~0.20ms
+- CountryCard-Ghana: ~0.10ms
+- CountryCard-Chad: ~0.10ms
+- CountryCard-Zimbabwe: ~0.10ms
+- CountryCard-Republic of the Congo: ~0.10ms
+- CountriesGrid: ~7.60ms
+- App: ~7.60ms
+- Filters: ~0.10ms
+- CountryCard-Taiwan: ~0.30ms
+- CountryCard-Indonesia: ~0.20ms
+- CountryCard-Laos: ~0.10ms
+- CountryCard-China: ~0.30ms
+- CountryCard-Yemen: ~0.10ms
+- CountryCard-Uzbekistan: ~0.20ms
+- CountryCard-Sri Lanka: ~0.10ms
+- CountryCard-Palestine: ~0.00ms
+- CountryCard-Bangladesh: ~0.10ms
+- CountryCard-Singapore: ~0.10ms
+- CountryCard-Turkey: ~0.20ms
+- CountryCard-Afghanistan: ~0.30ms
+- CountryCard-Azerbaijan: ~0.20ms
+- CountryCard-North Korea: ~0.30ms
+- CountryCard-Nepal: ~0.20ms
+- CountryCard-Georgia: ~0.10ms
+- CountryCard-Pakistan: ~0.00ms
+- CountryCard-Lebanon: ~0.30ms
+- CountryCard-Qatar: ~0.10ms
+- CountryCard-India: ~0.20ms
+- CountryCard-Syria: ~0.20ms
+- CountryCard-United Arab Emirates: ~0.10ms
+- CountryCard-Cambodia: ~0.20ms
+- CountryCard-Iraq: ~0.10ms
+- CountryCard-Kyrgyzstan: ~0.00ms
+- CountryCard-Malaysia: ~0.20ms
+- CountryCard-Saudi Arabia: ~0.20ms
+- CountryCard-Oman: ~0.20ms
+- CountryCard-Macau: ~0.20ms
+- CountryCard-Thailand: ~0.10ms
+- CountryCard-Philippines: ~0.10ms
+- CountryCard-Bahrain: ~0.10ms
+- CountryCard-Timor-Leste: ~0.20ms
+- CountryCard-Vietnam: ~0.10ms
+- CountryCard-Hong Kong: ~0.10ms
+- CountryCard-Turkmenistan: ~0.10ms
+- CountryCard-South Korea: ~0.00ms
+- CountryCard-Jordan: ~0.20ms
+- CountryCard-Kazakhstan: ~0.20ms
+- CountryCard-Armenia: ~0.20ms
+- CountryCard-Japan: ~0.10ms
+- CountryCard-Tajikistan: ~0.10ms
+- CountryCard-Kuwait: ~0.10ms
+- CountryCard-Maldives: ~0.10ms
+- CountryCard-Iran: ~0.20ms
+- CountryCard-Myanmar: ~0.10ms
+- CountryCard-Bhutan: ~0.10ms
+- CountryCard-Brunei: ~0.10ms
+- CountryCard-Mongolia: ~0.20ms
+- CountryCard-Israel: ~0.00ms
+- CountriesGrid: ~9.60ms
+- App: ~9.90ms
+- CountryCard-Taiwan: ~0.10ms
+- CountryCard-Indonesia: ~0.20ms
+- CountryCard-Laos: ~0.10ms
+- CountryCard-China: ~0.10ms
+- CountryCard-Yemen: ~0.10ms
+- CountryCard-Uzbekistan: ~0.20ms
+- CountryCard-Sri Lanka: ~0.00ms
+- CountryCard-Palestine: ~0.20ms
+- CountryCard-Bangladesh: ~0.20ms
+- CountryCard-Singapore: ~0.00ms
+- CountryCard-Turkey: ~0.00ms
+- CountryCard-Afghanistan: ~0.10ms
+- CountryCard-Azerbaijan: ~0.10ms
+- CountryCard-North Korea: ~0.10ms
+- CountryCard-Nepal: ~0.10ms
+- CountryCard-Georgia: ~0.10ms
+- CountryCard-Pakistan: ~0.00ms
+- CountryCard-Lebanon: ~0.20ms
+- CountryCard-Qatar: ~0.00ms
+- CountryCard-India: ~0.10ms
+- CountryCard-Syria: ~0.10ms
+- CountryCard-United Arab Emirates: ~0.10ms
+- CountryCard-Cambodia: ~0.10ms
+- CountryCard-Iraq: ~0.00ms
+- CountryCard-Kyrgyzstan: ~0.20ms
+- CountryCard-Malaysia: ~0.10ms
+- CountryCard-Saudi Arabia: ~0.00ms
+- CountryCard-Oman: ~0.10ms
+- CountryCard-Macau: ~0.10ms
+- CountryCard-Thailand: ~0.10ms
+- CountryCard-Philippines: ~0.10ms
+- CountryCard-Bahrain: ~0.00ms
+- CountryCard-Timor-Leste: ~0.20ms
+- CountryCard-Vietnam: ~0.10ms
+- CountryCard-Hong Kong: ~0.10ms
+- CountryCard-Turkmenistan: ~0.20ms
+- CountryCard-South Korea: ~0.00ms
+- CountryCard-Jordan: ~0.10ms
+- CountryCard-Kazakhstan: ~0.00ms
+- CountryCard-Armenia: ~0.10ms
+- CountryCard-Japan: ~0.10ms
+- CountryCard-Tajikistan: ~0.10ms
+- CountryCard-Kuwait: ~0.00ms
+- CountryCard-Maldives: ~0.20ms
+- CountryCard-Iran: ~0.10ms
+- CountryCard-Myanmar: ~0.00ms
+- CountryCard-Bhutan: ~0.10ms
+- CountryCard-Brunei: ~0.00ms
+- CountryCard-Mongolia: ~0.10ms
+- CountryCard-Israel: ~0.10ms
+- CountriesGrid: ~4.60ms
+- App: ~4.60ms
+
+#### Key Findings
+- Average base duration: 0.40ms
+- Average actual duration: 0.79ms
+    ### Initial Performance Metrics
+
+Performance metrics were collected using React Dev Tools Profiler:
+
+#### Commit Duration
+- Initial render: ~26.72ms
+- Average commit: ~13.36ms
+
+#### Component Render Times
+- Filters: ~1.80ms
+- CountryCard-South Georgia: ~2.20ms
+- CountryCard-Grenada: ~1.10ms
+- CountryCard-Switzerland: ~1.00ms
+- CountryCard-Sierra Leone: ~0.70ms
+- CountryCard-Hungary: ~0.90ms
+- CountryCard-Taiwan: ~0.70ms
+- CountryCard-Wallis and Futuna: ~0.80ms
+- CountryCard-Barbados: ~3.80ms
+- CountryCard-Pitcairn Islands: ~0.70ms
+- CountryCard-Ivory Coast: ~0.30ms
+- CountryCard-Tunisia: ~0.40ms
+- CountryCard-Italy: ~0.50ms
+- CountryCard-Benin: ~0.50ms
+- CountryCard-Indonesia: ~0.40ms
+- CountryCard-Cape Verde: ~0.50ms
+- CountryCard-Saint Kitts and Nevis: ~0.40ms
+- CountryCard-Laos: ~0.40ms
+- CountryCard-Caribbean Netherlands: ~0.40ms
+- CountryCard-Uganda: ~0.60ms
+- CountryCard-Andorra: ~0.50ms
+- CountryCard-Burundi: ~0.40ms
+- CountryCard-South Africa: ~0.50ms
+- CountryCard-France: ~0.40ms
+- CountryCard-Libya: ~0.50ms
+- CountryCard-Mexico: ~0.40ms
+- CountryCard-Gabon: ~0.60ms
+- CountryCard-Northern Mariana Islands: ~0.50ms
+- CountryCard-North Macedonia: ~0.50ms
+- CountryCard-China: ~0.50ms
+- CountryCard-Yemen: ~0.50ms
+- CountryCard-Saint Barthélemy: ~0.70ms
+- CountryCard-Guernsey: ~0.50ms
+- CountryCard-Solomon Islands: ~0.60ms
+- CountryCard-Svalbard and Jan Mayen: ~0.60ms
+- CountryCard-Faroe Islands: ~0.50ms
+- CountryCard-Uzbekistan: ~0.50ms
+- CountryCard-Egypt: ~0.60ms
+- CountryCard-Senegal: ~0.40ms
+- CountryCard-Sri Lanka: ~0.60ms
+- CountryCard-Palestine: ~0.40ms
+- CountryCard-Bangladesh: ~0.60ms
+- CountryCard-Peru: ~0.50ms
+- CountryCard-Singapore: ~0.50ms
+- CountryCard-Turkey: ~0.40ms
+- CountryCard-Afghanistan: ~0.40ms
+- CountryCard-Aruba: ~0.50ms
+- CountryCard-Cook Islands: ~0.60ms
+- CountryCard-United Kingdom: ~0.60ms
+- CountryCard-Zambia: ~0.50ms
+- CountryCard-Finland: ~0.60ms
+- CountryCard-Niger: ~0.80ms
+- CountryCard-Christmas Island: ~0.70ms
+- CountryCard-Tokelau: ~0.70ms
+- CountryCard-Guinea-Bissau: ~0.50ms
+- CountryCard-Azerbaijan: ~0.70ms
+- CountryCard-Réunion: ~1.00ms
+- CountryCard-Djibouti: ~1.00ms
+- CountryCard-North Korea: ~0.70ms
+- CountryCard-Mauritius: ~0.70ms
+- CountryCard-Montserrat: ~0.90ms
+- CountryCard-United States Virgin Islands: ~0.70ms
+- CountryCard-Colombia: ~0.60ms
+- CountryCard-Greece: ~0.50ms
+- CountryCard-Croatia: ~0.60ms
+- CountryCard-Morocco: ~0.70ms
+- CountryCard-Algeria: ~0.40ms
+- CountryCard-Antarctica: ~0.40ms
+- CountryCard-Netherlands: ~0.50ms
+- CountryCard-Sudan: ~0.40ms
+- CountryCard-Fiji: ~0.60ms
+- CountryCard-Liechtenstein: ~0.70ms
+- CountryCard-Nepal: ~0.70ms
+- CountryCard-Puerto Rico: ~0.60ms
+- CountryCard-Georgia: ~0.60ms
+- CountryCard-Pakistan: ~0.40ms
+- CountryCard-Monaco: ~0.60ms
+- CountryCard-Botswana: ~0.70ms
+- CountryCard-Lebanon: ~0.50ms
+- CountryCard-Papua New Guinea: ~0.80ms
+- CountryCard-Mayotte: ~0.80ms
+- CountryCard-Dominican Republic: ~0.80ms
+- CountryCard-Norfolk Island: ~0.50ms
+- CountryCard-Bouvet Island: ~0.60ms
+- CountryCard-Qatar: ~1.00ms
+- CountryCard-Madagascar: ~0.60ms
+- CountryCard-India: ~0.60ms
+- CountryCard-Syria: ~0.40ms
+- CountryCard-Montenegro: ~0.40ms
+- CountryCard-Eswatini: ~0.50ms
+- CountryCard-Paraguay: ~0.50ms
+- CountryCard-El Salvador: ~0.50ms
+- CountryCard-Ukraine: ~0.40ms
+- CountryCard-Isle of Man: ~0.60ms
+- CountryCard-Namibia: ~0.40ms
+- CountryCard-United Arab Emirates: ~0.40ms
+- CountryCard-Bulgaria: ~0.30ms
+- CountryCard-Greenland: ~0.40ms
+- CountryCard-Germany: ~0.50ms
+- CountryCard-Cambodia: ~0.90ms
+- CountryCard-Iraq: ~0.90ms
+- CountryCard-French Southern and Antarctic Lands: ~0.90ms
+- CountryCard-Sweden: ~0.80ms
+- CountryCard-Cuba: ~0.80ms
+- CountryCard-Kyrgyzstan: ~0.60ms
+- CountryCard-Russia: ~0.80ms
+- CountryCard-Malaysia: ~0.50ms
+- CountryCard-São Tomé and Príncipe: ~0.60ms
+- CountryCard-Cyprus: ~0.60ms
+- CountryCard-Canada: ~0.60ms
+- CountryCard-Malawi: ~0.60ms
+- CountryCard-Saudi Arabia: ~0.60ms
+- CountryCard-Bosnia and Herzegovina: ~0.50ms
+- CountryCard-Ethiopia: ~0.60ms
+- CountryCard-Spain: ~0.60ms
+- CountryCard-Slovenia: ~0.60ms
+- CountryCard-Oman: ~0.40ms
+- CountryCard-Saint Pierre and Miquelon: ~0.50ms
+- CountryCard-Macau: ~0.60ms
+- CountryCard-San Marino: ~0.50ms
+- CountryCard-Lesotho: ~0.60ms
+- CountryCard-Marshall Islands: ~0.60ms
+- CountryCard-Sint Maarten: ~0.60ms
+- CountryCard-Iceland: ~0.60ms
+- CountryCard-Luxembourg: ~0.40ms
+- CountryCard-Argentina: ~0.40ms
+- CountryCard-Turks and Caicos Islands: ~0.40ms
+- CountryCard-Nauru: ~0.40ms
+- CountryCard-Cocos (Keeling) Islands: ~0.40ms
+- CountryCard-Western Sahara: ~0.40ms
+- CountryCard-Dominica: ~0.40ms
+- CountryCard-Costa Rica: ~0.30ms
+- CountryCard-Australia: ~0.50ms
+- CountryCard-Thailand: ~0.70ms
+- CountryCard-Haiti: ~0.60ms
+- CountryCard-Tuvalu: ~0.50ms
+- CountryCard-Honduras: ~0.80ms
+- CountryCard-Equatorial Guinea: ~0.50ms
+- CountryCard-Saint Lucia: ~0.40ms
+- CountryCard-French Polynesia: ~0.50ms
+- CountryCard-Belarus: ~0.40ms
+- CountryCard-Latvia: ~0.40ms
+- CountryCard-Palau: ~0.40ms
+- CountryCard-Guadeloupe: ~0.40ms
+- CountryCard-Philippines: ~0.40ms
+- CountryCard-Gibraltar: ~0.30ms
+- CountryCard-Denmark: ~0.40ms
+- CountryCard-Cameroon: ~0.40ms
+- CountryCard-Guinea: ~0.30ms
+- CountryCard-Bahrain: ~0.30ms
+- CountryCard-Suriname: ~0.40ms
+- CountryCard-DR Congo: ~0.40ms
+- CountryCard-Somalia: ~0.40ms
+- CountryCard-Czechia: ~0.40ms
+- CountryCard-New Caledonia: ~0.50ms
+- CountryCard-Vanuatu: ~0.40ms
+- CountryCard-Saint Helena, Ascension and Tristan da Cunha: ~0.40ms
+- CountryCard-Togo: ~0.30ms
+- CountryCard-British Virgin Islands: ~0.40ms
+- CountryCard-Kenya: ~0.30ms
+- CountryCard-Niue: ~0.40ms
+- CountryCard-Heard Island and McDonald Islands: ~0.30ms
+- CountryCard-Rwanda: ~0.40ms
+- CountryCard-Estonia: ~0.40ms
+- CountryCard-Romania: ~0.30ms
+- CountryCard-Trinidad and Tobago: ~0.30ms
+- CountryCard-Guyana: ~0.20ms
+- CountryCard-Timor-Leste: ~0.30ms
+- CountryCard-Vietnam: ~0.30ms
+- CountryCard-Uruguay: ~0.30ms
+- CountryCard-Vatican City: ~0.40ms
+- CountryCard-Hong Kong: ~0.30ms
+- CountryCard-Austria: ~0.50ms
+- CountryCard-Antigua and Barbuda: ~0.30ms
+- CountryCard-Turkmenistan: ~0.40ms
+- CountryCard-Mozambique: ~0.40ms
+- CountryCard-Panama: ~0.30ms
+- CountryCard-Micronesia: ~0.30ms
+- CountryCard-Ireland: ~0.30ms
+- CountryCard-Curaçao: ~0.20ms
+- CountryCard-French Guiana: ~0.30ms
+- CountryCard-Norway: ~0.30ms
+- CountryCard-Åland Islands: ~0.40ms
+- CountryCard-Central African Republic: ~0.30ms
+- CountryCard-Burkina Faso: ~0.20ms
+- CountryCard-Eritrea: ~0.30ms
+- CountryCard-Tanzania: ~0.30ms
+- CountryCard-South Korea: ~0.40ms
+- CountryCard-Jordan: ~0.30ms
+- CountryCard-Mauritania: ~0.30ms
+- CountryCard-Lithuania: ~0.30ms
+- CountryCard-United States Minor Outlying Islands: ~0.40ms
+- CountryCard-Slovakia: ~0.30ms
+- CountryCard-Angola: ~0.30ms
+- CountryCard-Kazakhstan: ~0.30ms
+- CountryCard-Moldova: ~0.40ms
+- CountryCard-Mali: ~0.30ms
+- CountryCard-Falkland Islands: ~0.40ms
+- CountryCard-Armenia: ~0.30ms
+- CountryCard-Samoa: ~0.30ms
+- CountryCard-Jersey: ~0.30ms
+- CountryCard-Japan: ~0.30ms
+- CountryCard-Bolivia: ~0.30ms
+- CountryCard-Chile: ~0.30ms
+- CountryCard-United States: ~0.30ms
+- CountryCard-Saint Vincent and the Grenadines: ~0.40ms
+- CountryCard-Bermuda: ~0.30ms
+- CountryCard-Seychelles: ~0.40ms
+- CountryCard-British Indian Ocean Territory: ~0.30ms
+- CountryCard-Guatemala: ~0.40ms
+- CountryCard-Ecuador: ~0.40ms
+- CountryCard-Martinique: ~0.30ms
+- CountryCard-Tajikistan: ~0.40ms
+- CountryCard-Malta: ~0.40ms
+- CountryCard-Gambia: ~0.50ms
+- CountryCard-Nigeria: ~0.30ms
+- CountryCard-Bahamas: ~0.20ms
+- CountryCard-Kosovo: ~0.50ms
+- CountryCard-Kuwait: ~0.40ms
+- CountryCard-Maldives: ~0.30ms
+- CountryCard-South Sudan: ~0.40ms
+- CountryCard-Iran: ~0.40ms
+- CountryCard-Albania: ~0.40ms
+- CountryCard-Brazil: ~0.40ms
+- CountryCard-Serbia: ~0.30ms
+- CountryCard-Belize: ~0.40ms
+- CountryCard-Myanmar: ~0.40ms
+- CountryCard-Bhutan: ~0.40ms
+- CountryCard-Venezuela: ~0.40ms
+- CountryCard-Liberia: ~0.40ms
+- CountryCard-Jamaica: ~0.40ms
+- CountryCard-Poland: ~0.40ms
+- CountryCard-Cayman Islands: ~0.30ms
+- CountryCard-Brunei: ~0.40ms
+- CountryCard-Comoros: ~0.30ms
+- CountryCard-Guam: ~0.30ms
+- CountryCard-Tonga: ~0.40ms
+- CountryCard-Kiribati: ~0.40ms
+- CountryCard-Ghana: ~0.40ms
+- CountryCard-Chad: ~0.40ms
+- CountryCard-Zimbabwe: ~0.30ms
+- CountryCard-Saint Martin: ~0.50ms
+- CountryCard-Mongolia: ~0.40ms
+- CountryCard-Portugal: ~0.30ms
+- CountryCard-American Samoa: ~0.30ms
+- CountryCard-Republic of the Congo: ~0.30ms
+- CountryCard-Belgium: ~0.30ms
+- CountryCard-Israel: ~0.30ms
+- CountryCard-New Zealand: ~0.30ms
+- CountryCard-Nicaragua: ~0.30ms
+- CountryCard-Anguilla: ~0.40ms
+- CountriesGrid: ~138.40ms
+- App: ~141.00ms
+- Filters: ~0.20ms
+- CountryCard-South Georgia: ~0.20ms
+- CountryCard-Grenada: ~0.00ms
+- CountryCard-Switzerland: ~0.30ms
+- CountryCard-Sierra Leone: ~0.10ms
+- CountryCard-Hungary: ~0.10ms
+- CountryCard-Taiwan: ~0.10ms
+- CountryCard-Wallis and Futuna: ~0.10ms
+- CountryCard-Barbados: ~0.10ms
+- CountryCard-Pitcairn Islands: ~0.20ms
+- CountryCard-Ivory Coast: ~0.10ms
+- CountryCard-Tunisia: ~0.20ms
+- CountryCard-Italy: ~0.20ms
+- CountryCard-Benin: ~0.10ms
+- CountryCard-Indonesia: ~0.10ms
+- CountryCard-Cape Verde: ~0.20ms
+- CountryCard-Saint Kitts and Nevis: ~0.10ms
+- CountryCard-Laos: ~0.10ms
+- CountryCard-Caribbean Netherlands: ~0.20ms
+- CountryCard-Uganda: ~0.10ms
+- CountryCard-Andorra: ~0.20ms
+- CountryCard-Burundi: ~0.20ms
+- CountryCard-South Africa: ~0.10ms
+- CountryCard-France: ~0.20ms
+- CountryCard-Libya: ~0.00ms
+- CountryCard-Mexico: ~0.20ms
+- CountryCard-Gabon: ~0.10ms
+- CountryCard-Northern Mariana Islands: ~0.00ms
+- CountryCard-North Macedonia: ~0.20ms
+- CountryCard-China: ~0.10ms
+- CountryCard-Yemen: ~0.00ms
+- CountryCard-Saint Barthélemy: ~0.10ms
+- CountryCard-Guernsey: ~0.10ms
+- CountryCard-Solomon Islands: ~0.10ms
+- CountryCard-Svalbard and Jan Mayen: ~0.00ms
+- CountryCard-Faroe Islands: ~0.10ms
+- CountryCard-Uzbekistan: ~0.10ms
+- CountryCard-Egypt: ~0.10ms
+- CountryCard-Senegal: ~0.00ms
+- CountryCard-Sri Lanka: ~0.00ms
+- CountryCard-Palestine: ~0.10ms
+- CountryCard-Bangladesh: ~0.10ms
+- CountryCard-Peru: ~0.10ms
+- CountryCard-Singapore: ~0.10ms
+- CountryCard-Turkey: ~0.10ms
+- CountryCard-Afghanistan: ~0.00ms
+- CountryCard-Aruba: ~0.10ms
+- CountryCard-Cook Islands: ~0.10ms
+- CountryCard-United Kingdom: ~0.10ms
+- CountryCard-Zambia: ~0.10ms
+- CountryCard-Finland: ~0.20ms
+- CountryCard-Niger: ~0.00ms
+- CountryCard-Christmas Island: ~0.10ms
+- CountryCard-Tokelau: ~0.10ms
+- CountryCard-Guinea-Bissau: ~0.10ms
+- CountryCard-Azerbaijan: ~0.00ms
+- CountryCard-Réunion: ~0.10ms
+- CountryCard-Djibouti: ~0.10ms
+- CountryCard-North Korea: ~0.20ms
+- CountryCard-Mauritius: ~0.00ms
+- CountryCard-Montserrat: ~0.30ms
+- CountryCard-United States Virgin Islands: ~0.10ms
+- CountryCard-Colombia: ~0.00ms
+- CountryCard-Greece: ~0.10ms
+- CountryCard-Croatia: ~0.10ms
+- CountryCard-Morocco: ~0.00ms
+- CountryCard-Algeria: ~0.10ms
+- CountryCard-Antarctica: ~0.00ms
+- CountryCard-Netherlands: ~0.10ms
+- CountryCard-Sudan: ~0.10ms
+- CountryCard-Fiji: ~0.10ms
+- CountryCard-Liechtenstein: ~0.10ms
+- CountryCard-Nepal: ~0.20ms
+- CountryCard-Puerto Rico: ~0.10ms
+- CountryCard-Georgia: ~0.10ms
+- CountryCard-Pakistan: ~0.00ms
+- CountryCard-Monaco: ~0.20ms
+- CountryCard-Botswana: ~0.10ms
+- CountryCard-Lebanon: ~0.20ms
+- CountryCard-Papua New Guinea: ~0.00ms
+- CountryCard-Mayotte: ~0.00ms
+- CountryCard-Dominican Republic: ~0.00ms
+- CountryCard-Norfolk Island: ~0.00ms
+- CountryCard-Bouvet Island: ~0.20ms
+- CountryCard-Qatar: ~0.10ms
+- CountryCard-Madagascar: ~0.00ms
+- CountryCard-India: ~0.00ms
+- CountryCard-Syria: ~0.10ms
+- CountryCard-Montenegro: ~0.00ms
+- CountryCard-Eswatini: ~0.10ms
+- CountryCard-Paraguay: ~0.00ms
+- CountryCard-El Salvador: ~0.10ms
+- CountryCard-Ukraine: ~0.10ms
+- CountryCard-Isle of Man: ~0.10ms
+- CountryCard-Namibia: ~0.10ms
+- CountryCard-United Arab Emirates: ~0.10ms
+- CountryCard-Bulgaria: ~0.10ms
+- CountryCard-Greenland: ~0.20ms
+- CountryCard-Germany: ~0.10ms
+- CountryCard-Cambodia: ~0.10ms
+- CountryCard-Iraq: ~0.20ms
+- CountryCard-French Southern and Antarctic Lands: ~0.10ms
+- CountryCard-Sweden: ~0.10ms
+- CountryCard-Cuba: ~0.20ms
+- CountryCard-Kyrgyzstan: ~0.00ms
+- CountryCard-Russia: ~0.10ms
+- CountryCard-Malaysia: ~0.10ms
+- CountryCard-São Tomé and Príncipe: ~0.10ms
+- CountryCard-Cyprus: ~0.20ms
+- CountryCard-Canada: ~0.10ms
+- CountryCard-Malawi: ~0.10ms
+- CountryCard-Saudi Arabia: ~0.10ms
+- CountryCard-Bosnia and Herzegovina: ~0.00ms
+- CountryCard-Ethiopia: ~0.10ms
+- CountryCard-Spain: ~0.10ms
+- CountryCard-Slovenia: ~0.10ms
+- CountryCard-Oman: ~0.00ms
+- CountryCard-Saint Pierre and Miquelon: ~0.10ms
+- CountryCard-Macau: ~0.10ms
+- CountryCard-San Marino: ~0.10ms
+- CountryCard-Lesotho: ~0.10ms
+- CountryCard-Marshall Islands: ~0.10ms
+- CountryCard-Sint Maarten: ~0.10ms
+- CountryCard-Iceland: ~0.10ms
+- CountryCard-Luxembourg: ~0.00ms
+- CountryCard-Argentina: ~0.20ms
+- CountryCard-Turks and Caicos Islands: ~0.00ms
+- CountryCard-Nauru: ~0.10ms
+- CountryCard-Cocos (Keeling) Islands: ~0.10ms
+- CountryCard-Western Sahara: ~0.20ms
+- CountryCard-Dominica: ~0.10ms
+- CountryCard-Costa Rica: ~0.10ms
+- CountryCard-Australia: ~0.00ms
+- CountryCard-Thailand: ~0.10ms
+- CountryCard-Haiti: ~0.10ms
+- CountryCard-Tuvalu: ~0.10ms
+- CountryCard-Honduras: ~0.00ms
+- CountryCard-Equatorial Guinea: ~0.20ms
+- CountryCard-Saint Lucia: ~0.00ms
+- CountryCard-French Polynesia: ~0.10ms
+- CountryCard-Belarus: ~0.10ms
+- CountryCard-Latvia: ~0.00ms
+- CountryCard-Palau: ~0.10ms
+- CountryCard-Guadeloupe: ~0.10ms
+- CountryCard-Philippines: ~0.10ms
+- CountryCard-Gibraltar: ~0.10ms
+- CountryCard-Denmark: ~0.10ms
+- CountryCard-Cameroon: ~0.00ms
+- CountryCard-Guinea: ~0.00ms
+- CountryCard-Bahrain: ~0.00ms
+- CountryCard-Suriname: ~0.20ms
+- CountryCard-DR Congo: ~0.20ms
+- CountryCard-Somalia: ~0.10ms
+- CountryCard-Czechia: ~0.10ms
+- CountryCard-New Caledonia: ~0.20ms
+- CountryCard-Vanuatu: ~0.00ms
+- CountryCard-Saint Helena, Ascension and Tristan da Cunha: ~0.20ms
+- CountryCard-Togo: ~0.10ms
+- CountryCard-British Virgin Islands: ~0.10ms
+- CountryCard-Kenya: ~0.10ms
+- CountryCard-Niue: ~0.00ms
+- CountryCard-Heard Island and McDonald Islands: ~0.10ms
+- CountryCard-Rwanda: ~0.10ms
+- CountryCard-Estonia: ~0.10ms
+- CountryCard-Romania: ~0.00ms
+- CountryCard-Trinidad and Tobago: ~0.00ms
+- CountryCard-Guyana: ~0.10ms
+- CountryCard-Timor-Leste: ~0.00ms
+- CountryCard-Vietnam: ~0.10ms
+- CountryCard-Uruguay: ~0.20ms
+- CountryCard-Vatican City: ~0.10ms
+- CountryCard-Hong Kong: ~0.10ms
+- CountryCard-Austria: ~0.10ms
+- CountryCard-Antigua and Barbuda: ~0.10ms
+- CountryCard-Turkmenistan: ~0.10ms
+- CountryCard-Mozambique: ~0.00ms
+- CountryCard-Panama: ~0.10ms
+- CountryCard-Micronesia: ~0.00ms
+- CountryCard-Ireland: ~0.10ms
+- CountryCard-Curaçao: ~0.10ms
+- CountryCard-French Guiana: ~0.10ms
+- CountryCard-Norway: ~0.00ms
+- CountryCard-Åland Islands: ~0.00ms
+- CountryCard-Central African Republic: ~0.10ms
+- CountryCard-Burkina Faso: ~0.00ms
+- CountryCard-Eritrea: ~0.10ms
+- CountryCard-Tanzania: ~0.10ms
+- CountryCard-South Korea: ~0.10ms
+- CountryCard-Jordan: ~0.00ms
+- CountryCard-Mauritania: ~0.10ms
+- CountryCard-Lithuania: ~0.10ms
+- CountryCard-United States Minor Outlying Islands: ~0.10ms
+- CountryCard-Slovakia: ~0.10ms
+- CountryCard-Angola: ~0.10ms
+- CountryCard-Kazakhstan: ~0.10ms
+- CountryCard-Moldova: ~0.10ms
+- CountryCard-Mali: ~0.20ms
+- CountryCard-Falkland Islands: ~0.20ms
+- CountryCard-Armenia: ~0.10ms
+- CountryCard-Samoa: ~0.10ms
+- CountryCard-Jersey: ~0.10ms
+- CountryCard-Japan: ~0.10ms
+- CountryCard-Bolivia: ~0.10ms
+- CountryCard-Chile: ~0.20ms
+- CountryCard-United States: ~0.10ms
+- CountryCard-Saint Vincent and the Grenadines: ~0.20ms
+- CountryCard-Bermuda: ~0.10ms
+- CountryCard-Seychelles: ~0.20ms
+- CountryCard-British Indian Ocean Territory: ~0.10ms
+- CountryCard-Guatemala: ~0.10ms
+- CountryCard-Ecuador: ~0.10ms
+- CountryCard-Martinique: ~0.10ms
+- CountryCard-Tajikistan: ~0.00ms
+- CountryCard-Malta: ~0.10ms
+- CountryCard-Gambia: ~0.10ms
+- CountryCard-Nigeria: ~0.10ms
+- CountryCard-Bahamas: ~0.00ms
+- CountryCard-Kosovo: ~0.20ms
+- CountryCard-Kuwait: ~0.10ms
+- CountryCard-Maldives: ~0.00ms
+- CountryCard-South Sudan: ~0.10ms
+- CountryCard-Iran: ~0.10ms
+- CountryCard-Albania: ~0.10ms
+- CountryCard-Brazil: ~0.10ms
+- CountryCard-Serbia: ~0.10ms
+- CountryCard-Belize: ~0.10ms
+- CountryCard-Myanmar: ~0.10ms
+- CountryCard-Bhutan: ~0.00ms
+- CountryCard-Venezuela: ~0.10ms
+- CountryCard-Liberia: ~0.10ms
+- CountryCard-Jamaica: ~0.10ms
+- CountryCard-Poland: ~0.10ms
+- CountryCard-Cayman Islands: ~0.00ms
+- CountryCard-Brunei: ~0.10ms
+- CountryCard-Comoros: ~0.10ms
+- CountryCard-Guam: ~0.10ms
+- CountryCard-Tonga: ~0.10ms
+- CountryCard-Kiribati: ~0.10ms
+- CountryCard-Ghana: ~0.20ms
+- CountryCard-Chad: ~0.10ms
+- CountryCard-Zimbabwe: ~0.10ms
+- CountryCard-Saint Martin: ~0.10ms
+- CountryCard-Mongolia: ~0.20ms
+- CountryCard-Portugal: ~0.20ms
+- CountryCard-American Samoa: ~0.20ms
+- CountryCard-Republic of the Congo: ~0.10ms
+- CountryCard-Belgium: ~0.10ms
+- CountryCard-Israel: ~0.00ms
+- CountryCard-New Zealand: ~0.00ms
+- CountryCard-Nicaragua: ~0.20ms
+- CountryCard-Anguilla: ~0.20ms
+- CountriesGrid: ~47.10ms
+- App: ~47.70ms
+- Filters: ~0.30ms
+- CountryCard-Barbados: ~0.20ms
+- CountryCard-Benin: ~0.00ms
+- CountryCard-Caribbean Netherlands: ~0.10ms
+- CountryCard-Burundi: ~0.10ms
+- CountryCard-Libya: ~0.10ms
+- CountryCard-Gabon: ~0.00ms
+- CountryCard-Saint Barthélemy: ~0.00ms
+- CountryCard-Svalbard and Jan Mayen: ~0.00ms
+- CountryCard-Uzbekistan: ~0.00ms
+- CountryCard-Bangladesh: ~0.10ms
+- CountryCard-Aruba: ~0.10ms
+- CountryCard-Zambia: ~0.10ms
+- CountryCard-Guinea-Bissau: ~0.10ms
+- CountryCard-Azerbaijan: ~0.00ms
+- CountryCard-Djibouti: ~0.00ms
+- CountryCard-Colombia: ~0.00ms
+- CountryCard-Botswana: ~0.00ms
+- CountryCard-Lebanon: ~0.10ms
+- CountryCard-Dominican Republic: ~0.00ms
+- CountryCard-Bouvet Island: ~0.00ms
+- CountryCard-Namibia: ~0.00ms
+- CountryCard-United Arab Emirates: ~0.00ms
+- CountryCard-Bulgaria: ~0.10ms
+- CountryCard-Cambodia: ~0.00ms
+- CountryCard-Cuba: ~0.00ms
+- CountryCard-Saudi Arabia: ~0.10ms
+- CountryCard-Bosnia and Herzegovina: ~0.10ms
+- CountryCard-Luxembourg: ~0.10ms
+- CountryCard-Belarus: ~0.00ms
+- CountryCard-Gibraltar: ~0.20ms
+- CountryCard-Bahrain: ~0.00ms
+- CountryCard-British Virgin Islands: ~0.00ms
+- CountryCard-Trinidad and Tobago: ~0.20ms
+- CountryCard-Antigua and Barbuda: ~0.00ms
+- CountryCard-Mozambique: ~0.10ms
+- CountryCard-Central African Republic: ~0.10ms
+- CountryCard-Burkina Faso: ~0.00ms
+- CountryCard-Bolivia: ~0.10ms
+- CountryCard-Bermuda: ~0.10ms
+- CountryCard-British Indian Ocean Territory: ~0.00ms
+- CountryCard-Gambia: ~0.10ms
+- CountryCard-Bahamas: ~0.10ms
+- CountryCard-Albania: ~0.00ms
+- CountryCard-Brazil: ~0.00ms
+- CountryCard-Serbia: ~0.00ms
+- CountryCard-Belize: ~0.20ms
+- CountryCard-Bhutan: ~0.00ms
+- CountryCard-Liberia: ~0.00ms
+- CountryCard-Brunei: ~0.00ms
+- CountryCard-Kiribati: ~0.10ms
+- CountryCard-Zimbabwe: ~0.10ms
+- CountryCard-Republic of the Congo: ~0.00ms
+- CountryCard-Belgium: ~0.10ms
+- CountriesGrid: ~5.10ms
+- App: ~5.50ms
+- Filters: ~0.40ms
+- CountryCard-Benin: ~0.00ms
+- CountryCard-Caribbean Netherlands: ~0.10ms
+- CountryCard-Uzbekistan: ~0.10ms
+- CountryCard-Belarus: ~0.10ms
+- CountryCard-Bermuda: ~0.00ms
+- CountryCard-Belize: ~0.00ms
+- CountryCard-Liberia: ~0.00ms
+- CountryCard-Belgium: ~0.00ms
+- CountriesGrid: ~0.80ms
+- App: ~1.20ms
+- Filters: ~0.20ms
+- CountryCard-Belarus: ~0.10ms
+- CountryCard-Belize: ~0.10ms
+- CountryCard-Belgium: ~0.10ms
+- CountriesGrid: ~0.50ms
+- App: ~0.70ms
+- Filters: ~0.20ms
+- CountriesGrid: ~0.00ms
+- App: ~0.30ms
+- Filters: ~0.20ms
+- CountryCard-Sierra Leone: ~0.40ms
+- CountryCard-Ivory Coast: ~0.00ms
+- CountryCard-Tunisia: ~0.20ms
+- CountryCard-Benin: ~0.20ms
+- CountryCard-Cape Verde: ~0.10ms
+- CountryCard-Uganda: ~0.10ms
+- CountryCard-Burundi: ~0.10ms
+- CountryCard-South Africa: ~0.20ms
+- CountryCard-Libya: ~0.20ms
+- CountryCard-Gabon: ~0.00ms
+- CountryCard-Egypt: ~0.10ms
+- CountryCard-Senegal: ~0.40ms
+- CountryCard-Zambia: ~0.20ms
+- CountryCard-Niger: ~0.20ms
+- CountryCard-Guinea-Bissau: ~0.30ms
+- CountryCard-Réunion: ~0.30ms
+- CountryCard-Djibouti: ~0.10ms
+- CountryCard-Mauritius: ~0.20ms
+- CountryCard-Morocco: ~0.10ms
+- CountryCard-Algeria: ~0.20ms
+- CountryCard-Sudan: ~0.20ms
+- CountryCard-Botswana: ~0.20ms
+- CountryCard-Mayotte: ~0.20ms
+- CountryCard-Madagascar: ~0.20ms
+- CountryCard-Eswatini: ~0.10ms
+- CountryCard-Namibia: ~0.10ms
+- CountryCard-São Tomé and Príncipe: ~0.10ms
+- CountryCard-Malawi: ~0.20ms
+- CountryCard-Ethiopia: ~0.20ms
+- CountryCard-Lesotho: ~0.20ms
+- CountryCard-Western Sahara: ~0.20ms
+- CountryCard-Equatorial Guinea: ~0.00ms
+- CountryCard-Cameroon: ~0.20ms
+- CountryCard-Guinea: ~0.10ms
+- CountryCard-DR Congo: ~0.30ms
+- CountryCard-Somalia: ~0.20ms
+- CountryCard-Saint Helena, Ascension and Tristan da Cunha: ~0.20ms
+- CountryCard-Togo: ~0.20ms
+- CountryCard-Kenya: ~0.20ms
+- CountryCard-Rwanda: ~0.20ms
+- CountryCard-Mozambique: ~0.20ms
+- CountryCard-Central African Republic: ~0.10ms
+- CountryCard-Burkina Faso: ~0.10ms
+- CountryCard-Eritrea: ~0.20ms
+- CountryCard-Tanzania: ~0.20ms
+- CountryCard-Mauritania: ~0.10ms
+- CountryCard-Angola: ~0.30ms
+- CountryCard-Mali: ~0.10ms
+- CountryCard-Seychelles: ~0.10ms
+- CountryCard-British Indian Ocean Territory: ~0.10ms
+- CountryCard-Gambia: ~0.20ms
+- CountryCard-Nigeria: ~0.20ms
+- CountryCard-South Sudan: ~0.20ms
+- CountryCard-Liberia: ~0.00ms
+- CountryCard-Comoros: ~0.10ms
+- CountryCard-Ghana: ~0.20ms
+- CountryCard-Chad: ~0.10ms
+- CountryCard-Zimbabwe: ~0.20ms
+- CountryCard-Republic of the Congo: ~0.20ms
+- CountriesGrid: ~12.30ms
+- App: ~12.60ms
+- CountryCard-Sierra Leone: ~0.30ms
+- CountryCard-Ivory Coast: ~0.20ms
+- CountryCard-Tunisia: ~0.00ms
+- CountryCard-Benin: ~0.10ms
+- CountryCard-Cape Verde: ~0.10ms
+- CountryCard-Uganda: ~0.20ms
+- CountryCard-Burundi: ~0.10ms
+- CountryCard-South Africa: ~0.10ms
+- CountryCard-Libya: ~0.20ms
+- CountryCard-Gabon: ~0.10ms
+- CountryCard-Egypt: ~0.20ms
+- CountryCard-Senegal: ~0.20ms
+- CountryCard-Zambia: ~0.10ms
+- CountryCard-Niger: ~0.10ms
+- CountryCard-Guinea-Bissau: ~0.10ms
+- CountryCard-Réunion: ~0.20ms
+- CountryCard-Djibouti: ~0.20ms
+- CountryCard-Mauritius: ~0.10ms
+- CountryCard-Morocco: ~0.00ms
+- CountryCard-Algeria: ~0.00ms
+- CountryCard-Sudan: ~0.10ms
+- CountryCard-Botswana: ~0.00ms
+- CountryCard-Mayotte: ~0.30ms
+- CountryCard-Madagascar: ~0.10ms
+- CountryCard-Eswatini: ~0.10ms
+- CountryCard-Namibia: ~0.10ms
+- CountryCard-São Tomé and Príncipe: ~0.20ms
+- CountryCard-Malawi: ~0.20ms
+- CountryCard-Ethiopia: ~0.10ms
+- CountryCard-Lesotho: ~0.10ms
+- CountryCard-Western Sahara: ~0.20ms
+- CountryCard-Equatorial Guinea: ~0.10ms
+- CountryCard-Cameroon: ~0.10ms
+- CountryCard-Guinea: ~0.20ms
+- CountryCard-DR Congo: ~0.00ms
+- CountryCard-Somalia: ~0.20ms
+- CountryCard-Saint Helena, Ascension and Tristan da Cunha: ~0.10ms
+- CountryCard-Togo: ~0.20ms
+- CountryCard-Kenya: ~0.00ms
+- CountryCard-Rwanda: ~0.20ms
+- CountryCard-Mozambique: ~0.20ms
+- CountryCard-Central African Republic: ~0.10ms
+- CountryCard-Burkina Faso: ~0.10ms
+- CountryCard-Eritrea: ~0.10ms
+- CountryCard-Tanzania: ~0.30ms
+- CountryCard-Mauritania: ~0.10ms
+- CountryCard-Angola: ~0.20ms
+- CountryCard-Mali: ~0.10ms
+- CountryCard-Seychelles: ~0.00ms
+- CountryCard-British Indian Ocean Territory: ~0.20ms
+- CountryCard-Gambia: ~0.00ms
+- CountryCard-Nigeria: ~0.20ms
+- CountryCard-South Sudan: ~0.10ms
+- CountryCard-Liberia: ~0.10ms
+- CountryCard-Comoros: ~0.20ms
+- CountryCard-Ghana: ~0.10ms
+- CountryCard-Chad: ~0.10ms
+- CountryCard-Zimbabwe: ~0.10ms
+- CountryCard-Republic of the Congo: ~0.10ms
+- CountriesGrid: ~7.60ms
+- App: ~7.60ms
+- Filters: ~0.10ms
+- CountryCard-Taiwan: ~0.30ms
+- CountryCard-Indonesia: ~0.20ms
+- CountryCard-Laos: ~0.10ms
+- CountryCard-China: ~0.30ms
+- CountryCard-Yemen: ~0.10ms
+- CountryCard-Uzbekistan: ~0.20ms
+- CountryCard-Sri Lanka: ~0.10ms
+- CountryCard-Palestine: ~0.00ms
+- CountryCard-Bangladesh: ~0.10ms
+- CountryCard-Singapore: ~0.10ms
+- CountryCard-Turkey: ~0.20ms
+- CountryCard-Afghanistan: ~0.30ms
+- CountryCard-Azerbaijan: ~0.20ms
+- CountryCard-North Korea: ~0.30ms
+- CountryCard-Nepal: ~0.20ms
+- CountryCard-Georgia: ~0.10ms
+- CountryCard-Pakistan: ~0.00ms
+- CountryCard-Lebanon: ~0.30ms
+- CountryCard-Qatar: ~0.10ms
+- CountryCard-India: ~0.20ms
+- CountryCard-Syria: ~0.20ms
+- CountryCard-United Arab Emirates: ~0.10ms
+- CountryCard-Cambodia: ~0.20ms
+- CountryCard-Iraq: ~0.10ms
+- CountryCard-Kyrgyzstan: ~0.00ms
+- CountryCard-Malaysia: ~0.20ms
+- CountryCard-Saudi Arabia: ~0.20ms
+- CountryCard-Oman: ~0.20ms
+- CountryCard-Macau: ~0.20ms
+- CountryCard-Thailand: ~0.10ms
+- CountryCard-Philippines: ~0.10ms
+- CountryCard-Bahrain: ~0.10ms
+- CountryCard-Timor-Leste: ~0.20ms
+- CountryCard-Vietnam: ~0.10ms
+- CountryCard-Hong Kong: ~0.10ms
+- CountryCard-Turkmenistan: ~0.10ms
+- CountryCard-South Korea: ~0.00ms
+- CountryCard-Jordan: ~0.20ms
+- CountryCard-Kazakhstan: ~0.20ms
+- CountryCard-Armenia: ~0.20ms
+- CountryCard-Japan: ~0.10ms
+- CountryCard-Tajikistan: ~0.10ms
+- CountryCard-Kuwait: ~0.10ms
+- CountryCard-Maldives: ~0.10ms
+- CountryCard-Iran: ~0.20ms
+- CountryCard-Myanmar: ~0.10ms
+- CountryCard-Bhutan: ~0.10ms
+- CountryCard-Brunei: ~0.10ms
+- CountryCard-Mongolia: ~0.20ms
+- CountryCard-Israel: ~0.00ms
+- CountriesGrid: ~9.60ms
+- App: ~9.90ms
+- CountryCard-Taiwan: ~0.10ms
+- CountryCard-Indonesia: ~0.20ms
+- CountryCard-Laos: ~0.10ms
+- CountryCard-China: ~0.10ms
+- CountryCard-Yemen: ~0.10ms
+- CountryCard-Uzbekistan: ~0.20ms
+- CountryCard-Sri Lanka: ~0.00ms
+- CountryCard-Palestine: ~0.20ms
+- CountryCard-Bangladesh: ~0.20ms
+- CountryCard-Singapore: ~0.00ms
+- CountryCard-Turkey: ~0.00ms
+- CountryCard-Afghanistan: ~0.10ms
+- CountryCard-Azerbaijan: ~0.10ms
+- CountryCard-North Korea: ~0.10ms
+- CountryCard-Nepal: ~0.10ms
+- CountryCard-Georgia: ~0.10ms
+- CountryCard-Pakistan: ~0.00ms
+- CountryCard-Lebanon: ~0.20ms
+- CountryCard-Qatar: ~0.00ms
+- CountryCard-India: ~0.10ms
+- CountryCard-Syria: ~0.10ms
+- CountryCard-United Arab Emirates: ~0.10ms
+- CountryCard-Cambodia: ~0.10ms
+- CountryCard-Iraq: ~0.00ms
+- CountryCard-Kyrgyzstan: ~0.20ms
+- CountryCard-Malaysia: ~0.10ms
+- CountryCard-Saudi Arabia: ~0.00ms
+- CountryCard-Oman: ~0.10ms
+- CountryCard-Macau: ~0.10ms
+- CountryCard-Thailand: ~0.10ms
+- CountryCard-Philippines: ~0.10ms
+- CountryCard-Bahrain: ~0.00ms
+- CountryCard-Timor-Leste: ~0.20ms
+- CountryCard-Vietnam: ~0.10ms
+- CountryCard-Hong Kong: ~0.10ms
+- CountryCard-Turkmenistan: ~0.20ms
+- CountryCard-South Korea: ~0.00ms
+- CountryCard-Jordan: ~0.10ms
+- CountryCard-Kazakhstan: ~0.00ms
+- CountryCard-Armenia: ~0.10ms
+- CountryCard-Japan: ~0.10ms
+- CountryCard-Tajikistan: ~0.10ms
+- CountryCard-Kuwait: ~0.00ms
+- CountryCard-Maldives: ~0.20ms
+- CountryCard-Iran: ~0.10ms
+- CountryCard-Myanmar: ~0.00ms
+- CountryCard-Bhutan: ~0.10ms
+- CountryCard-Brunei: ~0.00ms
+- CountryCard-Mongolia: ~0.10ms
+- CountryCard-Israel: ~0.10ms
+- CountriesGrid: ~4.60ms
+- App: ~4.60ms
+
+#### Key Findings
+- Average base duration: 0.40ms
+- Average actual duration: 0.79ms
+    ### Initial Performance Metrics
+
+Performance metrics were collected using React Dev Tools Profiler:
+
+#### Commit Duration
+- Initial render: ~26.72ms
+- Average commit: ~13.36ms
+
+#### Component Render Times
+- Filters: ~1.80ms
+- CountryCard-South Georgia: ~2.20ms
+- CountryCard-Grenada: ~1.10ms
+- CountryCard-Switzerland: ~1.00ms
+- CountryCard-Sierra Leone: ~0.70ms
+- CountryCard-Hungary: ~0.90ms
+- CountryCard-Taiwan: ~0.70ms
+- CountryCard-Wallis and Futuna: ~0.80ms
+- CountryCard-Barbados: ~3.80ms
+- CountryCard-Pitcairn Islands: ~0.70ms
+- CountryCard-Ivory Coast: ~0.30ms
+- CountryCard-Tunisia: ~0.40ms
+- CountryCard-Italy: ~0.50ms
+- CountryCard-Benin: ~0.50ms
+- CountryCard-Indonesia: ~0.40ms
+- CountryCard-Cape Verde: ~0.50ms
+- CountryCard-Saint Kitts and Nevis: ~0.40ms
+- CountryCard-Laos: ~0.40ms
+- CountryCard-Caribbean Netherlands: ~0.40ms
+- CountryCard-Uganda: ~0.60ms
+- CountryCard-Andorra: ~0.50ms
+- CountryCard-Burundi: ~0.40ms
+- CountryCard-South Africa: ~0.50ms
+- CountryCard-France: ~0.40ms
+- CountryCard-Libya: ~0.50ms
+- CountryCard-Mexico: ~0.40ms
+- CountryCard-Gabon: ~0.60ms
+- CountryCard-Northern Mariana Islands: ~0.50ms
+- CountryCard-North Macedonia: ~0.50ms
+- CountryCard-China: ~0.50ms
+- CountryCard-Yemen: ~0.50ms
+- CountryCard-Saint Barthélemy: ~0.70ms
+- CountryCard-Guernsey: ~0.50ms
+- CountryCard-Solomon Islands: ~0.60ms
+- CountryCard-Svalbard and Jan Mayen: ~0.60ms
+- CountryCard-Faroe Islands: ~0.50ms
+- CountryCard-Uzbekistan: ~0.50ms
+- CountryCard-Egypt: ~0.60ms
+- CountryCard-Senegal: ~0.40ms
+- CountryCard-Sri Lanka: ~0.60ms
+- CountryCard-Palestine: ~0.40ms
+- CountryCard-Bangladesh: ~0.60ms
+- CountryCard-Peru: ~0.50ms
+- CountryCard-Singapore: ~0.50ms
+- CountryCard-Turkey: ~0.40ms
+- CountryCard-Afghanistan: ~0.40ms
+- CountryCard-Aruba: ~0.50ms
+- CountryCard-Cook Islands: ~0.60ms
+- CountryCard-United Kingdom: ~0.60ms
+- CountryCard-Zambia: ~0.50ms
+- CountryCard-Finland: ~0.60ms
+- CountryCard-Niger: ~0.80ms
+- CountryCard-Christmas Island: ~0.70ms
+- CountryCard-Tokelau: ~0.70ms
+- CountryCard-Guinea-Bissau: ~0.50ms
+- CountryCard-Azerbaijan: ~0.70ms
+- CountryCard-Réunion: ~1.00ms
+- CountryCard-Djibouti: ~1.00ms
+- CountryCard-North Korea: ~0.70ms
+- CountryCard-Mauritius: ~0.70ms
+- CountryCard-Montserrat: ~0.90ms
+- CountryCard-United States Virgin Islands: ~0.70ms
+- CountryCard-Colombia: ~0.60ms
+- CountryCard-Greece: ~0.50ms
+- CountryCard-Croatia: ~0.60ms
+- CountryCard-Morocco: ~0.70ms
+- CountryCard-Algeria: ~0.40ms
+- CountryCard-Antarctica: ~0.40ms
+- CountryCard-Netherlands: ~0.50ms
+- CountryCard-Sudan: ~0.40ms
+- CountryCard-Fiji: ~0.60ms
+- CountryCard-Liechtenstein: ~0.70ms
+- CountryCard-Nepal: ~0.70ms
+- CountryCard-Puerto Rico: ~0.60ms
+- CountryCard-Georgia: ~0.60ms
+- CountryCard-Pakistan: ~0.40ms
+- CountryCard-Monaco: ~0.60ms
+- CountryCard-Botswana: ~0.70ms
+- CountryCard-Lebanon: ~0.50ms
+- CountryCard-Papua New Guinea: ~0.80ms
+- CountryCard-Mayotte: ~0.80ms
+- CountryCard-Dominican Republic: ~0.80ms
+- CountryCard-Norfolk Island: ~0.50ms
+- CountryCard-Bouvet Island: ~0.60ms
+- CountryCard-Qatar: ~1.00ms
+- CountryCard-Madagascar: ~0.60ms
+- CountryCard-India: ~0.60ms
+- CountryCard-Syria: ~0.40ms
+- CountryCard-Montenegro: ~0.40ms
+- CountryCard-Eswatini: ~0.50ms
+- CountryCard-Paraguay: ~0.50ms
+- CountryCard-El Salvador: ~0.50ms
+- CountryCard-Ukraine: ~0.40ms
+- CountryCard-Isle of Man: ~0.60ms
+- CountryCard-Namibia: ~0.40ms
+- CountryCard-United Arab Emirates: ~0.40ms
+- CountryCard-Bulgaria: ~0.30ms
+- CountryCard-Greenland: ~0.40ms
+- CountryCard-Germany: ~0.50ms
+- CountryCard-Cambodia: ~0.90ms
+- CountryCard-Iraq: ~0.90ms
+- CountryCard-French Southern and Antarctic Lands: ~0.90ms
+- CountryCard-Sweden: ~0.80ms
+- CountryCard-Cuba: ~0.80ms
+- CountryCard-Kyrgyzstan: ~0.60ms
+- CountryCard-Russia: ~0.80ms
+- CountryCard-Malaysia: ~0.50ms
+- CountryCard-São Tomé and Príncipe: ~0.60ms
+- CountryCard-Cyprus: ~0.60ms
+- CountryCard-Canada: ~0.60ms
+- CountryCard-Malawi: ~0.60ms
+- CountryCard-Saudi Arabia: ~0.60ms
+- CountryCard-Bosnia and Herzegovina: ~0.50ms
+- CountryCard-Ethiopia: ~0.60ms
+- CountryCard-Spain: ~0.60ms
+- CountryCard-Slovenia: ~0.60ms
+- CountryCard-Oman: ~0.40ms
+- CountryCard-Saint Pierre and Miquelon: ~0.50ms
+- CountryCard-Macau: ~0.60ms
+- CountryCard-San Marino: ~0.50ms
+- CountryCard-Lesotho: ~0.60ms
+- CountryCard-Marshall Islands: ~0.60ms
+- CountryCard-Sint Maarten: ~0.60ms
+- CountryCard-Iceland: ~0.60ms
+- CountryCard-Luxembourg: ~0.40ms
+- CountryCard-Argentina: ~0.40ms
+- CountryCard-Turks and Caicos Islands: ~0.40ms
+- CountryCard-Nauru: ~0.40ms
+- CountryCard-Cocos (Keeling) Islands: ~0.40ms
+- CountryCard-Western Sahara: ~0.40ms
+- CountryCard-Dominica: ~0.40ms
+- CountryCard-Costa Rica: ~0.30ms
+- CountryCard-Australia: ~0.50ms
+- CountryCard-Thailand: ~0.70ms
+- CountryCard-Haiti: ~0.60ms
+- CountryCard-Tuvalu: ~0.50ms
+- CountryCard-Honduras: ~0.80ms
+- CountryCard-Equatorial Guinea: ~0.50ms
+- CountryCard-Saint Lucia: ~0.40ms
+- CountryCard-French Polynesia: ~0.50ms
+- CountryCard-Belarus: ~0.40ms
+- CountryCard-Latvia: ~0.40ms
+- CountryCard-Palau: ~0.40ms
+- CountryCard-Guadeloupe: ~0.40ms
+- CountryCard-Philippines: ~0.40ms
+- CountryCard-Gibraltar: ~0.30ms
+- CountryCard-Denmark: ~0.40ms
+- CountryCard-Cameroon: ~0.40ms
+- CountryCard-Guinea: ~0.30ms
+- CountryCard-Bahrain: ~0.30ms
+- CountryCard-Suriname: ~0.40ms
+- CountryCard-DR Congo: ~0.40ms
+- CountryCard-Somalia: ~0.40ms
+- CountryCard-Czechia: ~0.40ms
+- CountryCard-New Caledonia: ~0.50ms
+- CountryCard-Vanuatu: ~0.40ms
+- CountryCard-Saint Helena, Ascension and Tristan da Cunha: ~0.40ms
+- CountryCard-Togo: ~0.30ms
+- CountryCard-British Virgin Islands: ~0.40ms
+- CountryCard-Kenya: ~0.30ms
+- CountryCard-Niue: ~0.40ms
+- CountryCard-Heard Island and McDonald Islands: ~0.30ms
+- CountryCard-Rwanda: ~0.40ms
+- CountryCard-Estonia: ~0.40ms
+- CountryCard-Romania: ~0.30ms
+- CountryCard-Trinidad and Tobago: ~0.30ms
+- CountryCard-Guyana: ~0.20ms
+- CountryCard-Timor-Leste: ~0.30ms
+- CountryCard-Vietnam: ~0.30ms
+- CountryCard-Uruguay: ~0.30ms
+- CountryCard-Vatican City: ~0.40ms
+- CountryCard-Hong Kong: ~0.30ms
+- CountryCard-Austria: ~0.50ms
+- CountryCard-Antigua and Barbuda: ~0.30ms
+- CountryCard-Turkmenistan: ~0.40ms
+- CountryCard-Mozambique: ~0.40ms
+- CountryCard-Panama: ~0.30ms
+- CountryCard-Micronesia: ~0.30ms
+- CountryCard-Ireland: ~0.30ms
+- CountryCard-Curaçao: ~0.20ms
+- CountryCard-French Guiana: ~0.30ms
+- CountryCard-Norway: ~0.30ms
+- CountryCard-Åland Islands: ~0.40ms
+- CountryCard-Central African Republic: ~0.30ms
+- CountryCard-Burkina Faso: ~0.20ms
+- CountryCard-Eritrea: ~0.30ms
+- CountryCard-Tanzania: ~0.30ms
+- CountryCard-South Korea: ~0.40ms
+- CountryCard-Jordan: ~0.30ms
+- CountryCard-Mauritania: ~0.30ms
+- CountryCard-Lithuania: ~0.30ms
+- CountryCard-United States Minor Outlying Islands: ~0.40ms
+- CountryCard-Slovakia: ~0.30ms
+- CountryCard-Angola: ~0.30ms
+- CountryCard-Kazakhstan: ~0.30ms
+- CountryCard-Moldova: ~0.40ms
+- CountryCard-Mali: ~0.30ms
+- CountryCard-Falkland Islands: ~0.40ms
+- CountryCard-Armenia: ~0.30ms
+- CountryCard-Samoa: ~0.30ms
+- CountryCard-Jersey: ~0.30ms
+- CountryCard-Japan: ~0.30ms
+- CountryCard-Bolivia: ~0.30ms
+- CountryCard-Chile: ~0.30ms
+- CountryCard-United States: ~0.30ms
+- CountryCard-Saint Vincent and the Grenadines: ~0.40ms
+- CountryCard-Bermuda: ~0.30ms
+- CountryCard-Seychelles: ~0.40ms
+- CountryCard-British Indian Ocean Territory: ~0.30ms
+- CountryCard-Guatemala: ~0.40ms
+- CountryCard-Ecuador: ~0.40ms
+- CountryCard-Martinique: ~0.30ms
+- CountryCard-Tajikistan: ~0.40ms
+- CountryCard-Malta: ~0.40ms
+- CountryCard-Gambia: ~0.50ms
+- CountryCard-Nigeria: ~0.30ms
+- CountryCard-Bahamas: ~0.20ms
+- CountryCard-Kosovo: ~0.50ms
+- CountryCard-Kuwait: ~0.40ms
+- CountryCard-Maldives: ~0.30ms
+- CountryCard-South Sudan: ~0.40ms
+- CountryCard-Iran: ~0.40ms
+- CountryCard-Albania: ~0.40ms
+- CountryCard-Brazil: ~0.40ms
+- CountryCard-Serbia: ~0.30ms
+- CountryCard-Belize: ~0.40ms
+- CountryCard-Myanmar: ~0.40ms
+- CountryCard-Bhutan: ~0.40ms
+- CountryCard-Venezuela: ~0.40ms
+- CountryCard-Liberia: ~0.40ms
+- CountryCard-Jamaica: ~0.40ms
+- CountryCard-Poland: ~0.40ms
+- CountryCard-Cayman Islands: ~0.30ms
+- CountryCard-Brunei: ~0.40ms
+- CountryCard-Comoros: ~0.30ms
+- CountryCard-Guam: ~0.30ms
+- CountryCard-Tonga: ~0.40ms
+- CountryCard-Kiribati: ~0.40ms
+- CountryCard-Ghana: ~0.40ms
+- CountryCard-Chad: ~0.40ms
+- CountryCard-Zimbabwe: ~0.30ms
+- CountryCard-Saint Martin: ~0.50ms
+- CountryCard-Mongolia: ~0.40ms
+- CountryCard-Portugal: ~0.30ms
+- CountryCard-American Samoa: ~0.30ms
+- CountryCard-Republic of the Congo: ~0.30ms
+- CountryCard-Belgium: ~0.30ms
+- CountryCard-Israel: ~0.30ms
+- CountryCard-New Zealand: ~0.30ms
+- CountryCard-Nicaragua: ~0.30ms
+- CountryCard-Anguilla: ~0.40ms
+- CountriesGrid: ~138.40ms
+- App: ~141.00ms
+- Filters: ~0.20ms
+- CountryCard-South Georgia: ~0.20ms
+- CountryCard-Grenada: ~0.00ms
+- CountryCard-Switzerland: ~0.30ms
+- CountryCard-Sierra Leone: ~0.10ms
+- CountryCard-Hungary: ~0.10ms
+- CountryCard-Taiwan: ~0.10ms
+- CountryCard-Wallis and Futuna: ~0.10ms
+- CountryCard-Barbados: ~0.10ms
+- CountryCard-Pitcairn Islands: ~0.20ms
+- CountryCard-Ivory Coast: ~0.10ms
+- CountryCard-Tunisia: ~0.20ms
+- CountryCard-Italy: ~0.20ms
+- CountryCard-Benin: ~0.10ms
+- CountryCard-Indonesia: ~0.10ms
+- CountryCard-Cape Verde: ~0.20ms
+- CountryCard-Saint Kitts and Nevis: ~0.10ms
+- CountryCard-Laos: ~0.10ms
+- CountryCard-Caribbean Netherlands: ~0.20ms
+- CountryCard-Uganda: ~0.10ms
+- CountryCard-Andorra: ~0.20ms
+- CountryCard-Burundi: ~0.20ms
+- CountryCard-South Africa: ~0.10ms
+- CountryCard-France: ~0.20ms
+- CountryCard-Libya: ~0.00ms
+- CountryCard-Mexico: ~0.20ms
+- CountryCard-Gabon: ~0.10ms
+- CountryCard-Northern Mariana Islands: ~0.00ms
+- CountryCard-North Macedonia: ~0.20ms
+- CountryCard-China: ~0.10ms
+- CountryCard-Yemen: ~0.00ms
+- CountryCard-Saint Barthélemy: ~0.10ms
+- CountryCard-Guernsey: ~0.10ms
+- CountryCard-Solomon Islands: ~0.10ms
+- CountryCard-Svalbard and Jan Mayen: ~0.00ms
+- CountryCard-Faroe Islands: ~0.10ms
+- CountryCard-Uzbekistan: ~0.10ms
+- CountryCard-Egypt: ~0.10ms
+- CountryCard-Senegal: ~0.00ms
+- CountryCard-Sri Lanka: ~0.00ms
+- CountryCard-Palestine: ~0.10ms
+- CountryCard-Bangladesh: ~0.10ms
+- CountryCard-Peru: ~0.10ms
+- CountryCard-Singapore: ~0.10ms
+- CountryCard-Turkey: ~0.10ms
+- CountryCard-Afghanistan: ~0.00ms
+- CountryCard-Aruba: ~0.10ms
+- CountryCard-Cook Islands: ~0.10ms
+- CountryCard-United Kingdom: ~0.10ms
+- CountryCard-Zambia: ~0.10ms
+- CountryCard-Finland: ~0.20ms
+- CountryCard-Niger: ~0.00ms
+- CountryCard-Christmas Island: ~0.10ms
+- CountryCard-Tokelau: ~0.10ms
+- CountryCard-Guinea-Bissau: ~0.10ms
+- CountryCard-Azerbaijan: ~0.00ms
+- CountryCard-Réunion: ~0.10ms
+- CountryCard-Djibouti: ~0.10ms
+- CountryCard-North Korea: ~0.20ms
+- CountryCard-Mauritius: ~0.00ms
+- CountryCard-Montserrat: ~0.30ms
+- CountryCard-United States Virgin Islands: ~0.10ms
+- CountryCard-Colombia: ~0.00ms
+- CountryCard-Greece: ~0.10ms
+- CountryCard-Croatia: ~0.10ms
+- CountryCard-Morocco: ~0.00ms
+- CountryCard-Algeria: ~0.10ms
+- CountryCard-Antarctica: ~0.00ms
+- CountryCard-Netherlands: ~0.10ms
+- CountryCard-Sudan: ~0.10ms
+- CountryCard-Fiji: ~0.10ms
+- CountryCard-Liechtenstein: ~0.10ms
+- CountryCard-Nepal: ~0.20ms
+- CountryCard-Puerto Rico: ~0.10ms
+- CountryCard-Georgia: ~0.10ms
+- CountryCard-Pakistan: ~0.00ms
+- CountryCard-Monaco: ~0.20ms
+- CountryCard-Botswana: ~0.10ms
+- CountryCard-Lebanon: ~0.20ms
+- CountryCard-Papua New Guinea: ~0.00ms
+- CountryCard-Mayotte: ~0.00ms
+- CountryCard-Dominican Republic: ~0.00ms
+- CountryCard-Norfolk Island: ~0.00ms
+- CountryCard-Bouvet Island: ~0.20ms
+- CountryCard-Qatar: ~0.10ms
+- CountryCard-Madagascar: ~0.00ms
+- CountryCard-India: ~0.00ms
+- CountryCard-Syria: ~0.10ms
+- CountryCard-Montenegro: ~0.00ms
+- CountryCard-Eswatini: ~0.10ms
+- CountryCard-Paraguay: ~0.00ms
+- CountryCard-El Salvador: ~0.10ms
+- CountryCard-Ukraine: ~0.10ms
+- CountryCard-Isle of Man: ~0.10ms
+- CountryCard-Namibia: ~0.10ms
+- CountryCard-United Arab Emirates: ~0.10ms
+- CountryCard-Bulgaria: ~0.10ms
+- CountryCard-Greenland: ~0.20ms
+- CountryCard-Germany: ~0.10ms
+- CountryCard-Cambodia: ~0.10ms
+- CountryCard-Iraq: ~0.20ms
+- CountryCard-French Southern and Antarctic Lands: ~0.10ms
+- CountryCard-Sweden: ~0.10ms
+- CountryCard-Cuba: ~0.20ms
+- CountryCard-Kyrgyzstan: ~0.00ms
+- CountryCard-Russia: ~0.10ms
+- CountryCard-Malaysia: ~0.10ms
+- CountryCard-São Tomé and Príncipe: ~0.10ms
+- CountryCard-Cyprus: ~0.20ms
+- CountryCard-Canada: ~0.10ms
+- CountryCard-Malawi: ~0.10ms
+- CountryCard-Saudi Arabia: ~0.10ms
+- CountryCard-Bosnia and Herzegovina: ~0.00ms
+- CountryCard-Ethiopia: ~0.10ms
+- CountryCard-Spain: ~0.10ms
+- CountryCard-Slovenia: ~0.10ms
+- CountryCard-Oman: ~0.00ms
+- CountryCard-Saint Pierre and Miquelon: ~0.10ms
+- CountryCard-Macau: ~0.10ms
+- CountryCard-San Marino: ~0.10ms
+- CountryCard-Lesotho: ~0.10ms
+- CountryCard-Marshall Islands: ~0.10ms
+- CountryCard-Sint Maarten: ~0.10ms
+- CountryCard-Iceland: ~0.10ms
+- CountryCard-Luxembourg: ~0.00ms
+- CountryCard-Argentina: ~0.20ms
+- CountryCard-Turks and Caicos Islands: ~0.00ms
+- CountryCard-Nauru: ~0.10ms
+- CountryCard-Cocos (Keeling) Islands: ~0.10ms
+- CountryCard-Western Sahara: ~0.20ms
+- CountryCard-Dominica: ~0.10ms
+- CountryCard-Costa Rica: ~0.10ms
+- CountryCard-Australia: ~0.00ms
+- CountryCard-Thailand: ~0.10ms
+- CountryCard-Haiti: ~0.10ms
+- CountryCard-Tuvalu: ~0.10ms
+- CountryCard-Honduras: ~0.00ms
+- CountryCard-Equatorial Guinea: ~0.20ms
+- CountryCard-Saint Lucia: ~0.00ms
+- CountryCard-French Polynesia: ~0.10ms
+- CountryCard-Belarus: ~0.10ms
+- CountryCard-Latvia: ~0.00ms
+- CountryCard-Palau: ~0.10ms
+- CountryCard-Guadeloupe: ~0.10ms
+- CountryCard-Philippines: ~0.10ms
+- CountryCard-Gibraltar: ~0.10ms
+- CountryCard-Denmark: ~0.10ms
+- CountryCard-Cameroon: ~0.00ms
+- CountryCard-Guinea: ~0.00ms
+- CountryCard-Bahrain: ~0.00ms
+- CountryCard-Suriname: ~0.20ms
+- CountryCard-DR Congo: ~0.20ms
+- CountryCard-Somalia: ~0.10ms
+- CountryCard-Czechia: ~0.10ms
+- CountryCard-New Caledonia: ~0.20ms
+- CountryCard-Vanuatu: ~0.00ms
+- CountryCard-Saint Helena, Ascension and Tristan da Cunha: ~0.20ms
+- CountryCard-Togo: ~0.10ms
+- CountryCard-British Virgin Islands: ~0.10ms
+- CountryCard-Kenya: ~0.10ms
+- CountryCard-Niue: ~0.00ms
+- CountryCard-Heard Island and McDonald Islands: ~0.10ms
+- CountryCard-Rwanda: ~0.10ms
+- CountryCard-Estonia: ~0.10ms
+- CountryCard-Romania: ~0.00ms
+- CountryCard-Trinidad and Tobago: ~0.00ms
+- CountryCard-Guyana: ~0.10ms
+- CountryCard-Timor-Leste: ~0.00ms
+- CountryCard-Vietnam: ~0.10ms
+- CountryCard-Uruguay: ~0.20ms
+- CountryCard-Vatican City: ~0.10ms
+- CountryCard-Hong Kong: ~0.10ms
+- CountryCard-Austria: ~0.10ms
+- CountryCard-Antigua and Barbuda: ~0.10ms
+- CountryCard-Turkmenistan: ~0.10ms
+- CountryCard-Mozambique: ~0.00ms
+- CountryCard-Panama: ~0.10ms
+- CountryCard-Micronesia: ~0.00ms
+- CountryCard-Ireland: ~0.10ms
+- CountryCard-Curaçao: ~0.10ms
+- CountryCard-French Guiana: ~0.10ms
+- CountryCard-Norway: ~0.00ms
+- CountryCard-Åland Islands: ~0.00ms
+- CountryCard-Central African Republic: ~0.10ms
+- CountryCard-Burkina Faso: ~0.00ms
+- CountryCard-Eritrea: ~0.10ms
+- CountryCard-Tanzania: ~0.10ms
+- CountryCard-South Korea: ~0.10ms
+- CountryCard-Jordan: ~0.00ms
+- CountryCard-Mauritania: ~0.10ms
+- CountryCard-Lithuania: ~0.10ms
+- CountryCard-United States Minor Outlying Islands: ~0.10ms
+- CountryCard-Slovakia: ~0.10ms
+- CountryCard-Angola: ~0.10ms
+- CountryCard-Kazakhstan: ~0.10ms
+- CountryCard-Moldova: ~0.10ms
+- CountryCard-Mali: ~0.20ms
+- CountryCard-Falkland Islands: ~0.20ms
+- CountryCard-Armenia: ~0.10ms
+- CountryCard-Samoa: ~0.10ms
+- CountryCard-Jersey: ~0.10ms
+- CountryCard-Japan: ~0.10ms
+- CountryCard-Bolivia: ~0.10ms
+- CountryCard-Chile: ~0.20ms
+- CountryCard-United States: ~0.10ms
+- CountryCard-Saint Vincent and the Grenadines: ~0.20ms
+- CountryCard-Bermuda: ~0.10ms
+- CountryCard-Seychelles: ~0.20ms
+- CountryCard-British Indian Ocean Territory: ~0.10ms
+- CountryCard-Guatemala: ~0.10ms
+- CountryCard-Ecuador: ~0.10ms
+- CountryCard-Martinique: ~0.10ms
+- CountryCard-Tajikistan: ~0.00ms
+- CountryCard-Malta: ~0.10ms
+- CountryCard-Gambia: ~0.10ms
+- CountryCard-Nigeria: ~0.10ms
+- CountryCard-Bahamas: ~0.00ms
+- CountryCard-Kosovo: ~0.20ms
+- CountryCard-Kuwait: ~0.10ms
+- CountryCard-Maldives: ~0.00ms
+- CountryCard-South Sudan: ~0.10ms
+- CountryCard-Iran: ~0.10ms
+- CountryCard-Albania: ~0.10ms
+- CountryCard-Brazil: ~0.10ms
+- CountryCard-Serbia: ~0.10ms
+- CountryCard-Belize: ~0.10ms
+- CountryCard-Myanmar: ~0.10ms
+- CountryCard-Bhutan: ~0.00ms
+- CountryCard-Venezuela: ~0.10ms
+- CountryCard-Liberia: ~0.10ms
+- CountryCard-Jamaica: ~0.10ms
+- CountryCard-Poland: ~0.10ms
+- CountryCard-Cayman Islands: ~0.00ms
+- CountryCard-Brunei: ~0.10ms
+- CountryCard-Comoros: ~0.10ms
+- CountryCard-Guam: ~0.10ms
+- CountryCard-Tonga: ~0.10ms
+- CountryCard-Kiribati: ~0.10ms
+- CountryCard-Ghana: ~0.20ms
+- CountryCard-Chad: ~0.10ms
+- CountryCard-Zimbabwe: ~0.10ms
+- CountryCard-Saint Martin: ~0.10ms
+- CountryCard-Mongolia: ~0.20ms
+- CountryCard-Portugal: ~0.20ms
+- CountryCard-American Samoa: ~0.20ms
+- CountryCard-Republic of the Congo: ~0.10ms
+- CountryCard-Belgium: ~0.10ms
+- CountryCard-Israel: ~0.00ms
+- CountryCard-New Zealand: ~0.00ms
+- CountryCard-Nicaragua: ~0.20ms
+- CountryCard-Anguilla: ~0.20ms
+- CountriesGrid: ~47.10ms
+- App: ~47.70ms
+- Filters: ~0.30ms
+- CountryCard-Barbados: ~0.20ms
+- CountryCard-Benin: ~0.00ms
+- CountryCard-Caribbean Netherlands: ~0.10ms
+- CountryCard-Burundi: ~0.10ms
+- CountryCard-Libya: ~0.10ms
+- CountryCard-Gabon: ~0.00ms
+- CountryCard-Saint Barthélemy: ~0.00ms
+- CountryCard-Svalbard and Jan Mayen: ~0.00ms
+- CountryCard-Uzbekistan: ~0.00ms
+- CountryCard-Bangladesh: ~0.10ms
+- CountryCard-Aruba: ~0.10ms
+- CountryCard-Zambia: ~0.10ms
+- CountryCard-Guinea-Bissau: ~0.10ms
+- CountryCard-Azerbaijan: ~0.00ms
+- CountryCard-Djibouti: ~0.00ms
+- CountryCard-Colombia: ~0.00ms
+- CountryCard-Botswana: ~0.00ms
+- CountryCard-Lebanon: ~0.10ms
+- CountryCard-Dominican Republic: ~0.00ms
+- CountryCard-Bouvet Island: ~0.00ms
+- CountryCard-Namibia: ~0.00ms
+- CountryCard-United Arab Emirates: ~0.00ms
+- CountryCard-Bulgaria: ~0.10ms
+- CountryCard-Cambodia: ~0.00ms
+- CountryCard-Cuba: ~0.00ms
+- CountryCard-Saudi Arabia: ~0.10ms
+- CountryCard-Bosnia and Herzegovina: ~0.10ms
+- CountryCard-Luxembourg: ~0.10ms
+- CountryCard-Belarus: ~0.00ms
+- CountryCard-Gibraltar: ~0.20ms
+- CountryCard-Bahrain: ~0.00ms
+- CountryCard-British Virgin Islands: ~0.00ms
+- CountryCard-Trinidad and Tobago: ~0.20ms
+- CountryCard-Antigua and Barbuda: ~0.00ms
+- CountryCard-Mozambique: ~0.10ms
+- CountryCard-Central African Republic: ~0.10ms
+- CountryCard-Burkina Faso: ~0.00ms
+- CountryCard-Bolivia: ~0.10ms
+- CountryCard-Bermuda: ~0.10ms
+- CountryCard-British Indian Ocean Territory: ~0.00ms
+- CountryCard-Gambia: ~0.10ms
+- CountryCard-Bahamas: ~0.10ms
+- CountryCard-Albania: ~0.00ms
+- CountryCard-Brazil: ~0.00ms
+- CountryCard-Serbia: ~0.00ms
+- CountryCard-Belize: ~0.20ms
+- CountryCard-Bhutan: ~0.00ms
+- CountryCard-Liberia: ~0.00ms
+- CountryCard-Brunei: ~0.00ms
+- CountryCard-Kiribati: ~0.10ms
+- CountryCard-Zimbabwe: ~0.10ms
+- CountryCard-Republic of the Congo: ~0.00ms
+- CountryCard-Belgium: ~0.10ms
+- CountriesGrid: ~5.10ms
+- App: ~5.50ms
+- Filters: ~0.40ms
+- CountryCard-Benin: ~0.00ms
+- CountryCard-Caribbean Netherlands: ~0.10ms
+- CountryCard-Uzbekistan: ~0.10ms
+- CountryCard-Belarus: ~0.10ms
+- CountryCard-Bermuda: ~0.00ms
+- CountryCard-Belize: ~0.00ms
+- CountryCard-Liberia: ~0.00ms
+- CountryCard-Belgium: ~0.00ms
+- CountriesGrid: ~0.80ms
+- App: ~1.20ms
+- Filters: ~0.20ms
+- CountryCard-Belarus: ~0.10ms
+- CountryCard-Belize: ~0.10ms
+- CountryCard-Belgium: ~0.10ms
+- CountriesGrid: ~0.50ms
+- App: ~0.70ms
+- Filters: ~0.20ms
+- CountriesGrid: ~0.00ms
+- App: ~0.30ms
+- Filters: ~0.20ms
+- CountryCard-Sierra Leone: ~0.40ms
+- CountryCard-Ivory Coast: ~0.00ms
+- CountryCard-Tunisia: ~0.20ms
+- CountryCard-Benin: ~0.20ms
+- CountryCard-Cape Verde: ~0.10ms
+- CountryCard-Uganda: ~0.10ms
+- CountryCard-Burundi: ~0.10ms
+- CountryCard-South Africa: ~0.20ms
+- CountryCard-Libya: ~0.20ms
+- CountryCard-Gabon: ~0.00ms
+- CountryCard-Egypt: ~0.10ms
+- CountryCard-Senegal: ~0.40ms
+- CountryCard-Zambia: ~0.20ms
+- CountryCard-Niger: ~0.20ms
+- CountryCard-Guinea-Bissau: ~0.30ms
+- CountryCard-Réunion: ~0.30ms
+- CountryCard-Djibouti: ~0.10ms
+- CountryCard-Mauritius: ~0.20ms
+- CountryCard-Morocco: ~0.10ms
+- CountryCard-Algeria: ~0.20ms
+- CountryCard-Sudan: ~0.20ms
+- CountryCard-Botswana: ~0.20ms
+- CountryCard-Mayotte: ~0.20ms
+- CountryCard-Madagascar: ~0.20ms
+- CountryCard-Eswatini: ~0.10ms
+- CountryCard-Namibia: ~0.10ms
+- CountryCard-São Tomé and Príncipe: ~0.10ms
+- CountryCard-Malawi: ~0.20ms
+- CountryCard-Ethiopia: ~0.20ms
+- CountryCard-Lesotho: ~0.20ms
+- CountryCard-Western Sahara: ~0.20ms
+- CountryCard-Equatorial Guinea: ~0.00ms
+- CountryCard-Cameroon: ~0.20ms
+- CountryCard-Guinea: ~0.10ms
+- CountryCard-DR Congo: ~0.30ms
+- CountryCard-Somalia: ~0.20ms
+- CountryCard-Saint Helena, Ascension and Tristan da Cunha: ~0.20ms
+- CountryCard-Togo: ~0.20ms
+- CountryCard-Kenya: ~0.20ms
+- CountryCard-Rwanda: ~0.20ms
+- CountryCard-Mozambique: ~0.20ms
+- CountryCard-Central African Republic: ~0.10ms
+- CountryCard-Burkina Faso: ~0.10ms
+- CountryCard-Eritrea: ~0.20ms
+- CountryCard-Tanzania: ~0.20ms
+- CountryCard-Mauritania: ~0.10ms
+- CountryCard-Angola: ~0.30ms
+- CountryCard-Mali: ~0.10ms
+- CountryCard-Seychelles: ~0.10ms
+- CountryCard-British Indian Ocean Territory: ~0.10ms
+- CountryCard-Gambia: ~0.20ms
+- CountryCard-Nigeria: ~0.20ms
+- CountryCard-South Sudan: ~0.20ms
+- CountryCard-Liberia: ~0.00ms
+- CountryCard-Comoros: ~0.10ms
+- CountryCard-Ghana: ~0.20ms
+- CountryCard-Chad: ~0.10ms
+- CountryCard-Zimbabwe: ~0.20ms
+- CountryCard-Republic of the Congo: ~0.20ms
+- CountriesGrid: ~12.30ms
+- App: ~12.60ms
+- CountryCard-Sierra Leone: ~0.30ms
+- CountryCard-Ivory Coast: ~0.20ms
+- CountryCard-Tunisia: ~0.00ms
+- CountryCard-Benin: ~0.10ms
+- CountryCard-Cape Verde: ~0.10ms
+- CountryCard-Uganda: ~0.20ms
+- CountryCard-Burundi: ~0.10ms
+- CountryCard-South Africa: ~0.10ms
+- CountryCard-Libya: ~0.20ms
+- CountryCard-Gabon: ~0.10ms
+- CountryCard-Egypt: ~0.20ms
+- CountryCard-Senegal: ~0.20ms
+- CountryCard-Zambia: ~0.10ms
+- CountryCard-Niger: ~0.10ms
+- CountryCard-Guinea-Bissau: ~0.10ms
+- CountryCard-Réunion: ~0.20ms
+- CountryCard-Djibouti: ~0.20ms
+- CountryCard-Mauritius: ~0.10ms
+- CountryCard-Morocco: ~0.00ms
+- CountryCard-Algeria: ~0.00ms
+- CountryCard-Sudan: ~0.10ms
+- CountryCard-Botswana: ~0.00ms
+- CountryCard-Mayotte: ~0.30ms
+- CountryCard-Madagascar: ~0.10ms
+- CountryCard-Eswatini: ~0.10ms
+- CountryCard-Namibia: ~0.10ms
+- CountryCard-São Tomé and Príncipe: ~0.20ms
+- CountryCard-Malawi: ~0.20ms
+- CountryCard-Ethiopia: ~0.10ms
+- CountryCard-Lesotho: ~0.10ms
+- CountryCard-Western Sahara: ~0.20ms
+- CountryCard-Equatorial Guinea: ~0.10ms
+- CountryCard-Cameroon: ~0.10ms
+- CountryCard-Guinea: ~0.20ms
+- CountryCard-DR Congo: ~0.00ms
+- CountryCard-Somalia: ~0.20ms
+- CountryCard-Saint Helena, Ascension and Tristan da Cunha: ~0.10ms
+- CountryCard-Togo: ~0.20ms
+- CountryCard-Kenya: ~0.00ms
+- CountryCard-Rwanda: ~0.20ms
+- CountryCard-Mozambique: ~0.20ms
+- CountryCard-Central African Republic: ~0.10ms
+- CountryCard-Burkina Faso: ~0.10ms
+- CountryCard-Eritrea: ~0.10ms
+- CountryCard-Tanzania: ~0.30ms
+- CountryCard-Mauritania: ~0.10ms
+- CountryCard-Angola: ~0.20ms
+- CountryCard-Mali: ~0.10ms
+- CountryCard-Seychelles: ~0.00ms
+- CountryCard-British Indian Ocean Territory: ~0.20ms
+- CountryCard-Gambia: ~0.00ms
+- CountryCard-Nigeria: ~0.20ms
+- CountryCard-South Sudan: ~0.10ms
+- CountryCard-Liberia: ~0.10ms
+- CountryCard-Comoros: ~0.20ms
+- CountryCard-Ghana: ~0.10ms
+- CountryCard-Chad: ~0.10ms
+- CountryCard-Zimbabwe: ~0.10ms
+- CountryCard-Republic of the Congo: ~0.10ms
+- CountriesGrid: ~7.60ms
+- App: ~7.60ms
+- Filters: ~0.10ms
+- CountryCard-Taiwan: ~0.30ms
+- CountryCard-Indonesia: ~0.20ms
+- CountryCard-Laos: ~0.10ms
+- CountryCard-China: ~0.30ms
+- CountryCard-Yemen: ~0.10ms
+- CountryCard-Uzbekistan: ~0.20ms
+- CountryCard-Sri Lanka: ~0.10ms
+- CountryCard-Palestine: ~0.00ms
+- CountryCard-Bangladesh: ~0.10ms
+- CountryCard-Singapore: ~0.10ms
+- CountryCard-Turkey: ~0.20ms
+- CountryCard-Afghanistan: ~0.30ms
+- CountryCard-Azerbaijan: ~0.20ms
+- CountryCard-North Korea: ~0.30ms
+- CountryCard-Nepal: ~0.20ms
+- CountryCard-Georgia: ~0.10ms
+- CountryCard-Pakistan: ~0.00ms
+- CountryCard-Lebanon: ~0.30ms
+- CountryCard-Qatar: ~0.10ms
+- CountryCard-India: ~0.20ms
+- CountryCard-Syria: ~0.20ms
+- CountryCard-United Arab Emirates: ~0.10ms
+- CountryCard-Cambodia: ~0.20ms
+- CountryCard-Iraq: ~0.10ms
+- CountryCard-Kyrgyzstan: ~0.00ms
+- CountryCard-Malaysia: ~0.20ms
+- CountryCard-Saudi Arabia: ~0.20ms
+- CountryCard-Oman: ~0.20ms
+- CountryCard-Macau: ~0.20ms
+- CountryCard-Thailand: ~0.10ms
+- CountryCard-Philippines: ~0.10ms
+- CountryCard-Bahrain: ~0.10ms
+- CountryCard-Timor-Leste: ~0.20ms
+- CountryCard-Vietnam: ~0.10ms
+- CountryCard-Hong Kong: ~0.10ms
+- CountryCard-Turkmenistan: ~0.10ms
+- CountryCard-South Korea: ~0.00ms
+- CountryCard-Jordan: ~0.20ms
+- CountryCard-Kazakhstan: ~0.20ms
+- CountryCard-Armenia: ~0.20ms
+- CountryCard-Japan: ~0.10ms
+- CountryCard-Tajikistan: ~0.10ms
+- CountryCard-Kuwait: ~0.10ms
+- CountryCard-Maldives: ~0.10ms
+- CountryCard-Iran: ~0.20ms
+- CountryCard-Myanmar: ~0.10ms
+- CountryCard-Bhutan: ~0.10ms
+- CountryCard-Brunei: ~0.10ms
+- CountryCard-Mongolia: ~0.20ms
+- CountryCard-Israel: ~0.00ms
+- CountriesGrid: ~9.60ms
+- App: ~9.90ms
+- CountryCard-Taiwan: ~0.10ms
+- CountryCard-Indonesia: ~0.20ms
+- CountryCard-Laos: ~0.10ms
+- CountryCard-China: ~0.10ms
+- CountryCard-Yemen: ~0.10ms
+- CountryCard-Uzbekistan: ~0.20ms
+- CountryCard-Sri Lanka: ~0.00ms
+- CountryCard-Palestine: ~0.20ms
+- CountryCard-Bangladesh: ~0.20ms
+- CountryCard-Singapore: ~0.00ms
+- CountryCard-Turkey: ~0.00ms
+- CountryCard-Afghanistan: ~0.10ms
+- CountryCard-Azerbaijan: ~0.10ms
+- CountryCard-North Korea: ~0.10ms
+- CountryCard-Nepal: ~0.10ms
+- CountryCard-Georgia: ~0.10ms
+- CountryCard-Pakistan: ~0.00ms
+- CountryCard-Lebanon: ~0.20ms
+- CountryCard-Qatar: ~0.00ms
+- CountryCard-India: ~0.10ms
+- CountryCard-Syria: ~0.10ms
+- CountryCard-United Arab Emirates: ~0.10ms
+- CountryCard-Cambodia: ~0.10ms
+- CountryCard-Iraq: ~0.00ms
+- CountryCard-Kyrgyzstan: ~0.20ms
+- CountryCard-Malaysia: ~0.10ms
+- CountryCard-Saudi Arabia: ~0.00ms
+- CountryCard-Oman: ~0.10ms
+- CountryCard-Macau: ~0.10ms
+- CountryCard-Thailand: ~0.10ms
+- CountryCard-Philippines: ~0.10ms
+- CountryCard-Bahrain: ~0.00ms
+- CountryCard-Timor-Leste: ~0.20ms
+- CountryCard-Vietnam: ~0.10ms
+- CountryCard-Hong Kong: ~0.10ms
+- CountryCard-Turkmenistan: ~0.20ms
+- CountryCard-South Korea: ~0.00ms
+- CountryCard-Jordan: ~0.10ms
+- CountryCard-Kazakhstan: ~0.00ms
+- CountryCard-Armenia: ~0.10ms
+- CountryCard-Japan: ~0.10ms
+- CountryCard-Tajikistan: ~0.10ms
+- CountryCard-Kuwait: ~0.00ms
+- CountryCard-Maldives: ~0.20ms
+- CountryCard-Iran: ~0.10ms
+- CountryCard-Myanmar: ~0.00ms
+- CountryCard-Bhutan: ~0.10ms
+- CountryCard-Brunei: ~0.00ms
+- CountryCard-Mongolia: ~0.10ms
+- CountryCard-Israel: ~0.10ms
+- CountriesGrid: ~4.60ms
+- App: ~4.60ms
+
+#### Key Findings
+- Average base duration: 0.40ms
+- Average actual duration: 0.79ms
+    ### Initial Performance Metrics
+
+Performance metrics were collected using React Dev Tools Profiler:
+
+#### Commit Duration
+- Initial render: ~26.72ms
+- Average commit: ~13.36ms
+
+#### Component Render Times
+- Filters: ~1.80ms
+- CountryCard-South Georgia: ~2.20ms
+- CountryCard-Grenada: ~1.10ms
+- CountryCard-Switzerland: ~1.00ms
+- CountryCard-Sierra Leone: ~0.70ms
+- CountryCard-Hungary: ~0.90ms
+- CountryCard-Taiwan: ~0.70ms
+- CountryCard-Wallis and Futuna: ~0.80ms
+- CountryCard-Barbados: ~3.80ms
+- CountryCard-Pitcairn Islands: ~0.70ms
+- CountryCard-Ivory Coast: ~0.30ms
+- CountryCard-Tunisia: ~0.40ms
+- CountryCard-Italy: ~0.50ms
+- CountryCard-Benin: ~0.50ms
+- CountryCard-Indonesia: ~0.40ms
+- CountryCard-Cape Verde: ~0.50ms
+- CountryCard-Saint Kitts and Nevis: ~0.40ms
+- CountryCard-Laos: ~0.40ms
+- CountryCard-Caribbean Netherlands: ~0.40ms
+- CountryCard-Uganda: ~0.60ms
+- CountryCard-Andorra: ~0.50ms
+- CountryCard-Burundi: ~0.40ms
+- CountryCard-South Africa: ~0.50ms
+- CountryCard-France: ~0.40ms
+- CountryCard-Libya: ~0.50ms
+- CountryCard-Mexico: ~0.40ms
+- CountryCard-Gabon: ~0.60ms
+- CountryCard-Northern Mariana Islands: ~0.50ms
+- CountryCard-North Macedonia: ~0.50ms
+- CountryCard-China: ~0.50ms
+- CountryCard-Yemen: ~0.50ms
+- CountryCard-Saint Barthélemy: ~0.70ms
+- CountryCard-Guernsey: ~0.50ms
+- CountryCard-Solomon Islands: ~0.60ms
+- CountryCard-Svalbard and Jan Mayen: ~0.60ms
+- CountryCard-Faroe Islands: ~0.50ms
+- CountryCard-Uzbekistan: ~0.50ms
+- CountryCard-Egypt: ~0.60ms
+- CountryCard-Senegal: ~0.40ms
+- CountryCard-Sri Lanka: ~0.60ms
+- CountryCard-Palestine: ~0.40ms
+- CountryCard-Bangladesh: ~0.60ms
+- CountryCard-Peru: ~0.50ms
+- CountryCard-Singapore: ~0.50ms
+- CountryCard-Turkey: ~0.40ms
+- CountryCard-Afghanistan: ~0.40ms
+- CountryCard-Aruba: ~0.50ms
+- CountryCard-Cook Islands: ~0.60ms
+- CountryCard-United Kingdom: ~0.60ms
+- CountryCard-Zambia: ~0.50ms
+- CountryCard-Finland: ~0.60ms
+- CountryCard-Niger: ~0.80ms
+- CountryCard-Christmas Island: ~0.70ms
+- CountryCard-Tokelau: ~0.70ms
+- CountryCard-Guinea-Bissau: ~0.50ms
+- CountryCard-Azerbaijan: ~0.70ms
+- CountryCard-Réunion: ~1.00ms
+- CountryCard-Djibouti: ~1.00ms
+- CountryCard-North Korea: ~0.70ms
+- CountryCard-Mauritius: ~0.70ms
+- CountryCard-Montserrat: ~0.90ms
+- CountryCard-United States Virgin Islands: ~0.70ms
+- CountryCard-Colombia: ~0.60ms
+- CountryCard-Greece: ~0.50ms
+- CountryCard-Croatia: ~0.60ms
+- CountryCard-Morocco: ~0.70ms
+- CountryCard-Algeria: ~0.40ms
+- CountryCard-Antarctica: ~0.40ms
+- CountryCard-Netherlands: ~0.50ms
+- CountryCard-Sudan: ~0.40ms
+- CountryCard-Fiji: ~0.60ms
+- CountryCard-Liechtenstein: ~0.70ms
+- CountryCard-Nepal: ~0.70ms
+- CountryCard-Puerto Rico: ~0.60ms
+- CountryCard-Georgia: ~0.60ms
+- CountryCard-Pakistan: ~0.40ms
+- CountryCard-Monaco: ~0.60ms
+- CountryCard-Botswana: ~0.70ms
+- CountryCard-Lebanon: ~0.50ms
+- CountryCard-Papua New Guinea: ~0.80ms
+- CountryCard-Mayotte: ~0.80ms
+- CountryCard-Dominican Republic: ~0.80ms
+- CountryCard-Norfolk Island: ~0.50ms
+- CountryCard-Bouvet Island: ~0.60ms
+- CountryCard-Qatar: ~1.00ms
+- CountryCard-Madagascar: ~0.60ms
+- CountryCard-India: ~0.60ms
+- CountryCard-Syria: ~0.40ms
+- CountryCard-Montenegro: ~0.40ms
+- CountryCard-Eswatini: ~0.50ms
+- CountryCard-Paraguay: ~0.50ms
+- CountryCard-El Salvador: ~0.50ms
+- CountryCard-Ukraine: ~0.40ms
+- CountryCard-Isle of Man: ~0.60ms
+- CountryCard-Namibia: ~0.40ms
+- CountryCard-United Arab Emirates: ~0.40ms
+- CountryCard-Bulgaria: ~0.30ms
+- CountryCard-Greenland: ~0.40ms
+- CountryCard-Germany: ~0.50ms
+- CountryCard-Cambodia: ~0.90ms
+- CountryCard-Iraq: ~0.90ms
+- CountryCard-French Southern and Antarctic Lands: ~0.90ms
+- CountryCard-Sweden: ~0.80ms
+- CountryCard-Cuba: ~0.80ms
+- CountryCard-Kyrgyzstan: ~0.60ms
+- CountryCard-Russia: ~0.80ms
+- CountryCard-Malaysia: ~0.50ms
+- CountryCard-São Tomé and Príncipe: ~0.60ms
+- CountryCard-Cyprus: ~0.60ms
+- CountryCard-Canada: ~0.60ms
+- CountryCard-Malawi: ~0.60ms
+- CountryCard-Saudi Arabia: ~0.60ms
+- CountryCard-Bosnia and Herzegovina: ~0.50ms
+- CountryCard-Ethiopia: ~0.60ms
+- CountryCard-Spain: ~0.60ms
+- CountryCard-Slovenia: ~0.60ms
+- CountryCard-Oman: ~0.40ms
+- CountryCard-Saint Pierre and Miquelon: ~0.50ms
+- CountryCard-Macau: ~0.60ms
+- CountryCard-San Marino: ~0.50ms
+- CountryCard-Lesotho: ~0.60ms
+- CountryCard-Marshall Islands: ~0.60ms
+- CountryCard-Sint Maarten: ~0.60ms
+- CountryCard-Iceland: ~0.60ms
+- CountryCard-Luxembourg: ~0.40ms
+- CountryCard-Argentina: ~0.40ms
+- CountryCard-Turks and Caicos Islands: ~0.40ms
+- CountryCard-Nauru: ~0.40ms
+- CountryCard-Cocos (Keeling) Islands: ~0.40ms
+- CountryCard-Western Sahara: ~0.40ms
+- CountryCard-Dominica: ~0.40ms
+- CountryCard-Costa Rica: ~0.30ms
+- CountryCard-Australia: ~0.50ms
+- CountryCard-Thailand: ~0.70ms
+- CountryCard-Haiti: ~0.60ms
+- CountryCard-Tuvalu: ~0.50ms
+- CountryCard-Honduras: ~0.80ms
+- CountryCard-Equatorial Guinea: ~0.50ms
+- CountryCard-Saint Lucia: ~0.40ms
+- CountryCard-French Polynesia: ~0.50ms
+- CountryCard-Belarus: ~0.40ms
+- CountryCard-Latvia: ~0.40ms
+- CountryCard-Palau: ~0.40ms
+- CountryCard-Guadeloupe: ~0.40ms
+- CountryCard-Philippines: ~0.40ms
+- CountryCard-Gibraltar: ~0.30ms
+- CountryCard-Denmark: ~0.40ms
+- CountryCard-Cameroon: ~0.40ms
+- CountryCard-Guinea: ~0.30ms
+- CountryCard-Bahrain: ~0.30ms
+- CountryCard-Suriname: ~0.40ms
+- CountryCard-DR Congo: ~0.40ms
+- CountryCard-Somalia: ~0.40ms
+- CountryCard-Czechia: ~0.40ms
+- CountryCard-New Caledonia: ~0.50ms
+- CountryCard-Vanuatu: ~0.40ms
+- CountryCard-Saint Helena, Ascension and Tristan da Cunha: ~0.40ms
+- CountryCard-Togo: ~0.30ms
+- CountryCard-British Virgin Islands: ~0.40ms
+- CountryCard-Kenya: ~0.30ms
+- CountryCard-Niue: ~0.40ms
+- CountryCard-Heard Island and McDonald Islands: ~0.30ms
+- CountryCard-Rwanda: ~0.40ms
+- CountryCard-Estonia: ~0.40ms
+- CountryCard-Romania: ~0.30ms
+- CountryCard-Trinidad and Tobago: ~0.30ms
+- CountryCard-Guyana: ~0.20ms
+- CountryCard-Timor-Leste: ~0.30ms
+- CountryCard-Vietnam: ~0.30ms
+- CountryCard-Uruguay: ~0.30ms
+- CountryCard-Vatican City: ~0.40ms
+- CountryCard-Hong Kong: ~0.30ms
+- CountryCard-Austria: ~0.50ms
+- CountryCard-Antigua and Barbuda: ~0.30ms
+- CountryCard-Turkmenistan: ~0.40ms
+- CountryCard-Mozambique: ~0.40ms
+- CountryCard-Panama: ~0.30ms
+- CountryCard-Micronesia: ~0.30ms
+- CountryCard-Ireland: ~0.30ms
+- CountryCard-Curaçao: ~0.20ms
+- CountryCard-French Guiana: ~0.30ms
+- CountryCard-Norway: ~0.30ms
+- CountryCard-Åland Islands: ~0.40ms
+- CountryCard-Central African Republic: ~0.30ms
+- CountryCard-Burkina Faso: ~0.20ms
+- CountryCard-Eritrea: ~0.30ms
+- CountryCard-Tanzania: ~0.30ms
+- CountryCard-South Korea: ~0.40ms
+- CountryCard-Jordan: ~0.30ms
+- CountryCard-Mauritania: ~0.30ms
+- CountryCard-Lithuania: ~0.30ms
+- CountryCard-United States Minor Outlying Islands: ~0.40ms
+- CountryCard-Slovakia: ~0.30ms
+- CountryCard-Angola: ~0.30ms
+- CountryCard-Kazakhstan: ~0.30ms
+- CountryCard-Moldova: ~0.40ms
+- CountryCard-Mali: ~0.30ms
+- CountryCard-Falkland Islands: ~0.40ms
+- CountryCard-Armenia: ~0.30ms
+- CountryCard-Samoa: ~0.30ms
+- CountryCard-Jersey: ~0.30ms
+- CountryCard-Japan: ~0.30ms
+- CountryCard-Bolivia: ~0.30ms
+- CountryCard-Chile: ~0.30ms
+- CountryCard-United States: ~0.30ms
+- CountryCard-Saint Vincent and the Grenadines: ~0.40ms
+- CountryCard-Bermuda: ~0.30ms
+- CountryCard-Seychelles: ~0.40ms
+- CountryCard-British Indian Ocean Territory: ~0.30ms
+- CountryCard-Guatemala: ~0.40ms
+- CountryCard-Ecuador: ~0.40ms
+- CountryCard-Martinique: ~0.30ms
+- CountryCard-Tajikistan: ~0.40ms
+- CountryCard-Malta: ~0.40ms
+- CountryCard-Gambia: ~0.50ms
+- CountryCard-Nigeria: ~0.30ms
+- CountryCard-Bahamas: ~0.20ms
+- CountryCard-Kosovo: ~0.50ms
+- CountryCard-Kuwait: ~0.40ms
+- CountryCard-Maldives: ~0.30ms
+- CountryCard-South Sudan: ~0.40ms
+- CountryCard-Iran: ~0.40ms
+- CountryCard-Albania: ~0.40ms
+- CountryCard-Brazil: ~0.40ms
+- CountryCard-Serbia: ~0.30ms
+- CountryCard-Belize: ~0.40ms
+- CountryCard-Myanmar: ~0.40ms
+- CountryCard-Bhutan: ~0.40ms
+- CountryCard-Venezuela: ~0.40ms
+- CountryCard-Liberia: ~0.40ms
+- CountryCard-Jamaica: ~0.40ms
+- CountryCard-Poland: ~0.40ms
+- CountryCard-Cayman Islands: ~0.30ms
+- CountryCard-Brunei: ~0.40ms
+- CountryCard-Comoros: ~0.30ms
+- CountryCard-Guam: ~0.30ms
+- CountryCard-Tonga: ~0.40ms
+- CountryCard-Kiribati: ~0.40ms
+- CountryCard-Ghana: ~0.40ms
+- CountryCard-Chad: ~0.40ms
+- CountryCard-Zimbabwe: ~0.30ms
+- CountryCard-Saint Martin: ~0.50ms
+- CountryCard-Mongolia: ~0.40ms
+- CountryCard-Portugal: ~0.30ms
+- CountryCard-American Samoa: ~0.30ms
+- CountryCard-Republic of the Congo: ~0.30ms
+- CountryCard-Belgium: ~0.30ms
+- CountryCard-Israel: ~0.30ms
+- CountryCard-New Zealand: ~0.30ms
+- CountryCard-Nicaragua: ~0.30ms
+- CountryCard-Anguilla: ~0.40ms
+- CountriesGrid: ~138.40ms
+- App: ~141.00ms
+- Filters: ~0.20ms
+- CountryCard-South Georgia: ~0.20ms
+- CountryCard-Grenada: ~0.00ms
+- CountryCard-Switzerland: ~0.30ms
+- CountryCard-Sierra Leone: ~0.10ms
+- CountryCard-Hungary: ~0.10ms
+- CountryCard-Taiwan: ~0.10ms
+- CountryCard-Wallis and Futuna: ~0.10ms
+- CountryCard-Barbados: ~0.10ms
+- CountryCard-Pitcairn Islands: ~0.20ms
+- CountryCard-Ivory Coast: ~0.10ms
+- CountryCard-Tunisia: ~0.20ms
+- CountryCard-Italy: ~0.20ms
+- CountryCard-Benin: ~0.10ms
+- CountryCard-Indonesia: ~0.10ms
+- CountryCard-Cape Verde: ~0.20ms
+- CountryCard-Saint Kitts and Nevis: ~0.10ms
+- CountryCard-Laos: ~0.10ms
+- CountryCard-Caribbean Netherlands: ~0.20ms
+- CountryCard-Uganda: ~0.10ms
+- CountryCard-Andorra: ~0.20ms
+- CountryCard-Burundi: ~0.20ms
+- CountryCard-South Africa: ~0.10ms
+- CountryCard-France: ~0.20ms
+- CountryCard-Libya: ~0.00ms
+- CountryCard-Mexico: ~0.20ms
+- CountryCard-Gabon: ~0.10ms
+- CountryCard-Northern Mariana Islands: ~0.00ms
+- CountryCard-North Macedonia: ~0.20ms
+- CountryCard-China: ~0.10ms
+- CountryCard-Yemen: ~0.00ms
+- CountryCard-Saint Barthélemy: ~0.10ms
+- CountryCard-Guernsey: ~0.10ms
+- CountryCard-Solomon Islands: ~0.10ms
+- CountryCard-Svalbard and Jan Mayen: ~0.00ms
+- CountryCard-Faroe Islands: ~0.10ms
+- CountryCard-Uzbekistan: ~0.10ms
+- CountryCard-Egypt: ~0.10ms
+- CountryCard-Senegal: ~0.00ms
+- CountryCard-Sri Lanka: ~0.00ms
+- CountryCard-Palestine: ~0.10ms
+- CountryCard-Bangladesh: ~0.10ms
+- CountryCard-Peru: ~0.10ms
+- CountryCard-Singapore: ~0.10ms
+- CountryCard-Turkey: ~0.10ms
+- CountryCard-Afghanistan: ~0.00ms
+- CountryCard-Aruba: ~0.10ms
+- CountryCard-Cook Islands: ~0.10ms
+- CountryCard-United Kingdom: ~0.10ms
+- CountryCard-Zambia: ~0.10ms
+- CountryCard-Finland: ~0.20ms
+- CountryCard-Niger: ~0.00ms
+- CountryCard-Christmas Island: ~0.10ms
+- CountryCard-Tokelau: ~0.10ms
+- CountryCard-Guinea-Bissau: ~0.10ms
+- CountryCard-Azerbaijan: ~0.00ms
+- CountryCard-Réunion: ~0.10ms
+- CountryCard-Djibouti: ~0.10ms
+- CountryCard-North Korea: ~0.20ms
+- CountryCard-Mauritius: ~0.00ms
+- CountryCard-Montserrat: ~0.30ms
+- CountryCard-United States Virgin Islands: ~0.10ms
+- CountryCard-Colombia: ~0.00ms
+- CountryCard-Greece: ~0.10ms
+- CountryCard-Croatia: ~0.10ms
+- CountryCard-Morocco: ~0.00ms
+- CountryCard-Algeria: ~0.10ms
+- CountryCard-Antarctica: ~0.00ms
+- CountryCard-Netherlands: ~0.10ms
+- CountryCard-Sudan: ~0.10ms
+- CountryCard-Fiji: ~0.10ms
+- CountryCard-Liechtenstein: ~0.10ms
+- CountryCard-Nepal: ~0.20ms
+- CountryCard-Puerto Rico: ~0.10ms
+- CountryCard-Georgia: ~0.10ms
+- CountryCard-Pakistan: ~0.00ms
+- CountryCard-Monaco: ~0.20ms
+- CountryCard-Botswana: ~0.10ms
+- CountryCard-Lebanon: ~0.20ms
+- CountryCard-Papua New Guinea: ~0.00ms
+- CountryCard-Mayotte: ~0.00ms
+- CountryCard-Dominican Republic: ~0.00ms
+- CountryCard-Norfolk Island: ~0.00ms
+- CountryCard-Bouvet Island: ~0.20ms
+- CountryCard-Qatar: ~0.10ms
+- CountryCard-Madagascar: ~0.00ms
+- CountryCard-India: ~0.00ms
+- CountryCard-Syria: ~0.10ms
+- CountryCard-Montenegro: ~0.00ms
+- CountryCard-Eswatini: ~0.10ms
+- CountryCard-Paraguay: ~0.00ms
+- CountryCard-El Salvador: ~0.10ms
+- CountryCard-Ukraine: ~0.10ms
+- CountryCard-Isle of Man: ~0.10ms
+- CountryCard-Namibia: ~0.10ms
+- CountryCard-United Arab Emirates: ~0.10ms
+- CountryCard-Bulgaria: ~0.10ms
+- CountryCard-Greenland: ~0.20ms
+- CountryCard-Germany: ~0.10ms
+- CountryCard-Cambodia: ~0.10ms
+- CountryCard-Iraq: ~0.20ms
+- CountryCard-French Southern and Antarctic Lands: ~0.10ms
+- CountryCard-Sweden: ~0.10ms
+- CountryCard-Cuba: ~0.20ms
+- CountryCard-Kyrgyzstan: ~0.00ms
+- CountryCard-Russia: ~0.10ms
+- CountryCard-Malaysia: ~0.10ms
+- CountryCard-São Tomé and Príncipe: ~0.10ms
+- CountryCard-Cyprus: ~0.20ms
+- CountryCard-Canada: ~0.10ms
+- CountryCard-Malawi: ~0.10ms
+- CountryCard-Saudi Arabia: ~0.10ms
+- CountryCard-Bosnia and Herzegovina: ~0.00ms
+- CountryCard-Ethiopia: ~0.10ms
+- CountryCard-Spain: ~0.10ms
+- CountryCard-Slovenia: ~0.10ms
+- CountryCard-Oman: ~0.00ms
+- CountryCard-Saint Pierre and Miquelon: ~0.10ms
+- CountryCard-Macau: ~0.10ms
+- CountryCard-San Marino: ~0.10ms
+- CountryCard-Lesotho: ~0.10ms
+- CountryCard-Marshall Islands: ~0.10ms
+- CountryCard-Sint Maarten: ~0.10ms
+- CountryCard-Iceland: ~0.10ms
+- CountryCard-Luxembourg: ~0.00ms
+- CountryCard-Argentina: ~0.20ms
+- CountryCard-Turks and Caicos Islands: ~0.00ms
+- CountryCard-Nauru: ~0.10ms
+- CountryCard-Cocos (Keeling) Islands: ~0.10ms
+- CountryCard-Western Sahara: ~0.20ms
+- CountryCard-Dominica: ~0.10ms
+- CountryCard-Costa Rica: ~0.10ms
+- CountryCard-Australia: ~0.00ms
+- CountryCard-Thailand: ~0.10ms
+- CountryCard-Haiti: ~0.10ms
+- CountryCard-Tuvalu: ~0.10ms
+- CountryCard-Honduras: ~0.00ms
+- CountryCard-Equatorial Guinea: ~0.20ms
+- CountryCard-Saint Lucia: ~0.00ms
+- CountryCard-French Polynesia: ~0.10ms
+- CountryCard-Belarus: ~0.10ms
+- CountryCard-Latvia: ~0.00ms
+- CountryCard-Palau: ~0.10ms
+- CountryCard-Guadeloupe: ~0.10ms
+- CountryCard-Philippines: ~0.10ms
+- CountryCard-Gibraltar: ~0.10ms
+- CountryCard-Denmark: ~0.10ms
+- CountryCard-Cameroon: ~0.00ms
+- CountryCard-Guinea: ~0.00ms
+- CountryCard-Bahrain: ~0.00ms
+- CountryCard-Suriname: ~0.20ms
+- CountryCard-DR Congo: ~0.20ms
+- CountryCard-Somalia: ~0.10ms
+- CountryCard-Czechia: ~0.10ms
+- CountryCard-New Caledonia: ~0.20ms
+- CountryCard-Vanuatu: ~0.00ms
+- CountryCard-Saint Helena, Ascension and Tristan da Cunha: ~0.20ms
+- CountryCard-Togo: ~0.10ms
+- CountryCard-British Virgin Islands: ~0.10ms
+- CountryCard-Kenya: ~0.10ms
+- CountryCard-Niue: ~0.00ms
+- CountryCard-Heard Island and McDonald Islands: ~0.10ms
+- CountryCard-Rwanda: ~0.10ms
+- CountryCard-Estonia: ~0.10ms
+- CountryCard-Romania: ~0.00ms
+- CountryCard-Trinidad and Tobago: ~0.00ms
+- CountryCard-Guyana: ~0.10ms
+- CountryCard-Timor-Leste: ~0.00ms
+- CountryCard-Vietnam: ~0.10ms
+- CountryCard-Uruguay: ~0.20ms
+- CountryCard-Vatican City: ~0.10ms
+- CountryCard-Hong Kong: ~0.10ms
+- CountryCard-Austria: ~0.10ms
+- CountryCard-Antigua and Barbuda: ~0.10ms
+- CountryCard-Turkmenistan: ~0.10ms
+- CountryCard-Mozambique: ~0.00ms
+- CountryCard-Panama: ~0.10ms
+- CountryCard-Micronesia: ~0.00ms
+- CountryCard-Ireland: ~0.10ms
+- CountryCard-Curaçao: ~0.10ms
+- CountryCard-French Guiana: ~0.10ms
+- CountryCard-Norway: ~0.00ms
+- CountryCard-Åland Islands: ~0.00ms
+- CountryCard-Central African Republic: ~0.10ms
+- CountryCard-Burkina Faso: ~0.00ms
+- CountryCard-Eritrea: ~0.10ms
+- CountryCard-Tanzania: ~0.10ms
+- CountryCard-South Korea: ~0.10ms
+- CountryCard-Jordan: ~0.00ms
+- CountryCard-Mauritania: ~0.10ms
+- CountryCard-Lithuania: ~0.10ms
+- CountryCard-United States Minor Outlying Islands: ~0.10ms
+- CountryCard-Slovakia: ~0.10ms
+- CountryCard-Angola: ~0.10ms
+- CountryCard-Kazakhstan: ~0.10ms
+- CountryCard-Moldova: ~0.10ms
+- CountryCard-Mali: ~0.20ms
+- CountryCard-Falkland Islands: ~0.20ms
+- CountryCard-Armenia: ~0.10ms
+- CountryCard-Samoa: ~0.10ms
+- CountryCard-Jersey: ~0.10ms
+- CountryCard-Japan: ~0.10ms
+- CountryCard-Bolivia: ~0.10ms
+- CountryCard-Chile: ~0.20ms
+- CountryCard-United States: ~0.10ms
+- CountryCard-Saint Vincent and the Grenadines: ~0.20ms
+- CountryCard-Bermuda: ~0.10ms
+- CountryCard-Seychelles: ~0.20ms
+- CountryCard-British Indian Ocean Territory: ~0.10ms
+- CountryCard-Guatemala: ~0.10ms
+- CountryCard-Ecuador: ~0.10ms
+- CountryCard-Martinique: ~0.10ms
+- CountryCard-Tajikistan: ~0.00ms
+- CountryCard-Malta: ~0.10ms
+- CountryCard-Gambia: ~0.10ms
+- CountryCard-Nigeria: ~0.10ms
+- CountryCard-Bahamas: ~0.00ms
+- CountryCard-Kosovo: ~0.20ms
+- CountryCard-Kuwait: ~0.10ms
+- CountryCard-Maldives: ~0.00ms
+- CountryCard-South Sudan: ~0.10ms
+- CountryCard-Iran: ~0.10ms
+- CountryCard-Albania: ~0.10ms
+- CountryCard-Brazil: ~0.10ms
+- CountryCard-Serbia: ~0.10ms
+- CountryCard-Belize: ~0.10ms
+- CountryCard-Myanmar: ~0.10ms
+- CountryCard-Bhutan: ~0.00ms
+- CountryCard-Venezuela: ~0.10ms
+- CountryCard-Liberia: ~0.10ms
+- CountryCard-Jamaica: ~0.10ms
+- CountryCard-Poland: ~0.10ms
+- CountryCard-Cayman Islands: ~0.00ms
+- CountryCard-Brunei: ~0.10ms
+- CountryCard-Comoros: ~0.10ms
+- CountryCard-Guam: ~0.10ms
+- CountryCard-Tonga: ~0.10ms
+- CountryCard-Kiribati: ~0.10ms
+- CountryCard-Ghana: ~0.20ms
+- CountryCard-Chad: ~0.10ms
+- CountryCard-Zimbabwe: ~0.10ms
+- CountryCard-Saint Martin: ~0.10ms
+- CountryCard-Mongolia: ~0.20ms
+- CountryCard-Portugal: ~0.20ms
+- CountryCard-American Samoa: ~0.20ms
+- CountryCard-Republic of the Congo: ~0.10ms
+- CountryCard-Belgium: ~0.10ms
+- CountryCard-Israel: ~0.00ms
+- CountryCard-New Zealand: ~0.00ms
+- CountryCard-Nicaragua: ~0.20ms
+- CountryCard-Anguilla: ~0.20ms
+- CountriesGrid: ~47.10ms
+- App: ~47.70ms
+- Filters: ~0.30ms
+- CountryCard-Barbados: ~0.20ms
+- CountryCard-Benin: ~0.00ms
+- CountryCard-Caribbean Netherlands: ~0.10ms
+- CountryCard-Burundi: ~0.10ms
+- CountryCard-Libya: ~0.10ms
+- CountryCard-Gabon: ~0.00ms
+- CountryCard-Saint Barthélemy: ~0.00ms
+- CountryCard-Svalbard and Jan Mayen: ~0.00ms
+- CountryCard-Uzbekistan: ~0.00ms
+- CountryCard-Bangladesh: ~0.10ms
+- CountryCard-Aruba: ~0.10ms
+- CountryCard-Zambia: ~0.10ms
+- CountryCard-Guinea-Bissau: ~0.10ms
+- CountryCard-Azerbaijan: ~0.00ms
+- CountryCard-Djibouti: ~0.00ms
+- CountryCard-Colombia: ~0.00ms
+- CountryCard-Botswana: ~0.00ms
+- CountryCard-Lebanon: ~0.10ms
+- CountryCard-Dominican Republic: ~0.00ms
+- CountryCard-Bouvet Island: ~0.00ms
+- CountryCard-Namibia: ~0.00ms
+- CountryCard-United Arab Emirates: ~0.00ms
+- CountryCard-Bulgaria: ~0.10ms
+- CountryCard-Cambodia: ~0.00ms
+- CountryCard-Cuba: ~0.00ms
+- CountryCard-Saudi Arabia: ~0.10ms
+- CountryCard-Bosnia and Herzegovina: ~0.10ms
+- CountryCard-Luxembourg: ~0.10ms
+- CountryCard-Belarus: ~0.00ms
+- CountryCard-Gibraltar: ~0.20ms
+- CountryCard-Bahrain: ~0.00ms
+- CountryCard-British Virgin Islands: ~0.00ms
+- CountryCard-Trinidad and Tobago: ~0.20ms
+- CountryCard-Antigua and Barbuda: ~0.00ms
+- CountryCard-Mozambique: ~0.10ms
+- CountryCard-Central African Republic: ~0.10ms
+- CountryCard-Burkina Faso: ~0.00ms
+- CountryCard-Bolivia: ~0.10ms
+- CountryCard-Bermuda: ~0.10ms
+- CountryCard-British Indian Ocean Territory: ~0.00ms
+- CountryCard-Gambia: ~0.10ms
+- CountryCard-Bahamas: ~0.10ms
+- CountryCard-Albania: ~0.00ms
+- CountryCard-Brazil: ~0.00ms
+- CountryCard-Serbia: ~0.00ms
+- CountryCard-Belize: ~0.20ms
+- CountryCard-Bhutan: ~0.00ms
+- CountryCard-Liberia: ~0.00ms
+- CountryCard-Brunei: ~0.00ms
+- CountryCard-Kiribati: ~0.10ms
+- CountryCard-Zimbabwe: ~0.10ms
+- CountryCard-Republic of the Congo: ~0.00ms
+- CountryCard-Belgium: ~0.10ms
+- CountriesGrid: ~5.10ms
+- App: ~5.50ms
+- Filters: ~0.40ms
+- CountryCard-Benin: ~0.00ms
+- CountryCard-Caribbean Netherlands: ~0.10ms
+- CountryCard-Uzbekistan: ~0.10ms
+- CountryCard-Belarus: ~0.10ms
+- CountryCard-Bermuda: ~0.00ms
+- CountryCard-Belize: ~0.00ms
+- CountryCard-Liberia: ~0.00ms
+- CountryCard-Belgium: ~0.00ms
+- CountriesGrid: ~0.80ms
+- App: ~1.20ms
+- Filters: ~0.20ms
+- CountryCard-Belarus: ~0.10ms
+- CountryCard-Belize: ~0.10ms
+- CountryCard-Belgium: ~0.10ms
+- CountriesGrid: ~0.50ms
+- App: ~0.70ms
+- Filters: ~0.20ms
+- CountriesGrid: ~0.00ms
+- App: ~0.30ms
+- Filters: ~0.20ms
+- CountryCard-Sierra Leone: ~0.40ms
+- CountryCard-Ivory Coast: ~0.00ms
+- CountryCard-Tunisia: ~0.20ms
+- CountryCard-Benin: ~0.20ms
+- CountryCard-Cape Verde: ~0.10ms
+- CountryCard-Uganda: ~0.10ms
+- CountryCard-Burundi: ~0.10ms
+- CountryCard-South Africa: ~0.20ms
+- CountryCard-Libya: ~0.20ms
+- CountryCard-Gabon: ~0.00ms
+- CountryCard-Egypt: ~0.10ms
+- CountryCard-Senegal: ~0.40ms
+- CountryCard-Zambia: ~0.20ms
+- CountryCard-Niger: ~0.20ms
+- CountryCard-Guinea-Bissau: ~0.30ms
+- CountryCard-Réunion: ~0.30ms
+- CountryCard-Djibouti: ~0.10ms
+- CountryCard-Mauritius: ~0.20ms
+- CountryCard-Morocco: ~0.10ms
+- CountryCard-Algeria: ~0.20ms
+- CountryCard-Sudan: ~0.20ms
+- CountryCard-Botswana: ~0.20ms
+- CountryCard-Mayotte: ~0.20ms
+- CountryCard-Madagascar: ~0.20ms
+- CountryCard-Eswatini: ~0.10ms
+- CountryCard-Namibia: ~0.10ms
+- CountryCard-São Tomé and Príncipe: ~0.10ms
+- CountryCard-Malawi: ~0.20ms
+- CountryCard-Ethiopia: ~0.20ms
+- CountryCard-Lesotho: ~0.20ms
+- CountryCard-Western Sahara: ~0.20ms
+- CountryCard-Equatorial Guinea: ~0.00ms
+- CountryCard-Cameroon: ~0.20ms
+- CountryCard-Guinea: ~0.10ms
+- CountryCard-DR Congo: ~0.30ms
+- CountryCard-Somalia: ~0.20ms
+- CountryCard-Saint Helena, Ascension and Tristan da Cunha: ~0.20ms
+- CountryCard-Togo: ~0.20ms
+- CountryCard-Kenya: ~0.20ms
+- CountryCard-Rwanda: ~0.20ms
+- CountryCard-Mozambique: ~0.20ms
+- CountryCard-Central African Republic: ~0.10ms
+- CountryCard-Burkina Faso: ~0.10ms
+- CountryCard-Eritrea: ~0.20ms
+- CountryCard-Tanzania: ~0.20ms
+- CountryCard-Mauritania: ~0.10ms
+- CountryCard-Angola: ~0.30ms
+- CountryCard-Mali: ~0.10ms
+- CountryCard-Seychelles: ~0.10ms
+- CountryCard-British Indian Ocean Territory: ~0.10ms
+- CountryCard-Gambia: ~0.20ms
+- CountryCard-Nigeria: ~0.20ms
+- CountryCard-South Sudan: ~0.20ms
+- CountryCard-Liberia: ~0.00ms
+- CountryCard-Comoros: ~0.10ms
+- CountryCard-Ghana: ~0.20ms
+- CountryCard-Chad: ~0.10ms
+- CountryCard-Zimbabwe: ~0.20ms
+- CountryCard-Republic of the Congo: ~0.20ms
+- CountriesGrid: ~12.30ms
+- App: ~12.60ms
+- CountryCard-Sierra Leone: ~0.30ms
+- CountryCard-Ivory Coast: ~0.20ms
+- CountryCard-Tunisia: ~0.00ms
+- CountryCard-Benin: ~0.10ms
+- CountryCard-Cape Verde: ~0.10ms
+- CountryCard-Uganda: ~0.20ms
+- CountryCard-Burundi: ~0.10ms
+- CountryCard-South Africa: ~0.10ms
+- CountryCard-Libya: ~0.20ms
+- CountryCard-Gabon: ~0.10ms
+- CountryCard-Egypt: ~0.20ms
+- CountryCard-Senegal: ~0.20ms
+- CountryCard-Zambia: ~0.10ms
+- CountryCard-Niger: ~0.10ms
+- CountryCard-Guinea-Bissau: ~0.10ms
+- CountryCard-Réunion: ~0.20ms
+- CountryCard-Djibouti: ~0.20ms
+- CountryCard-Mauritius: ~0.10ms
+- CountryCard-Morocco: ~0.00ms
+- CountryCard-Algeria: ~0.00ms
+- CountryCard-Sudan: ~0.10ms
+- CountryCard-Botswana: ~0.00ms
+- CountryCard-Mayotte: ~0.30ms
+- CountryCard-Madagascar: ~0.10ms
+- CountryCard-Eswatini: ~0.10ms
+- CountryCard-Namibia: ~0.10ms
+- CountryCard-São Tomé and Príncipe: ~0.20ms
+- CountryCard-Malawi: ~0.20ms
+- CountryCard-Ethiopia: ~0.10ms
+- CountryCard-Lesotho: ~0.10ms
+- CountryCard-Western Sahara: ~0.20ms
+- CountryCard-Equatorial Guinea: ~0.10ms
+- CountryCard-Cameroon: ~0.10ms
+- CountryCard-Guinea: ~0.20ms
+- CountryCard-DR Congo: ~0.00ms
+- CountryCard-Somalia: ~0.20ms
+- CountryCard-Saint Helena, Ascension and Tristan da Cunha: ~0.10ms
+- CountryCard-Togo: ~0.20ms
+- CountryCard-Kenya: ~0.00ms
+- CountryCard-Rwanda: ~0.20ms
+- CountryCard-Mozambique: ~0.20ms
+- CountryCard-Central African Republic: ~0.10ms
+- CountryCard-Burkina Faso: ~0.10ms
+- CountryCard-Eritrea: ~0.10ms
+- CountryCard-Tanzania: ~0.30ms
+- CountryCard-Mauritania: ~0.10ms
+- CountryCard-Angola: ~0.20ms
+- CountryCard-Mali: ~0.10ms
+- CountryCard-Seychelles: ~0.00ms
+- CountryCard-British Indian Ocean Territory: ~0.20ms
+- CountryCard-Gambia: ~0.00ms
+- CountryCard-Nigeria: ~0.20ms
+- CountryCard-South Sudan: ~0.10ms
+- CountryCard-Liberia: ~0.10ms
+- CountryCard-Comoros: ~0.20ms
+- CountryCard-Ghana: ~0.10ms
+- CountryCard-Chad: ~0.10ms
+- CountryCard-Zimbabwe: ~0.10ms
+- CountryCard-Republic of the Congo: ~0.10ms
+- CountriesGrid: ~7.60ms
+- App: ~7.60ms
+- Filters: ~0.10ms
+- CountryCard-Taiwan: ~0.30ms
+- CountryCard-Indonesia: ~0.20ms
+- CountryCard-Laos: ~0.10ms
+- CountryCard-China: ~0.30ms
+- CountryCard-Yemen: ~0.10ms
+- CountryCard-Uzbekistan: ~0.20ms
+- CountryCard-Sri Lanka: ~0.10ms
+- CountryCard-Palestine: ~0.00ms
+- CountryCard-Bangladesh: ~0.10ms
+- CountryCard-Singapore: ~0.10ms
+- CountryCard-Turkey: ~0.20ms
+- CountryCard-Afghanistan: ~0.30ms
+- CountryCard-Azerbaijan: ~0.20ms
+- CountryCard-North Korea: ~0.30ms
+- CountryCard-Nepal: ~0.20ms
+- CountryCard-Georgia: ~0.10ms
+- CountryCard-Pakistan: ~0.00ms
+- CountryCard-Lebanon: ~0.30ms
+- CountryCard-Qatar: ~0.10ms
+- CountryCard-India: ~0.20ms
+- CountryCard-Syria: ~0.20ms
+- CountryCard-United Arab Emirates: ~0.10ms
+- CountryCard-Cambodia: ~0.20ms
+- CountryCard-Iraq: ~0.10ms
+- CountryCard-Kyrgyzstan: ~0.00ms
+- CountryCard-Malaysia: ~0.20ms
+- CountryCard-Saudi Arabia: ~0.20ms
+- CountryCard-Oman: ~0.20ms
+- CountryCard-Macau: ~0.20ms
+- CountryCard-Thailand: ~0.10ms
+- CountryCard-Philippines: ~0.10ms
+- CountryCard-Bahrain: ~0.10ms
+- CountryCard-Timor-Leste: ~0.20ms
+- CountryCard-Vietnam: ~0.10ms
+- CountryCard-Hong Kong: ~0.10ms
+- CountryCard-Turkmenistan: ~0.10ms
+- CountryCard-South Korea: ~0.00ms
+- CountryCard-Jordan: ~0.20ms
+- CountryCard-Kazakhstan: ~0.20ms
+- CountryCard-Armenia: ~0.20ms
+- CountryCard-Japan: ~0.10ms
+- CountryCard-Tajikistan: ~0.10ms
+- CountryCard-Kuwait: ~0.10ms
+- CountryCard-Maldives: ~0.10ms
+- CountryCard-Iran: ~0.20ms
+- CountryCard-Myanmar: ~0.10ms
+- CountryCard-Bhutan: ~0.10ms
+- CountryCard-Brunei: ~0.10ms
+- CountryCard-Mongolia: ~0.20ms
+- CountryCard-Israel: ~0.00ms
+- CountriesGrid: ~9.60ms
+- App: ~9.90ms
+- CountryCard-Taiwan: ~0.10ms
+- CountryCard-Indonesia: ~0.20ms
+- CountryCard-Laos: ~0.10ms
+- CountryCard-China: ~0.10ms
+- CountryCard-Yemen: ~0.10ms
+- CountryCard-Uzbekistan: ~0.20ms
+- CountryCard-Sri Lanka: ~0.00ms
+- CountryCard-Palestine: ~0.20ms
+- CountryCard-Bangladesh: ~0.20ms
+- CountryCard-Singapore: ~0.00ms
+- CountryCard-Turkey: ~0.00ms
+- CountryCard-Afghanistan: ~0.10ms
+- CountryCard-Azerbaijan: ~0.10ms
+- CountryCard-North Korea: ~0.10ms
+- CountryCard-Nepal: ~0.10ms
+- CountryCard-Georgia: ~0.10ms
+- CountryCard-Pakistan: ~0.00ms
+- CountryCard-Lebanon: ~0.20ms
+- CountryCard-Qatar: ~0.00ms
+- CountryCard-India: ~0.10ms
+- CountryCard-Syria: ~0.10ms
+- CountryCard-United Arab Emirates: ~0.10ms
+- CountryCard-Cambodia: ~0.10ms
+- CountryCard-Iraq: ~0.00ms
+- CountryCard-Kyrgyzstan: ~0.20ms
+- CountryCard-Malaysia: ~0.10ms
+- CountryCard-Saudi Arabia: ~0.00ms
+- CountryCard-Oman: ~0.10ms
+- CountryCard-Macau: ~0.10ms
+- CountryCard-Thailand: ~0.10ms
+- CountryCard-Philippines: ~0.10ms
+- CountryCard-Bahrain: ~0.00ms
+- CountryCard-Timor-Leste: ~0.20ms
+- CountryCard-Vietnam: ~0.10ms
+- CountryCard-Hong Kong: ~0.10ms
+- CountryCard-Turkmenistan: ~0.20ms
+- CountryCard-South Korea: ~0.00ms
+- CountryCard-Jordan: ~0.10ms
+- CountryCard-Kazakhstan: ~0.00ms
+- CountryCard-Armenia: ~0.10ms
+- CountryCard-Japan: ~0.10ms
+- CountryCard-Tajikistan: ~0.10ms
+- CountryCard-Kuwait: ~0.00ms
+- CountryCard-Maldives: ~0.20ms
+- CountryCard-Iran: ~0.10ms
+- CountryCard-Myanmar: ~0.00ms
+- CountryCard-Bhutan: ~0.10ms
+- CountryCard-Brunei: ~0.00ms
+- CountryCard-Mongolia: ~0.10ms
+- CountryCard-Israel: ~0.10ms
+- CountriesGrid: ~4.60ms
+- App: ~4.60ms
+
+#### Key Findings
+- Average base duration: 0.40ms
+- Average actual duration: 0.79ms
+    ### Initial Performance Metrics
+
+Performance metrics were collected using React Dev Tools Profiler:
+
+#### Commit Duration
+- Initial render: ~26.72ms
+- Average commit: ~13.36ms
+
+#### Component Render Times
+- Filters: ~1.80ms
+- CountryCard-South Georgia: ~2.20ms
+- CountryCard-Grenada: ~1.10ms
+- CountryCard-Switzerland: ~1.00ms
+- CountryCard-Sierra Leone: ~0.70ms
+- CountryCard-Hungary: ~0.90ms
+- CountryCard-Taiwan: ~0.70ms
+- CountryCard-Wallis and Futuna: ~0.80ms
+- CountryCard-Barbados: ~3.80ms
+- CountryCard-Pitcairn Islands: ~0.70ms
+- CountryCard-Ivory Coast: ~0.30ms
+- CountryCard-Tunisia: ~0.40ms
+- CountryCard-Italy: ~0.50ms
+- CountryCard-Benin: ~0.50ms
+- CountryCard-Indonesia: ~0.40ms
+- CountryCard-Cape Verde: ~0.50ms
+- CountryCard-Saint Kitts and Nevis: ~0.40ms
+- CountryCard-Laos: ~0.40ms
+- CountryCard-Caribbean Netherlands: ~0.40ms
+- CountryCard-Uganda: ~0.60ms
+- CountryCard-Andorra: ~0.50ms
+- CountryCard-Burundi: ~0.40ms
+- CountryCard-South Africa: ~0.50ms
+- CountryCard-France: ~0.40ms
+- CountryCard-Libya: ~0.50ms
+- CountryCard-Mexico: ~0.40ms
+- CountryCard-Gabon: ~0.60ms
+- CountryCard-Northern Mariana Islands: ~0.50ms
+- CountryCard-North Macedonia: ~0.50ms
+- CountryCard-China: ~0.50ms
+- CountryCard-Yemen: ~0.50ms
+- CountryCard-Saint Barthélemy: ~0.70ms
+- CountryCard-Guernsey: ~0.50ms
+- CountryCard-Solomon Islands: ~0.60ms
+- CountryCard-Svalbard and Jan Mayen: ~0.60ms
+- CountryCard-Faroe Islands: ~0.50ms
+- CountryCard-Uzbekistan: ~0.50ms
+- CountryCard-Egypt: ~0.60ms
+- CountryCard-Senegal: ~0.40ms
+- CountryCard-Sri Lanka: ~0.60ms
+- CountryCard-Palestine: ~0.40ms
+- CountryCard-Bangladesh: ~0.60ms
+- CountryCard-Peru: ~0.50ms
+- CountryCard-Singapore: ~0.50ms
+- CountryCard-Turkey: ~0.40ms
+- CountryCard-Afghanistan: ~0.40ms
+- CountryCard-Aruba: ~0.50ms
+- CountryCard-Cook Islands: ~0.60ms
+- CountryCard-United Kingdom: ~0.60ms
+- CountryCard-Zambia: ~0.50ms
+- CountryCard-Finland: ~0.60ms
+- CountryCard-Niger: ~0.80ms
+- CountryCard-Christmas Island: ~0.70ms
+- CountryCard-Tokelau: ~0.70ms
+- CountryCard-Guinea-Bissau: ~0.50ms
+- CountryCard-Azerbaijan: ~0.70ms
+- CountryCard-Réunion: ~1.00ms
+- CountryCard-Djibouti: ~1.00ms
+- CountryCard-North Korea: ~0.70ms
+- CountryCard-Mauritius: ~0.70ms
+- CountryCard-Montserrat: ~0.90ms
+- CountryCard-United States Virgin Islands: ~0.70ms
+- CountryCard-Colombia: ~0.60ms
+- CountryCard-Greece: ~0.50ms
+- CountryCard-Croatia: ~0.60ms
+- CountryCard-Morocco: ~0.70ms
+- CountryCard-Algeria: ~0.40ms
+- CountryCard-Antarctica: ~0.40ms
+- CountryCard-Netherlands: ~0.50ms
+- CountryCard-Sudan: ~0.40ms
+- CountryCard-Fiji: ~0.60ms
+- CountryCard-Liechtenstein: ~0.70ms
+- CountryCard-Nepal: ~0.70ms
+- CountryCard-Puerto Rico: ~0.60ms
+- CountryCard-Georgia: ~0.60ms
+- CountryCard-Pakistan: ~0.40ms
+- CountryCard-Monaco: ~0.60ms
+- CountryCard-Botswana: ~0.70ms
+- CountryCard-Lebanon: ~0.50ms
+- CountryCard-Papua New Guinea: ~0.80ms
+- CountryCard-Mayotte: ~0.80ms
+- CountryCard-Dominican Republic: ~0.80ms
+- CountryCard-Norfolk Island: ~0.50ms
+- CountryCard-Bouvet Island: ~0.60ms
+- CountryCard-Qatar: ~1.00ms
+- CountryCard-Madagascar: ~0.60ms
+- CountryCard-India: ~0.60ms
+- CountryCard-Syria: ~0.40ms
+- CountryCard-Montenegro: ~0.40ms
+- CountryCard-Eswatini: ~0.50ms
+- CountryCard-Paraguay: ~0.50ms
+- CountryCard-El Salvador: ~0.50ms
+- CountryCard-Ukraine: ~0.40ms
+- CountryCard-Isle of Man: ~0.60ms
+- CountryCard-Namibia: ~0.40ms
+- CountryCard-United Arab Emirates: ~0.40ms
+- CountryCard-Bulgaria: ~0.30ms
+- CountryCard-Greenland: ~0.40ms
+- CountryCard-Germany: ~0.50ms
+- CountryCard-Cambodia: ~0.90ms
+- CountryCard-Iraq: ~0.90ms
+- CountryCard-French Southern and Antarctic Lands: ~0.90ms
+- CountryCard-Sweden: ~0.80ms
+- CountryCard-Cuba: ~0.80ms
+- CountryCard-Kyrgyzstan: ~0.60ms
+- CountryCard-Russia: ~0.80ms
+- CountryCard-Malaysia: ~0.50ms
+- CountryCard-São Tomé and Príncipe: ~0.60ms
+- CountryCard-Cyprus: ~0.60ms
+- CountryCard-Canada: ~0.60ms
+- CountryCard-Malawi: ~0.60ms
+- CountryCard-Saudi Arabia: ~0.60ms
+- CountryCard-Bosnia and Herzegovina: ~0.50ms
+- CountryCard-Ethiopia: ~0.60ms
+- CountryCard-Spain: ~0.60ms
+- CountryCard-Slovenia: ~0.60ms
+- CountryCard-Oman: ~0.40ms
+- CountryCard-Saint Pierre and Miquelon: ~0.50ms
+- CountryCard-Macau: ~0.60ms
+- CountryCard-San Marino: ~0.50ms
+- CountryCard-Lesotho: ~0.60ms
+- CountryCard-Marshall Islands: ~0.60ms
+- CountryCard-Sint Maarten: ~0.60ms
+- CountryCard-Iceland: ~0.60ms
+- CountryCard-Luxembourg: ~0.40ms
+- CountryCard-Argentina: ~0.40ms
+- CountryCard-Turks and Caicos Islands: ~0.40ms
+- CountryCard-Nauru: ~0.40ms
+- CountryCard-Cocos (Keeling) Islands: ~0.40ms
+- CountryCard-Western Sahara: ~0.40ms
+- CountryCard-Dominica: ~0.40ms
+- CountryCard-Costa Rica: ~0.30ms
+- CountryCard-Australia: ~0.50ms
+- CountryCard-Thailand: ~0.70ms
+- CountryCard-Haiti: ~0.60ms
+- CountryCard-Tuvalu: ~0.50ms
+- CountryCard-Honduras: ~0.80ms
+- CountryCard-Equatorial Guinea: ~0.50ms
+- CountryCard-Saint Lucia: ~0.40ms
+- CountryCard-French Polynesia: ~0.50ms
+- CountryCard-Belarus: ~0.40ms
+- CountryCard-Latvia: ~0.40ms
+- CountryCard-Palau: ~0.40ms
+- CountryCard-Guadeloupe: ~0.40ms
+- CountryCard-Philippines: ~0.40ms
+- CountryCard-Gibraltar: ~0.30ms
+- CountryCard-Denmark: ~0.40ms
+- CountryCard-Cameroon: ~0.40ms
+- CountryCard-Guinea: ~0.30ms
+- CountryCard-Bahrain: ~0.30ms
+- CountryCard-Suriname: ~0.40ms
+- CountryCard-DR Congo: ~0.40ms
+- CountryCard-Somalia: ~0.40ms
+- CountryCard-Czechia: ~0.40ms
+- CountryCard-New Caledonia: ~0.50ms
+- CountryCard-Vanuatu: ~0.40ms
+- CountryCard-Saint Helena, Ascension and Tristan da Cunha: ~0.40ms
+- CountryCard-Togo: ~0.30ms
+- CountryCard-British Virgin Islands: ~0.40ms
+- CountryCard-Kenya: ~0.30ms
+- CountryCard-Niue: ~0.40ms
+- CountryCard-Heard Island and McDonald Islands: ~0.30ms
+- CountryCard-Rwanda: ~0.40ms
+- CountryCard-Estonia: ~0.40ms
+- CountryCard-Romania: ~0.30ms
+- CountryCard-Trinidad and Tobago: ~0.30ms
+- CountryCard-Guyana: ~0.20ms
+- CountryCard-Timor-Leste: ~0.30ms
+- CountryCard-Vietnam: ~0.30ms
+- CountryCard-Uruguay: ~0.30ms
+- CountryCard-Vatican City: ~0.40ms
+- CountryCard-Hong Kong: ~0.30ms
+- CountryCard-Austria: ~0.50ms
+- CountryCard-Antigua and Barbuda: ~0.30ms
+- CountryCard-Turkmenistan: ~0.40ms
+- CountryCard-Mozambique: ~0.40ms
+- CountryCard-Panama: ~0.30ms
+- CountryCard-Micronesia: ~0.30ms
+- CountryCard-Ireland: ~0.30ms
+- CountryCard-Curaçao: ~0.20ms
+- CountryCard-French Guiana: ~0.30ms
+- CountryCard-Norway: ~0.30ms
+- CountryCard-Åland Islands: ~0.40ms
+- CountryCard-Central African Republic: ~0.30ms
+- CountryCard-Burkina Faso: ~0.20ms
+- CountryCard-Eritrea: ~0.30ms
+- CountryCard-Tanzania: ~0.30ms
+- CountryCard-South Korea: ~0.40ms
+- CountryCard-Jordan: ~0.30ms
+- CountryCard-Mauritania: ~0.30ms
+- CountryCard-Lithuania: ~0.30ms
+- CountryCard-United States Minor Outlying Islands: ~0.40ms
+- CountryCard-Slovakia: ~0.30ms
+- CountryCard-Angola: ~0.30ms
+- CountryCard-Kazakhstan: ~0.30ms
+- CountryCard-Moldova: ~0.40ms
+- CountryCard-Mali: ~0.30ms
+- CountryCard-Falkland Islands: ~0.40ms
+- CountryCard-Armenia: ~0.30ms
+- CountryCard-Samoa: ~0.30ms
+- CountryCard-Jersey: ~0.30ms
+- CountryCard-Japan: ~0.30ms
+- CountryCard-Bolivia: ~0.30ms
+- CountryCard-Chile: ~0.30ms
+- CountryCard-United States: ~0.30ms
+- CountryCard-Saint Vincent and the Grenadines: ~0.40ms
+- CountryCard-Bermuda: ~0.30ms
+- CountryCard-Seychelles: ~0.40ms
+- CountryCard-British Indian Ocean Territory: ~0.30ms
+- CountryCard-Guatemala: ~0.40ms
+- CountryCard-Ecuador: ~0.40ms
+- CountryCard-Martinique: ~0.30ms
+- CountryCard-Tajikistan: ~0.40ms
+- CountryCard-Malta: ~0.40ms
+- CountryCard-Gambia: ~0.50ms
+- CountryCard-Nigeria: ~0.30ms
+- CountryCard-Bahamas: ~0.20ms
+- CountryCard-Kosovo: ~0.50ms
+- CountryCard-Kuwait: ~0.40ms
+- CountryCard-Maldives: ~0.30ms
+- CountryCard-South Sudan: ~0.40ms
+- CountryCard-Iran: ~0.40ms
+- CountryCard-Albania: ~0.40ms
+- CountryCard-Brazil: ~0.40ms
+- CountryCard-Serbia: ~0.30ms
+- CountryCard-Belize: ~0.40ms
+- CountryCard-Myanmar: ~0.40ms
+- CountryCard-Bhutan: ~0.40ms
+- CountryCard-Venezuela: ~0.40ms
+- CountryCard-Liberia: ~0.40ms
+- CountryCard-Jamaica: ~0.40ms
+- CountryCard-Poland: ~0.40ms
+- CountryCard-Cayman Islands: ~0.30ms
+- CountryCard-Brunei: ~0.40ms
+- CountryCard-Comoros: ~0.30ms
+- CountryCard-Guam: ~0.30ms
+- CountryCard-Tonga: ~0.40ms
+- CountryCard-Kiribati: ~0.40ms
+- CountryCard-Ghana: ~0.40ms
+- CountryCard-Chad: ~0.40ms
+- CountryCard-Zimbabwe: ~0.30ms
+- CountryCard-Saint Martin: ~0.50ms
+- CountryCard-Mongolia: ~0.40ms
+- CountryCard-Portugal: ~0.30ms
+- CountryCard-American Samoa: ~0.30ms
+- CountryCard-Republic of the Congo: ~0.30ms
+- CountryCard-Belgium: ~0.30ms
+- CountryCard-Israel: ~0.30ms
+- CountryCard-New Zealand: ~0.30ms
+- CountryCard-Nicaragua: ~0.30ms
+- CountryCard-Anguilla: ~0.40ms
+- CountriesGrid: ~138.40ms
+- App: ~141.00ms
+- Filters: ~0.20ms
+- CountryCard-South Georgia: ~0.20ms
+- CountryCard-Grenada: ~0.00ms
+- CountryCard-Switzerland: ~0.30ms
+- CountryCard-Sierra Leone: ~0.10ms
+- CountryCard-Hungary: ~0.10ms
+- CountryCard-Taiwan: ~0.10ms
+- CountryCard-Wallis and Futuna: ~0.10ms
+- CountryCard-Barbados: ~0.10ms
+- CountryCard-Pitcairn Islands: ~0.20ms
+- CountryCard-Ivory Coast: ~0.10ms
+- CountryCard-Tunisia: ~0.20ms
+- CountryCard-Italy: ~0.20ms
+- CountryCard-Benin: ~0.10ms
+- CountryCard-Indonesia: ~0.10ms
+- CountryCard-Cape Verde: ~0.20ms
+- CountryCard-Saint Kitts and Nevis: ~0.10ms
+- CountryCard-Laos: ~0.10ms
+- CountryCard-Caribbean Netherlands: ~0.20ms
+- CountryCard-Uganda: ~0.10ms
+- CountryCard-Andorra: ~0.20ms
+- CountryCard-Burundi: ~0.20ms
+- CountryCard-South Africa: ~0.10ms
+- CountryCard-France: ~0.20ms
+- CountryCard-Libya: ~0.00ms
+- CountryCard-Mexico: ~0.20ms
+- CountryCard-Gabon: ~0.10ms
+- CountryCard-Northern Mariana Islands: ~0.00ms
+- CountryCard-North Macedonia: ~0.20ms
+- CountryCard-China: ~0.10ms
+- CountryCard-Yemen: ~0.00ms
+- CountryCard-Saint Barthélemy: ~0.10ms
+- CountryCard-Guernsey: ~0.10ms
+- CountryCard-Solomon Islands: ~0.10ms
+- CountryCard-Svalbard and Jan Mayen: ~0.00ms
+- CountryCard-Faroe Islands: ~0.10ms
+- CountryCard-Uzbekistan: ~0.10ms
+- CountryCard-Egypt: ~0.10ms
+- CountryCard-Senegal: ~0.00ms
+- CountryCard-Sri Lanka: ~0.00ms
+- CountryCard-Palestine: ~0.10ms
+- CountryCard-Bangladesh: ~0.10ms
+- CountryCard-Peru: ~0.10ms
+- CountryCard-Singapore: ~0.10ms
+- CountryCard-Turkey: ~0.10ms
+- CountryCard-Afghanistan: ~0.00ms
+- CountryCard-Aruba: ~0.10ms
+- CountryCard-Cook Islands: ~0.10ms
+- CountryCard-United Kingdom: ~0.10ms
+- CountryCard-Zambia: ~0.10ms
+- CountryCard-Finland: ~0.20ms
+- CountryCard-Niger: ~0.00ms
+- CountryCard-Christmas Island: ~0.10ms
+- CountryCard-Tokelau: ~0.10ms
+- CountryCard-Guinea-Bissau: ~0.10ms
+- CountryCard-Azerbaijan: ~0.00ms
+- CountryCard-Réunion: ~0.10ms
+- CountryCard-Djibouti: ~0.10ms
+- CountryCard-North Korea: ~0.20ms
+- CountryCard-Mauritius: ~0.00ms
+- CountryCard-Montserrat: ~0.30ms
+- CountryCard-United States Virgin Islands: ~0.10ms
+- CountryCard-Colombia: ~0.00ms
+- CountryCard-Greece: ~0.10ms
+- CountryCard-Croatia: ~0.10ms
+- CountryCard-Morocco: ~0.00ms
+- CountryCard-Algeria: ~0.10ms
+- CountryCard-Antarctica: ~0.00ms
+- CountryCard-Netherlands: ~0.10ms
+- CountryCard-Sudan: ~0.10ms
+- CountryCard-Fiji: ~0.10ms
+- CountryCard-Liechtenstein: ~0.10ms
+- CountryCard-Nepal: ~0.20ms
+- CountryCard-Puerto Rico: ~0.10ms
+- CountryCard-Georgia: ~0.10ms
+- CountryCard-Pakistan: ~0.00ms
+- CountryCard-Monaco: ~0.20ms
+- CountryCard-Botswana: ~0.10ms
+- CountryCard-Lebanon: ~0.20ms
+- CountryCard-Papua New Guinea: ~0.00ms
+- CountryCard-Mayotte: ~0.00ms
+- CountryCard-Dominican Republic: ~0.00ms
+- CountryCard-Norfolk Island: ~0.00ms
+- CountryCard-Bouvet Island: ~0.20ms
+- CountryCard-Qatar: ~0.10ms
+- CountryCard-Madagascar: ~0.00ms
+- CountryCard-India: ~0.00ms
+- CountryCard-Syria: ~0.10ms
+- CountryCard-Montenegro: ~0.00ms
+- CountryCard-Eswatini: ~0.10ms
+- CountryCard-Paraguay: ~0.00ms
+- CountryCard-El Salvador: ~0.10ms
+- CountryCard-Ukraine: ~0.10ms
+- CountryCard-Isle of Man: ~0.10ms
+- CountryCard-Namibia: ~0.10ms
+- CountryCard-United Arab Emirates: ~0.10ms
+- CountryCard-Bulgaria: ~0.10ms
+- CountryCard-Greenland: ~0.20ms
+- CountryCard-Germany: ~0.10ms
+- CountryCard-Cambodia: ~0.10ms
+- CountryCard-Iraq: ~0.20ms
+- CountryCard-French Southern and Antarctic Lands: ~0.10ms
+- CountryCard-Sweden: ~0.10ms
+- CountryCard-Cuba: ~0.20ms
+- CountryCard-Kyrgyzstan: ~0.00ms
+- CountryCard-Russia: ~0.10ms
+- CountryCard-Malaysia: ~0.10ms
+- CountryCard-São Tomé and Príncipe: ~0.10ms
+- CountryCard-Cyprus: ~0.20ms
+- CountryCard-Canada: ~0.10ms
+- CountryCard-Malawi: ~0.10ms
+- CountryCard-Saudi Arabia: ~0.10ms
+- CountryCard-Bosnia and Herzegovina: ~0.00ms
+- CountryCard-Ethiopia: ~0.10ms
+- CountryCard-Spain: ~0.10ms
+- CountryCard-Slovenia: ~0.10ms
+- CountryCard-Oman: ~0.00ms
+- CountryCard-Saint Pierre and Miquelon: ~0.10ms
+- CountryCard-Macau: ~0.10ms
+- CountryCard-San Marino: ~0.10ms
+- CountryCard-Lesotho: ~0.10ms
+- CountryCard-Marshall Islands: ~0.10ms
+- CountryCard-Sint Maarten: ~0.10ms
+- CountryCard-Iceland: ~0.10ms
+- CountryCard-Luxembourg: ~0.00ms
+- CountryCard-Argentina: ~0.20ms
+- CountryCard-Turks and Caicos Islands: ~0.00ms
+- CountryCard-Nauru: ~0.10ms
+- CountryCard-Cocos (Keeling) Islands: ~0.10ms
+- CountryCard-Western Sahara: ~0.20ms
+- CountryCard-Dominica: ~0.10ms
+- CountryCard-Costa Rica: ~0.10ms
+- CountryCard-Australia: ~0.00ms
+- CountryCard-Thailand: ~0.10ms
+- CountryCard-Haiti: ~0.10ms
+- CountryCard-Tuvalu: ~0.10ms
+- CountryCard-Honduras: ~0.00ms
+- CountryCard-Equatorial Guinea: ~0.20ms
+- CountryCard-Saint Lucia: ~0.00ms
+- CountryCard-French Polynesia: ~0.10ms
+- CountryCard-Belarus: ~0.10ms
+- CountryCard-Latvia: ~0.00ms
+- CountryCard-Palau: ~0.10ms
+- CountryCard-Guadeloupe: ~0.10ms
+- CountryCard-Philippines: ~0.10ms
+- CountryCard-Gibraltar: ~0.10ms
+- CountryCard-Denmark: ~0.10ms
+- CountryCard-Cameroon: ~0.00ms
+- CountryCard-Guinea: ~0.00ms
+- CountryCard-Bahrain: ~0.00ms
+- CountryCard-Suriname: ~0.20ms
+- CountryCard-DR Congo: ~0.20ms
+- CountryCard-Somalia: ~0.10ms
+- CountryCard-Czechia: ~0.10ms
+- CountryCard-New Caledonia: ~0.20ms
+- CountryCard-Vanuatu: ~0.00ms
+- CountryCard-Saint Helena, Ascension and Tristan da Cunha: ~0.20ms
+- CountryCard-Togo: ~0.10ms
+- CountryCard-British Virgin Islands: ~0.10ms
+- CountryCard-Kenya: ~0.10ms
+- CountryCard-Niue: ~0.00ms
+- CountryCard-Heard Island and McDonald Islands: ~0.10ms
+- CountryCard-Rwanda: ~0.10ms
+- CountryCard-Estonia: ~0.10ms
+- CountryCard-Romania: ~0.00ms
+- CountryCard-Trinidad and Tobago: ~0.00ms
+- CountryCard-Guyana: ~0.10ms
+- CountryCard-Timor-Leste: ~0.00ms
+- CountryCard-Vietnam: ~0.10ms
+- CountryCard-Uruguay: ~0.20ms
+- CountryCard-Vatican City: ~0.10ms
+- CountryCard-Hong Kong: ~0.10ms
+- CountryCard-Austria: ~0.10ms
+- CountryCard-Antigua and Barbuda: ~0.10ms
+- CountryCard-Turkmenistan: ~0.10ms
+- CountryCard-Mozambique: ~0.00ms
+- CountryCard-Panama: ~0.10ms
+- CountryCard-Micronesia: ~0.00ms
+- CountryCard-Ireland: ~0.10ms
+- CountryCard-Curaçao: ~0.10ms
+- CountryCard-French Guiana: ~0.10ms
+- CountryCard-Norway: ~0.00ms
+- CountryCard-Åland Islands: ~0.00ms
+- CountryCard-Central African Republic: ~0.10ms
+- CountryCard-Burkina Faso: ~0.00ms
+- CountryCard-Eritrea: ~0.10ms
+- CountryCard-Tanzania: ~0.10ms
+- CountryCard-South Korea: ~0.10ms
+- CountryCard-Jordan: ~0.00ms
+- CountryCard-Mauritania: ~0.10ms
+- CountryCard-Lithuania: ~0.10ms
+- CountryCard-United States Minor Outlying Islands: ~0.10ms
+- CountryCard-Slovakia: ~0.10ms
+- CountryCard-Angola: ~0.10ms
+- CountryCard-Kazakhstan: ~0.10ms
+- CountryCard-Moldova: ~0.10ms
+- CountryCard-Mali: ~0.20ms
+- CountryCard-Falkland Islands: ~0.20ms
+- CountryCard-Armenia: ~0.10ms
+- CountryCard-Samoa: ~0.10ms
+- CountryCard-Jersey: ~0.10ms
+- CountryCard-Japan: ~0.10ms
+- CountryCard-Bolivia: ~0.10ms
+- CountryCard-Chile: ~0.20ms
+- CountryCard-United States: ~0.10ms
+- CountryCard-Saint Vincent and the Grenadines: ~0.20ms
+- CountryCard-Bermuda: ~0.10ms
+- CountryCard-Seychelles: ~0.20ms
+- CountryCard-British Indian Ocean Territory: ~0.10ms
+- CountryCard-Guatemala: ~0.10ms
+- CountryCard-Ecuador: ~0.10ms
+- CountryCard-Martinique: ~0.10ms
+- CountryCard-Tajikistan: ~0.00ms
+- CountryCard-Malta: ~0.10ms
+- CountryCard-Gambia: ~0.10ms
+- CountryCard-Nigeria: ~0.10ms
+- CountryCard-Bahamas: ~0.00ms
+- CountryCard-Kosovo: ~0.20ms
+- CountryCard-Kuwait: ~0.10ms
+- CountryCard-Maldives: ~0.00ms
+- CountryCard-South Sudan: ~0.10ms
+- CountryCard-Iran: ~0.10ms
+- CountryCard-Albania: ~0.10ms
+- CountryCard-Brazil: ~0.10ms
+- CountryCard-Serbia: ~0.10ms
+- CountryCard-Belize: ~0.10ms
+- CountryCard-Myanmar: ~0.10ms
+- CountryCard-Bhutan: ~0.00ms
+- CountryCard-Venezuela: ~0.10ms
+- CountryCard-Liberia: ~0.10ms
+- CountryCard-Jamaica: ~0.10ms
+- CountryCard-Poland: ~0.10ms
+- CountryCard-Cayman Islands: ~0.00ms
+- CountryCard-Brunei: ~0.10ms
+- CountryCard-Comoros: ~0.10ms
+- CountryCard-Guam: ~0.10ms
+- CountryCard-Tonga: ~0.10ms
+- CountryCard-Kiribati: ~0.10ms
+- CountryCard-Ghana: ~0.20ms
+- CountryCard-Chad: ~0.10ms
+- CountryCard-Zimbabwe: ~0.10ms
+- CountryCard-Saint Martin: ~0.10ms
+- CountryCard-Mongolia: ~0.20ms
+- CountryCard-Portugal: ~0.20ms
+- CountryCard-American Samoa: ~0.20ms
+- CountryCard-Republic of the Congo: ~0.10ms
+- CountryCard-Belgium: ~0.10ms
+- CountryCard-Israel: ~0.00ms
+- CountryCard-New Zealand: ~0.00ms
+- CountryCard-Nicaragua: ~0.20ms
+- CountryCard-Anguilla: ~0.20ms
+- CountriesGrid: ~47.10ms
+- App: ~47.70ms
+- Filters: ~0.30ms
+- CountryCard-Barbados: ~0.20ms
+- CountryCard-Benin: ~0.00ms
+- CountryCard-Caribbean Netherlands: ~0.10ms
+- CountryCard-Burundi: ~0.10ms
+- CountryCard-Libya: ~0.10ms
+- CountryCard-Gabon: ~0.00ms
+- CountryCard-Saint Barthélemy: ~0.00ms
+- CountryCard-Svalbard and Jan Mayen: ~0.00ms
+- CountryCard-Uzbekistan: ~0.00ms
+- CountryCard-Bangladesh: ~0.10ms
+- CountryCard-Aruba: ~0.10ms
+- CountryCard-Zambia: ~0.10ms
+- CountryCard-Guinea-Bissau: ~0.10ms
+- CountryCard-Azerbaijan: ~0.00ms
+- CountryCard-Djibouti: ~0.00ms
+- CountryCard-Colombia: ~0.00ms
+- CountryCard-Botswana: ~0.00ms
+- CountryCard-Lebanon: ~0.10ms
+- CountryCard-Dominican Republic: ~0.00ms
+- CountryCard-Bouvet Island: ~0.00ms
+- CountryCard-Namibia: ~0.00ms
+- CountryCard-United Arab Emirates: ~0.00ms
+- CountryCard-Bulgaria: ~0.10ms
+- CountryCard-Cambodia: ~0.00ms
+- CountryCard-Cuba: ~0.00ms
+- CountryCard-Saudi Arabia: ~0.10ms
+- CountryCard-Bosnia and Herzegovina: ~0.10ms
+- CountryCard-Luxembourg: ~0.10ms
+- CountryCard-Belarus: ~0.00ms
+- CountryCard-Gibraltar: ~0.20ms
+- CountryCard-Bahrain: ~0.00ms
+- CountryCard-British Virgin Islands: ~0.00ms
+- CountryCard-Trinidad and Tobago: ~0.20ms
+- CountryCard-Antigua and Barbuda: ~0.00ms
+- CountryCard-Mozambique: ~0.10ms
+- CountryCard-Central African Republic: ~0.10ms
+- CountryCard-Burkina Faso: ~0.00ms
+- CountryCard-Bolivia: ~0.10ms
+- CountryCard-Bermuda: ~0.10ms
+- CountryCard-British Indian Ocean Territory: ~0.00ms
+- CountryCard-Gambia: ~0.10ms
+- CountryCard-Bahamas: ~0.10ms
+- CountryCard-Albania: ~0.00ms
+- CountryCard-Brazil: ~0.00ms
+- CountryCard-Serbia: ~0.00ms
+- CountryCard-Belize: ~0.20ms
+- CountryCard-Bhutan: ~0.00ms
+- CountryCard-Liberia: ~0.00ms
+- CountryCard-Brunei: ~0.00ms
+- CountryCard-Kiribati: ~0.10ms
+- CountryCard-Zimbabwe: ~0.10ms
+- CountryCard-Republic of the Congo: ~0.00ms
+- CountryCard-Belgium: ~0.10ms
+- CountriesGrid: ~5.10ms
+- App: ~5.50ms
+- Filters: ~0.40ms
+- CountryCard-Benin: ~0.00ms
+- CountryCard-Caribbean Netherlands: ~0.10ms
+- CountryCard-Uzbekistan: ~0.10ms
+- CountryCard-Belarus: ~0.10ms
+- CountryCard-Bermuda: ~0.00ms
+- CountryCard-Belize: ~0.00ms
+- CountryCard-Liberia: ~0.00ms
+- CountryCard-Belgium: ~0.00ms
+- CountriesGrid: ~0.80ms
+- App: ~1.20ms
+- Filters: ~0.20ms
+- CountryCard-Belarus: ~0.10ms
+- CountryCard-Belize: ~0.10ms
+- CountryCard-Belgium: ~0.10ms
+- CountriesGrid: ~0.50ms
+- App: ~0.70ms
+- Filters: ~0.20ms
+- CountriesGrid: ~0.00ms
+- App: ~0.30ms
+- Filters: ~0.20ms
+- CountryCard-Sierra Leone: ~0.40ms
+- CountryCard-Ivory Coast: ~0.00ms
+- CountryCard-Tunisia: ~0.20ms
+- CountryCard-Benin: ~0.20ms
+- CountryCard-Cape Verde: ~0.10ms
+- CountryCard-Uganda: ~0.10ms
+- CountryCard-Burundi: ~0.10ms
+- CountryCard-South Africa: ~0.20ms
+- CountryCard-Libya: ~0.20ms
+- CountryCard-Gabon: ~0.00ms
+- CountryCard-Egypt: ~0.10ms
+- CountryCard-Senegal: ~0.40ms
+- CountryCard-Zambia: ~0.20ms
+- CountryCard-Niger: ~0.20ms
+- CountryCard-Guinea-Bissau: ~0.30ms
+- CountryCard-Réunion: ~0.30ms
+- CountryCard-Djibouti: ~0.10ms
+- CountryCard-Mauritius: ~0.20ms
+- CountryCard-Morocco: ~0.10ms
+- CountryCard-Algeria: ~0.20ms
+- CountryCard-Sudan: ~0.20ms
+- CountryCard-Botswana: ~0.20ms
+- CountryCard-Mayotte: ~0.20ms
+- CountryCard-Madagascar: ~0.20ms
+- CountryCard-Eswatini: ~0.10ms
+- CountryCard-Namibia: ~0.10ms
+- CountryCard-São Tomé and Príncipe: ~0.10ms
+- CountryCard-Malawi: ~0.20ms
+- CountryCard-Ethiopia: ~0.20ms
+- CountryCard-Lesotho: ~0.20ms
+- CountryCard-Western Sahara: ~0.20ms
+- CountryCard-Equatorial Guinea: ~0.00ms
+- CountryCard-Cameroon: ~0.20ms
+- CountryCard-Guinea: ~0.10ms
+- CountryCard-DR Congo: ~0.30ms
+- CountryCard-Somalia: ~0.20ms
+- CountryCard-Saint Helena, Ascension and Tristan da Cunha: ~0.20ms
+- CountryCard-Togo: ~0.20ms
+- CountryCard-Kenya: ~0.20ms
+- CountryCard-Rwanda: ~0.20ms
+- CountryCard-Mozambique: ~0.20ms
+- CountryCard-Central African Republic: ~0.10ms
+- CountryCard-Burkina Faso: ~0.10ms
+- CountryCard-Eritrea: ~0.20ms
+- CountryCard-Tanzania: ~0.20ms
+- CountryCard-Mauritania: ~0.10ms
+- CountryCard-Angola: ~0.30ms
+- CountryCard-Mali: ~0.10ms
+- CountryCard-Seychelles: ~0.10ms
+- CountryCard-British Indian Ocean Territory: ~0.10ms
+- CountryCard-Gambia: ~0.20ms
+- CountryCard-Nigeria: ~0.20ms
+- CountryCard-South Sudan: ~0.20ms
+- CountryCard-Liberia: ~0.00ms
+- CountryCard-Comoros: ~0.10ms
+- CountryCard-Ghana: ~0.20ms
+- CountryCard-Chad: ~0.10ms
+- CountryCard-Zimbabwe: ~0.20ms
+- CountryCard-Republic of the Congo: ~0.20ms
+- CountriesGrid: ~12.30ms
+- App: ~12.60ms
+- CountryCard-Sierra Leone: ~0.30ms
+- CountryCard-Ivory Coast: ~0.20ms
+- CountryCard-Tunisia: ~0.00ms
+- CountryCard-Benin: ~0.10ms
+- CountryCard-Cape Verde: ~0.10ms
+- CountryCard-Uganda: ~0.20ms
+- CountryCard-Burundi: ~0.10ms
+- CountryCard-South Africa: ~0.10ms
+- CountryCard-Libya: ~0.20ms
+- CountryCard-Gabon: ~0.10ms
+- CountryCard-Egypt: ~0.20ms
+- CountryCard-Senegal: ~0.20ms
+- CountryCard-Zambia: ~0.10ms
+- CountryCard-Niger: ~0.10ms
+- CountryCard-Guinea-Bissau: ~0.10ms
+- CountryCard-Réunion: ~0.20ms
+- CountryCard-Djibouti: ~0.20ms
+- CountryCard-Mauritius: ~0.10ms
+- CountryCard-Morocco: ~0.00ms
+- CountryCard-Algeria: ~0.00ms
+- CountryCard-Sudan: ~0.10ms
+- CountryCard-Botswana: ~0.00ms
+- CountryCard-Mayotte: ~0.30ms
+- CountryCard-Madagascar: ~0.10ms
+- CountryCard-Eswatini: ~0.10ms
+- CountryCard-Namibia: ~0.10ms
+- CountryCard-São Tomé and Príncipe: ~0.20ms
+- CountryCard-Malawi: ~0.20ms
+- CountryCard-Ethiopia: ~0.10ms
+- CountryCard-Lesotho: ~0.10ms
+- CountryCard-Western Sahara: ~0.20ms
+- CountryCard-Equatorial Guinea: ~0.10ms
+- CountryCard-Cameroon: ~0.10ms
+- CountryCard-Guinea: ~0.20ms
+- CountryCard-DR Congo: ~0.00ms
+- CountryCard-Somalia: ~0.20ms
+- CountryCard-Saint Helena, Ascension and Tristan da Cunha: ~0.10ms
+- CountryCard-Togo: ~0.20ms
+- CountryCard-Kenya: ~0.00ms
+- CountryCard-Rwanda: ~0.20ms
+- CountryCard-Mozambique: ~0.20ms
+- CountryCard-Central African Republic: ~0.10ms
+- CountryCard-Burkina Faso: ~0.10ms
+- CountryCard-Eritrea: ~0.10ms
+- CountryCard-Tanzania: ~0.30ms
+- CountryCard-Mauritania: ~0.10ms
+- CountryCard-Angola: ~0.20ms
+- CountryCard-Mali: ~0.10ms
+- CountryCard-Seychelles: ~0.00ms
+- CountryCard-British Indian Ocean Territory: ~0.20ms
+- CountryCard-Gambia: ~0.00ms
+- CountryCard-Nigeria: ~0.20ms
+- CountryCard-South Sudan: ~0.10ms
+- CountryCard-Liberia: ~0.10ms
+- CountryCard-Comoros: ~0.20ms
+- CountryCard-Ghana: ~0.10ms
+- CountryCard-Chad: ~0.10ms
+- CountryCard-Zimbabwe: ~0.10ms
+- CountryCard-Republic of the Congo: ~0.10ms
+- CountriesGrid: ~7.60ms
+- App: ~7.60ms
+- Filters: ~0.10ms
+- CountryCard-Taiwan: ~0.30ms
+- CountryCard-Indonesia: ~0.20ms
+- CountryCard-Laos: ~0.10ms
+- CountryCard-China: ~0.30ms
+- CountryCard-Yemen: ~0.10ms
+- CountryCard-Uzbekistan: ~0.20ms
+- CountryCard-Sri Lanka: ~0.10ms
+- CountryCard-Palestine: ~0.00ms
+- CountryCard-Bangladesh: ~0.10ms
+- CountryCard-Singapore: ~0.10ms
+- CountryCard-Turkey: ~0.20ms
+- CountryCard-Afghanistan: ~0.30ms
+- CountryCard-Azerbaijan: ~0.20ms
+- CountryCard-North Korea: ~0.30ms
+- CountryCard-Nepal: ~0.20ms
+- CountryCard-Georgia: ~0.10ms
+- CountryCard-Pakistan: ~0.00ms
+- CountryCard-Lebanon: ~0.30ms
+- CountryCard-Qatar: ~0.10ms
+- CountryCard-India: ~0.20ms
+- CountryCard-Syria: ~0.20ms
+- CountryCard-United Arab Emirates: ~0.10ms
+- CountryCard-Cambodia: ~0.20ms
+- CountryCard-Iraq: ~0.10ms
+- CountryCard-Kyrgyzstan: ~0.00ms
+- CountryCard-Malaysia: ~0.20ms
+- CountryCard-Saudi Arabia: ~0.20ms
+- CountryCard-Oman: ~0.20ms
+- CountryCard-Macau: ~0.20ms
+- CountryCard-Thailand: ~0.10ms
+- CountryCard-Philippines: ~0.10ms
+- CountryCard-Bahrain: ~0.10ms
+- CountryCard-Timor-Leste: ~0.20ms
+- CountryCard-Vietnam: ~0.10ms
+- CountryCard-Hong Kong: ~0.10ms
+- CountryCard-Turkmenistan: ~0.10ms
+- CountryCard-South Korea: ~0.00ms
+- CountryCard-Jordan: ~0.20ms
+- CountryCard-Kazakhstan: ~0.20ms
+- CountryCard-Armenia: ~0.20ms
+- CountryCard-Japan: ~0.10ms
+- CountryCard-Tajikistan: ~0.10ms
+- CountryCard-Kuwait: ~0.10ms
+- CountryCard-Maldives: ~0.10ms
+- CountryCard-Iran: ~0.20ms
+- CountryCard-Myanmar: ~0.10ms
+- CountryCard-Bhutan: ~0.10ms
+- CountryCard-Brunei: ~0.10ms
+- CountryCard-Mongolia: ~0.20ms
+- CountryCard-Israel: ~0.00ms
+- CountriesGrid: ~9.60ms
+- App: ~9.90ms
+- CountryCard-Taiwan: ~0.10ms
+- CountryCard-Indonesia: ~0.20ms
+- CountryCard-Laos: ~0.10ms
+- CountryCard-China: ~0.10ms
+- CountryCard-Yemen: ~0.10ms
+- CountryCard-Uzbekistan: ~0.20ms
+- CountryCard-Sri Lanka: ~0.00ms
+- CountryCard-Palestine: ~0.20ms
+- CountryCard-Bangladesh: ~0.20ms
+- CountryCard-Singapore: ~0.00ms
+- CountryCard-Turkey: ~0.00ms
+- CountryCard-Afghanistan: ~0.10ms
+- CountryCard-Azerbaijan: ~0.10ms
+- CountryCard-North Korea: ~0.10ms
+- CountryCard-Nepal: ~0.10ms
+- CountryCard-Georgia: ~0.10ms
+- CountryCard-Pakistan: ~0.00ms
+- CountryCard-Lebanon: ~0.20ms
+- CountryCard-Qatar: ~0.00ms
+- CountryCard-India: ~0.10ms
+- CountryCard-Syria: ~0.10ms
+- CountryCard-United Arab Emirates: ~0.10ms
+- CountryCard-Cambodia: ~0.10ms
+- CountryCard-Iraq: ~0.00ms
+- CountryCard-Kyrgyzstan: ~0.20ms
+- CountryCard-Malaysia: ~0.10ms
+- CountryCard-Saudi Arabia: ~0.00ms
+- CountryCard-Oman: ~0.10ms
+- CountryCard-Macau: ~0.10ms
+- CountryCard-Thailand: ~0.10ms
+- CountryCard-Philippines: ~0.10ms
+- CountryCard-Bahrain: ~0.00ms
+- CountryCard-Timor-Leste: ~0.20ms
+- CountryCard-Vietnam: ~0.10ms
+- CountryCard-Hong Kong: ~0.10ms
+- CountryCard-Turkmenistan: ~0.20ms
+- CountryCard-South Korea: ~0.00ms
+- CountryCard-Jordan: ~0.10ms
+- CountryCard-Kazakhstan: ~0.00ms
+- CountryCard-Armenia: ~0.10ms
+- CountryCard-Japan: ~0.10ms
+- CountryCard-Tajikistan: ~0.10ms
+- CountryCard-Kuwait: ~0.00ms
+- CountryCard-Maldives: ~0.20ms
+- CountryCard-Iran: ~0.10ms
+- CountryCard-Myanmar: ~0.00ms
+- CountryCard-Bhutan: ~0.10ms
+- CountryCard-Brunei: ~0.00ms
+- CountryCard-Mongolia: ~0.10ms
+- CountryCard-Israel: ~0.10ms
+- CountriesGrid: ~4.60ms
+- App: ~4.60ms
+
+#### Key Findings
+- Average base duration: 0.40ms
+- Average actual duration: 0.79ms
+    ### Initial Performance Metrics
+
+Performance metrics were collected using React Dev Tools Profiler:
+
+#### Commit Duration
+- Initial render: ~57.79ms
+- Average commit: ~28.90ms
+
+#### Component Render Times
+- Filters: ~9.90ms
+- CountryCard-South Georgia: ~3.30ms
+- CountryCard-Grenada: ~2.00ms
+- CountryCard-Switzerland: ~2.70ms
+- CountryCard-Sierra Leone: ~2.00ms
+- CountryCard-Hungary: ~2.30ms
+- CountryCard-Taiwan: ~7.40ms
+- CountryCard-Wallis and Futuna: ~1.60ms
+- CountryCard-Barbados: ~3.30ms
+- CountryCard-Pitcairn Islands: ~2.10ms
+- CountryCard-Ivory Coast: ~1.80ms
+- CountryCard-Tunisia: ~1.10ms
+- CountryCard-Italy: ~5.80ms
+- CountryCard-Benin: ~1.30ms
+- CountryCard-Indonesia: ~2.60ms
+- CountryCard-Cape Verde: ~1.70ms
+- CountryCard-Saint Kitts and Nevis: ~2.90ms
+- CountryCard-Laos: ~0.70ms
+- CountryCard-Caribbean Netherlands: ~1.20ms
+- CountryCard-Uganda: ~1.00ms
+- CountryCard-Andorra: ~0.90ms
+- CountryCard-Burundi: ~2.80ms
+- CountryCard-South Africa: ~1.10ms
+- CountryCard-France: ~1.40ms
+- CountryCard-Libya: ~1.30ms
+- CountryCard-Mexico: ~1.40ms
+- CountryCard-Gabon: ~1.10ms
+- CountryCard-Northern Mariana Islands: ~0.80ms
+- CountryCard-North Macedonia: ~0.70ms
+- CountryCard-China: ~0.80ms
+- CountryCard-Yemen: ~0.60ms
+- CountryCard-Saint Barthélemy: ~0.80ms
+- CountryCard-Guernsey: ~0.80ms
+- CountryCard-Solomon Islands: ~0.90ms
+- CountryCard-Svalbard and Jan Mayen: ~0.90ms
+- CountryCard-Faroe Islands: ~0.90ms
+- CountryCard-Uzbekistan: ~1.60ms
+- CountryCard-Egypt: ~0.80ms
+- CountryCard-Senegal: ~0.80ms
+- CountryCard-Sri Lanka: ~1.60ms
+- CountryCard-Palestine: ~0.70ms
+- CountryCard-Bangladesh: ~1.60ms
+- CountryCard-Peru: ~0.70ms
+- CountryCard-Singapore: ~0.80ms
+- CountryCard-Turkey: ~0.70ms
+- CountryCard-Afghanistan: ~0.60ms
+- CountryCard-Aruba: ~0.50ms
+- CountryCard-Cook Islands: ~0.70ms
+- CountryCard-United Kingdom: ~1.00ms
+- CountryCard-Zambia: ~0.60ms
+- CountryCard-Finland: ~0.40ms
+- CountryCard-Niger: ~0.60ms
+- CountryCard-Christmas Island: ~0.50ms
+- CountryCard-Tokelau: ~0.60ms
+- CountryCard-Guinea-Bissau: ~0.60ms
+- CountryCard-Azerbaijan: ~0.80ms
+- CountryCard-Réunion: ~0.80ms
+- CountryCard-Djibouti: ~0.90ms
+- CountryCard-North Korea: ~1.00ms
+- CountryCard-Mauritius: ~0.70ms
+- CountryCard-Montserrat: ~1.00ms
+- CountryCard-United States Virgin Islands: ~0.70ms
+- CountryCard-Colombia: ~0.60ms
+- CountryCard-Greece: ~1.80ms
+- CountryCard-Croatia: ~0.60ms
+- CountryCard-Morocco: ~1.00ms
+- CountryCard-Algeria: ~0.60ms
+- CountryCard-Antarctica: ~0.50ms
+- CountryCard-Netherlands: ~0.60ms
+- CountryCard-Sudan: ~0.60ms
+- CountryCard-Fiji: ~0.60ms
+- CountryCard-Liechtenstein: ~0.90ms
+- CountryCard-Nepal: ~0.50ms
+- CountryCard-Puerto Rico: ~0.60ms
+- CountryCard-Georgia: ~2.20ms
+- CountryCard-Pakistan: ~0.90ms
+- CountryCard-Monaco: ~0.40ms
+- CountryCard-Botswana: ~0.80ms
+- CountryCard-Lebanon: ~0.90ms
+- CountryCard-Papua New Guinea: ~0.70ms
+- CountryCard-Mayotte: ~0.60ms
+- CountryCard-Dominican Republic: ~0.50ms
+- CountryCard-Norfolk Island: ~0.60ms
+- CountryCard-Bouvet Island: ~1.20ms
+- CountryCard-Qatar: ~0.90ms
+- CountryCard-Madagascar: ~0.80ms
+- CountryCard-India: ~0.60ms
+- CountryCard-Syria: ~0.50ms
+- CountryCard-Montenegro: ~0.50ms
+- CountryCard-Eswatini: ~0.30ms
+- CountryCard-Paraguay: ~0.40ms
+- CountryCard-El Salvador: ~0.40ms
+- CountryCard-Ukraine: ~0.40ms
+- CountryCard-Isle of Man: ~0.40ms
+- CountryCard-Namibia: ~0.40ms
+- CountryCard-United Arab Emirates: ~0.40ms
+- CountryCard-Bulgaria: ~0.50ms
+- CountryCard-Greenland: ~3.30ms
+- CountryCard-Germany: ~0.90ms
+- CountryCard-Cambodia: ~1.70ms
+- CountryCard-Iraq: ~0.70ms
+- CountryCard-French Southern and Antarctic Lands: ~1.00ms
+- CountryCard-Sweden: ~0.60ms
+- CountryCard-Cuba: ~0.40ms
+- CountryCard-Kyrgyzstan: ~0.40ms
+- CountryCard-Russia: ~0.40ms
+- CountryCard-Malaysia: ~0.40ms
+- CountryCard-São Tomé and Príncipe: ~0.40ms
+- CountryCard-Cyprus: ~1.10ms
+- CountryCard-Canada: ~0.30ms
+- CountryCard-Malawi: ~0.50ms
+- CountryCard-Saudi Arabia: ~0.40ms
+- CountryCard-Bosnia and Herzegovina: ~0.30ms
+- CountryCard-Ethiopia: ~0.40ms
+- CountryCard-Spain: ~0.50ms
+- CountryCard-Slovenia: ~0.40ms
+- CountryCard-Oman: ~0.40ms
+- CountryCard-Saint Pierre and Miquelon: ~0.50ms
+- CountryCard-Macau: ~0.40ms
+- CountryCard-San Marino: ~0.30ms
+- CountryCard-Lesotho: ~0.40ms
+- CountryCard-Marshall Islands: ~0.70ms
+- CountryCard-Sint Maarten: ~0.40ms
+- CountryCard-Iceland: ~0.30ms
+- CountryCard-Luxembourg: ~0.40ms
+- CountryCard-Argentina: ~0.40ms
+- CountryCard-Turks and Caicos Islands: ~0.50ms
+- CountryCard-Nauru: ~0.40ms
+- CountryCard-Cocos (Keeling) Islands: ~0.50ms
+- CountryCard-Western Sahara: ~0.40ms
+- CountryCard-Dominica: ~0.50ms
+- CountryCard-Costa Rica: ~0.30ms
+- CountryCard-Australia: ~0.30ms
+- CountryCard-Thailand: ~0.40ms
+- CountryCard-Haiti: ~1.30ms
+- CountryCard-Tuvalu: ~0.30ms
+- CountryCard-Honduras: ~0.30ms
+- CountryCard-Equatorial Guinea: ~0.60ms
+- CountryCard-Saint Lucia: ~0.60ms
+- CountryCard-French Polynesia: ~0.50ms
+- CountryCard-Belarus: ~0.30ms
+- CountryCard-Latvia: ~0.40ms
+- CountryCard-Palau: ~0.30ms
+- CountryCard-Guadeloupe: ~0.30ms
+- CountryCard-Philippines: ~0.50ms
+- CountryCard-Gibraltar: ~0.40ms
+- CountryCard-Denmark: ~0.60ms
+- CountryCard-Cameroon: ~1.00ms
+- CountryCard-Guinea: ~0.50ms
+- CountryCard-Bahrain: ~0.40ms
+- CountryCard-Suriname: ~0.50ms
+- CountryCard-DR Congo: ~0.50ms
+- CountryCard-Somalia: ~0.50ms
+- CountryCard-Czechia: ~0.30ms
+- CountryCard-New Caledonia: ~0.40ms
+- CountryCard-Vanuatu: ~0.20ms
+- CountryCard-Saint Helena, Ascension and Tristan da Cunha: ~0.50ms
+- CountryCard-Togo: ~0.30ms
+- CountryCard-British Virgin Islands: ~0.30ms
+- CountryCard-Kenya: ~0.30ms
+- CountryCard-Niue: ~0.40ms
+- CountryCard-Heard Island and McDonald Islands: ~0.60ms
+- CountryCard-Rwanda: ~0.30ms
+- CountryCard-Estonia: ~0.40ms
+- CountryCard-Romania: ~0.30ms
+- CountryCard-Trinidad and Tobago: ~0.20ms
+- CountryCard-Guyana: ~0.30ms
+- CountryCard-Timor-Leste: ~0.30ms
+- CountryCard-Vietnam: ~0.30ms
+- CountryCard-Uruguay: ~0.40ms
+- CountryCard-Vatican City: ~0.40ms
+- CountryCard-Hong Kong: ~0.50ms
+- CountryCard-Austria: ~0.40ms
+- CountryCard-Antigua and Barbuda: ~0.40ms
+- CountryCard-Turkmenistan: ~0.20ms
+- CountryCard-Mozambique: ~0.30ms
+- CountryCard-Panama: ~0.50ms
+- CountryCard-Micronesia: ~0.30ms
+- CountryCard-Ireland: ~0.40ms
+- CountryCard-Curaçao: ~0.40ms
+- CountryCard-French Guiana: ~0.30ms
+- CountryCard-Norway: ~0.50ms
+- CountryCard-Åland Islands: ~0.30ms
+- CountryCard-Central African Republic: ~0.30ms
+- CountryCard-Burkina Faso: ~0.40ms
+- CountryCard-Eritrea: ~0.50ms
+- CountryCard-Tanzania: ~0.60ms
+- CountryCard-South Korea: ~0.50ms
+- CountryCard-Jordan: ~0.40ms
+- CountryCard-Mauritania: ~0.40ms
+- CountryCard-Lithuania: ~0.50ms
+- CountryCard-United States Minor Outlying Islands: ~0.40ms
+- CountryCard-Slovakia: ~0.40ms
+- CountryCard-Angola: ~0.30ms
+- CountryCard-Kazakhstan: ~0.40ms
+- CountryCard-Moldova: ~0.70ms
+- CountryCard-Mali: ~0.60ms
+- CountryCard-Falkland Islands: ~0.50ms
+- CountryCard-Armenia: ~0.60ms
+- CountryCard-Samoa: ~0.50ms
+- CountryCard-Jersey: ~0.40ms
+- CountryCard-Japan: ~0.40ms
+- CountryCard-Bolivia: ~0.40ms
+- CountryCard-Chile: ~0.40ms
+- CountryCard-United States: ~0.30ms
+- CountryCard-Saint Vincent and the Grenadines: ~0.40ms
+- CountryCard-Bermuda: ~0.30ms
+- CountryCard-Seychelles: ~0.40ms
+- CountryCard-British Indian Ocean Territory: ~0.40ms
+- CountryCard-Guatemala: ~0.40ms
+- CountryCard-Ecuador: ~0.30ms
+- CountryCard-Martinique: ~0.30ms
+- CountryCard-Tajikistan: ~0.30ms
+- CountryCard-Malta: ~0.30ms
+- CountryCard-Gambia: ~0.30ms
+- CountryCard-Nigeria: ~0.40ms
+- CountryCard-Bahamas: ~0.50ms
+- CountryCard-Kosovo: ~0.50ms
+- CountryCard-Kuwait: ~0.40ms
+- CountryCard-Maldives: ~0.40ms
+- CountryCard-South Sudan: ~0.40ms
+- CountryCard-Iran: ~0.50ms
+- CountryCard-Albania: ~0.40ms
+- CountryCard-Brazil: ~0.50ms
+- CountryCard-Serbia: ~0.50ms
+- CountryCard-Belize: ~0.50ms
+- CountryCard-Myanmar: ~0.50ms
+- CountryCard-Bhutan: ~0.50ms
+- CountryCard-Venezuela: ~0.30ms
+- CountryCard-Liberia: ~0.50ms
+- CountryCard-Jamaica: ~0.50ms
+- CountryCard-Poland: ~0.50ms
+- CountryCard-Cayman Islands: ~0.50ms
+- CountryCard-Brunei: ~0.50ms
+- CountryCard-Comoros: ~0.50ms
+- CountryCard-Guam: ~0.30ms
+- CountryCard-Tonga: ~0.40ms
+- CountryCard-Kiribati: ~0.50ms
+- CountryCard-Ghana: ~0.40ms
+- CountryCard-Chad: ~0.70ms
+- CountryCard-Zimbabwe: ~0.30ms
+- CountryCard-Saint Martin: ~0.50ms
+- CountryCard-Mongolia: ~0.40ms
+- CountryCard-Portugal: ~0.30ms
+- CountryCard-American Samoa: ~0.50ms
+- CountryCard-Republic of the Congo: ~0.40ms
+- CountryCard-Belgium: ~0.40ms
+- CountryCard-Israel: ~0.30ms
+- CountryCard-New Zealand: ~0.40ms
+- CountryCard-Nicaragua: ~0.30ms
+- CountryCard-Anguilla: ~0.40ms
+- CountriesGrid: ~220.60ms
+- App: ~233.50ms
+- Filters: ~0.40ms
+- CountryCard-South Georgia: ~0.30ms
+- CountryCard-Grenada: ~0.20ms
+- CountryCard-Switzerland: ~0.10ms
+- CountryCard-Sierra Leone: ~0.70ms
+- CountryCard-Hungary: ~0.20ms
+- CountryCard-Taiwan: ~1.10ms
+- CountryCard-Wallis and Futuna: ~0.20ms
+- CountryCard-Barbados: ~0.20ms
+- CountryCard-Pitcairn Islands: ~0.90ms
+- CountryCard-Ivory Coast: ~0.90ms
+- CountryCard-Tunisia: ~0.20ms
+- CountryCard-Italy: ~0.10ms
+- CountryCard-Benin: ~0.30ms
+- CountryCard-Indonesia: ~0.10ms
+- CountryCard-Cape Verde: ~0.20ms
+- CountryCard-Saint Kitts and Nevis: ~0.20ms
+- CountryCard-Laos: ~0.50ms
+- CountryCard-Caribbean Netherlands: ~0.20ms
+- CountryCard-Uganda: ~0.20ms
+- CountryCard-Andorra: ~0.10ms
+- CountryCard-Burundi: ~0.40ms
+- CountryCard-South Africa: ~0.30ms
+- CountryCard-France: ~0.20ms
+- CountryCard-Libya: ~0.00ms
+- CountryCard-Mexico: ~0.20ms
+- CountryCard-Gabon: ~0.20ms
+- CountryCard-Northern Mariana Islands: ~0.10ms
+- CountryCard-North Macedonia: ~0.10ms
+- CountryCard-China: ~0.10ms
+- CountryCard-Yemen: ~0.20ms
+- CountryCard-Saint Barthélemy: ~0.10ms
+- CountryCard-Guernsey: ~0.30ms
+- CountryCard-Solomon Islands: ~0.10ms
+- CountryCard-Svalbard and Jan Mayen: ~0.10ms
+- CountryCard-Faroe Islands: ~0.40ms
+- CountryCard-Uzbekistan: ~0.20ms
+- CountryCard-Egypt: ~0.20ms
+- CountryCard-Senegal: ~0.00ms
+- CountryCard-Sri Lanka: ~0.40ms
+- CountryCard-Palestine: ~0.20ms
+- CountryCard-Bangladesh: ~0.20ms
+- CountryCard-Peru: ~0.10ms
+- CountryCard-Singapore: ~0.10ms
+- CountryCard-Turkey: ~0.10ms
+- CountryCard-Afghanistan: ~0.20ms
+- CountryCard-Aruba: ~0.10ms
+- CountryCard-Cook Islands: ~0.50ms
+- CountryCard-United Kingdom: ~0.20ms
+- CountryCard-Zambia: ~0.20ms
+- CountryCard-Finland: ~0.20ms
+- CountryCard-Niger: ~0.20ms
+- CountryCard-Christmas Island: ~0.20ms
+- CountryCard-Tokelau: ~0.10ms
+- CountryCard-Guinea-Bissau: ~0.20ms
+- CountryCard-Azerbaijan: ~0.60ms
+- CountryCard-Réunion: ~0.20ms
+- CountryCard-Djibouti: ~0.20ms
+- CountryCard-North Korea: ~0.10ms
+- CountryCard-Mauritius: ~0.10ms
+- CountryCard-Montserrat: ~0.30ms
+- CountryCard-United States Virgin Islands: ~0.20ms
+- CountryCard-Colombia: ~0.10ms
+- CountryCard-Greece: ~0.50ms
+- CountryCard-Croatia: ~0.10ms
+- CountryCard-Morocco: ~0.20ms
+- CountryCard-Algeria: ~0.10ms
+- CountryCard-Antarctica: ~0.10ms
+- CountryCard-Netherlands: ~0.20ms
+- CountryCard-Sudan: ~0.00ms
+- CountryCard-Fiji: ~0.10ms
+- CountryCard-Liechtenstein: ~0.70ms
+- CountryCard-Nepal: ~0.10ms
+- CountryCard-Puerto Rico: ~0.10ms
+- CountryCard-Georgia: ~0.20ms
+- CountryCard-Pakistan: ~0.20ms
+- CountryCard-Monaco: ~0.20ms
+- CountryCard-Botswana: ~0.10ms
+- CountryCard-Lebanon: ~0.20ms
+- CountryCard-Papua New Guinea: ~0.50ms
+- CountryCard-Mayotte: ~0.20ms
+- CountryCard-Dominican Republic: ~0.20ms
+- CountryCard-Norfolk Island: ~0.20ms
+- CountryCard-Bouvet Island: ~0.20ms
+- CountryCard-Qatar: ~0.30ms
+- CountryCard-Madagascar: ~0.20ms
+- CountryCard-India: ~0.20ms
+- CountryCard-Syria: ~0.20ms
+- CountryCard-Montenegro: ~0.10ms
+- CountryCard-Eswatini: ~0.10ms
+- CountryCard-Paraguay: ~0.20ms
+- CountryCard-El Salvador: ~0.20ms
+- CountryCard-Ukraine: ~0.00ms
+- CountryCard-Isle of Man: ~0.30ms
+- CountryCard-Namibia: ~0.30ms
+- CountryCard-United Arab Emirates: ~0.50ms
+- CountryCard-Bulgaria: ~0.20ms
+- CountryCard-Greenland: ~0.60ms
+- CountryCard-Germany: ~0.10ms
+- CountryCard-Cambodia: ~0.10ms
+- CountryCard-Iraq: ~0.10ms
+- CountryCard-French Southern and Antarctic Lands: ~0.20ms
+- CountryCard-Sweden: ~0.20ms
+- CountryCard-Cuba: ~0.10ms
+- CountryCard-Kyrgyzstan: ~0.10ms
+- CountryCard-Russia: ~0.20ms
+- CountryCard-Malaysia: ~1.00ms
+- CountryCard-São Tomé and Príncipe: ~0.10ms
+- CountryCard-Cyprus: ~0.20ms
+- CountryCard-Canada: ~0.10ms
+- CountryCard-Malawi: ~0.40ms
+- CountryCard-Saudi Arabia: ~0.10ms
+- CountryCard-Bosnia and Herzegovina: ~0.20ms
+- CountryCard-Ethiopia: ~0.10ms
+- CountryCard-Spain: ~0.10ms
+- CountryCard-Slovenia: ~0.20ms
+- CountryCard-Oman: ~0.20ms
+- CountryCard-Saint Pierre and Miquelon: ~0.10ms
+- CountryCard-Macau: ~0.20ms
+- CountryCard-San Marino: ~0.20ms
+- CountryCard-Lesotho: ~0.20ms
+- CountryCard-Marshall Islands: ~0.10ms
+- CountryCard-Sint Maarten: ~0.20ms
+- CountryCard-Iceland: ~0.10ms
+- CountryCard-Luxembourg: ~0.20ms
+- CountryCard-Argentina: ~0.20ms
+- CountryCard-Turks and Caicos Islands: ~0.30ms
+- CountryCard-Nauru: ~0.10ms
+- CountryCard-Cocos (Keeling) Islands: ~0.30ms
+- CountryCard-Western Sahara: ~0.20ms
+- CountryCard-Dominica: ~0.10ms
+- CountryCard-Costa Rica: ~0.10ms
+- CountryCard-Australia: ~0.10ms
+- CountryCard-Thailand: ~0.20ms
+- CountryCard-Haiti: ~0.40ms
+- CountryCard-Tuvalu: ~0.30ms
+- CountryCard-Honduras: ~0.20ms
+- CountryCard-Equatorial Guinea: ~0.10ms
+- CountryCard-Saint Lucia: ~0.20ms
+- CountryCard-French Polynesia: ~0.30ms
+- CountryCard-Belarus: ~0.10ms
+- CountryCard-Latvia: ~0.10ms
+- CountryCard-Palau: ~0.50ms
+- CountryCard-Guadeloupe: ~0.10ms
+- CountryCard-Philippines: ~0.20ms
+- CountryCard-Gibraltar: ~0.00ms
+- CountryCard-Denmark: ~0.20ms
+- CountryCard-Cameroon: ~0.00ms
+- CountryCard-Guinea: ~0.10ms
+- CountryCard-Bahrain: ~0.20ms
+- CountryCard-Suriname: ~0.40ms
+- CountryCard-DR Congo: ~0.10ms
+- CountryCard-Somalia: ~0.10ms
+- CountryCard-Czechia: ~0.10ms
+- CountryCard-New Caledonia: ~0.00ms
+- CountryCard-Vanuatu: ~0.20ms
+- CountryCard-Saint Helena, Ascension and Tristan da Cunha: ~0.30ms
+- CountryCard-Togo: ~0.10ms
+- CountryCard-British Virgin Islands: ~0.40ms
+- CountryCard-Kenya: ~0.20ms
+- CountryCard-Niue: ~0.20ms
+- CountryCard-Heard Island and McDonald Islands: ~0.00ms
+- CountryCard-Rwanda: ~0.10ms
+- CountryCard-Estonia: ~0.10ms
+- CountryCard-Romania: ~0.20ms
+- CountryCard-Trinidad and Tobago: ~0.10ms
+- CountryCard-Guyana: ~0.20ms
+- CountryCard-Timor-Leste: ~0.20ms
+- CountryCard-Vietnam: ~0.10ms
+- CountryCard-Uruguay: ~0.10ms
+- CountryCard-Vatican City: ~0.20ms
+- CountryCard-Hong Kong: ~0.10ms
+- CountryCard-Austria: ~0.20ms
+- CountryCard-Antigua and Barbuda: ~0.10ms
+- CountryCard-Turkmenistan: ~0.10ms
+- CountryCard-Mozambique: ~0.10ms
+- CountryCard-Panama: ~0.10ms
+- CountryCard-Micronesia: ~0.10ms
+- CountryCard-Ireland: ~0.20ms
+- CountryCard-Curaçao: ~0.10ms
+- CountryCard-French Guiana: ~0.10ms
+- CountryCard-Norway: ~0.10ms
+- CountryCard-Åland Islands: ~0.20ms
+- CountryCard-Central African Republic: ~0.10ms
+- CountryCard-Burkina Faso: ~0.20ms
+- CountryCard-Eritrea: ~0.10ms
+- CountryCard-Tanzania: ~0.00ms
+- CountryCard-South Korea: ~0.10ms
+- CountryCard-Jordan: ~0.10ms
+- CountryCard-Mauritania: ~0.00ms
+- CountryCard-Lithuania: ~0.10ms
+- CountryCard-United States Minor Outlying Islands: ~0.20ms
+- CountryCard-Slovakia: ~0.10ms
+- CountryCard-Angola: ~0.10ms
+- CountryCard-Kazakhstan: ~0.10ms
+- CountryCard-Moldova: ~0.20ms
+- CountryCard-Mali: ~0.10ms
+- CountryCard-Falkland Islands: ~0.00ms
+- CountryCard-Armenia: ~0.20ms
+- CountryCard-Samoa: ~0.10ms
+- CountryCard-Jersey: ~0.10ms
+- CountryCard-Japan: ~0.00ms
+- CountryCard-Bolivia: ~0.10ms
+- CountryCard-Chile: ~0.10ms
+- CountryCard-United States: ~0.00ms
+- CountryCard-Saint Vincent and the Grenadines: ~0.20ms
+- CountryCard-Bermuda: ~0.10ms
+- CountryCard-Seychelles: ~0.30ms
+- CountryCard-British Indian Ocean Territory: ~0.10ms
+- CountryCard-Guatemala: ~0.20ms
+- CountryCard-Ecuador: ~0.10ms
+- CountryCard-Martinique: ~0.10ms
+- CountryCard-Tajikistan: ~0.10ms
+- CountryCard-Malta: ~0.20ms
+- CountryCard-Gambia: ~0.00ms
+- CountryCard-Nigeria: ~0.10ms
+- CountryCard-Bahamas: ~0.20ms
+- CountryCard-Kosovo: ~0.10ms
+- CountryCard-Kuwait: ~0.20ms
+- CountryCard-Maldives: ~0.20ms
+- CountryCard-South Sudan: ~0.20ms
+- CountryCard-Iran: ~0.10ms
+- CountryCard-Albania: ~0.20ms
+- CountryCard-Brazil: ~0.10ms
+- CountryCard-Serbia: ~0.10ms
+- CountryCard-Belize: ~0.10ms
+- CountryCard-Myanmar: ~0.00ms
+- CountryCard-Bhutan: ~0.10ms
+- CountryCard-Venezuela: ~0.10ms
+- CountryCard-Liberia: ~0.10ms
+- CountryCard-Jamaica: ~0.10ms
+- CountryCard-Poland: ~0.10ms
+- CountryCard-Cayman Islands: ~0.20ms
+- CountryCard-Brunei: ~0.10ms
+- CountryCard-Comoros: ~0.10ms
+- CountryCard-Guam: ~0.10ms
+- CountryCard-Tonga: ~0.10ms
+- CountryCard-Kiribati: ~0.10ms
+- CountryCard-Ghana: ~0.00ms
+- CountryCard-Chad: ~0.10ms
+- CountryCard-Zimbabwe: ~0.00ms
+- CountryCard-Saint Martin: ~0.10ms
+- CountryCard-Mongolia: ~0.00ms
+- CountryCard-Portugal: ~0.50ms
+- CountryCard-American Samoa: ~0.00ms
+- CountryCard-Republic of the Congo: ~0.10ms
+- CountryCard-Belgium: ~0.00ms
+- CountryCard-Israel: ~0.20ms
+- CountryCard-New Zealand: ~0.20ms
+- CountryCard-Nicaragua: ~0.20ms
+- CountryCard-Anguilla: ~0.30ms
+- CountriesGrid: ~75.80ms
+- App: ~77.30ms
+
+#### Key Findings
+- Average base duration: 0.87ms
+- Average actual duration: 1.67ms
+    ### Initial Performance Metrics
 
 Performance metrics were collected using React Dev Tools Profiler:
 

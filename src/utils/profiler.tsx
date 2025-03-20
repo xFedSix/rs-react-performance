@@ -1,4 +1,5 @@
 import { Profiler, ProfilerOnRenderCallback, ReactNode } from "react";
+import { ProfileLogger } from "./profileLogger";
 
 interface ProfileWrapperProps {
   id: string;
@@ -13,13 +14,12 @@ const onRender: ProfilerOnRenderCallback = (
   startTime,
   commitTime,
 ) => {
-  console.table({
-    id,
+  ProfileLogger.logPerformance({
+    componentName: id,
     phase,
-    actualDuration: `${actualDuration.toFixed(2)}ms`,
-    baseDuration: `${baseDuration.toFixed(2)}ms`,
-    startTime: `${startTime.toFixed(2)}ms`,
-    commitTime: `${commitTime.toFixed(2)}ms`,
+    commitDuration: commitTime - startTime,
+    actualDuration,
+    baseDuration,
   });
 };
 

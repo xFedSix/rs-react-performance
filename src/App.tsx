@@ -1,15 +1,22 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import { useFetchCountries } from "./api/fetchCountries";
 import { Filters } from "./components/filters/filters";
 import { CountryCard } from "./components/countryCard/countryCard";
 import { ProfileWrapper } from "./utils/profiler";
+import { ProfileLogger } from "./utils/profileLogger";
 
 function App() {
   const { countries, isLoading, error } = useFetchCountries();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedRegion, setSelectedRegion] = useState("");
   const [sortBy, setSortBy] = useState("");
+
+  useEffect(() => {
+    return () => {
+      ProfileLogger.updateReadme().catch(console.error);
+    };
+  }, []);
 
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
