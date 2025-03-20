@@ -9,10 +9,10 @@ export const saveMetricsToServer = async (metrics: string): Promise<void> => {
     });
 
     if (!response.ok) {
-      throw new Error("Ошибка сохранения метрик");
+      throw new Error("Error saving metrics");
     }
   } catch (error) {
-    console.error("Ошибка при отправке метрик:", error);
+    console.error("Error sending metrics:", error);
     throw error;
   }
 };

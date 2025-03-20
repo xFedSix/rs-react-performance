@@ -4,28 +4,34 @@ import { ProfileLogger } from "./profileLogger";
 interface ProfileWrapperProps {
   id: string;
   children: ReactNode;
+  interaction?: string;
 }
 
-const onRender: ProfilerOnRenderCallback = (
+export const ProfileWrapper = ({
   id,
-  phase,
-  actualDuration,
-  baseDuration,
-  startTime,
-  commitTime,
-) => {
-  ProfileLogger.logPerformance({
-    componentName: id,
+  children,
+  interaction,
+}: ProfileWrapperProps) => {
+  const handleRender: ProfilerOnRenderCallback = (
+    id,
     phase,
-    commitDuration: commitTime - startTime,
     actualDuration,
     baseDuration,
-  });
-};
+    startTime,
+    commitTime,
+  ) => {
+    ProfileLogger.logPerformance({
+      componentName: id,
+      phase,
+      commitDuration: commitTime - startTime,
+      actualDuration,
+      baseDuration,
+      interaction,
+    });
+  };
 
-export const ProfileWrapper = ({ id, children }: ProfileWrapperProps) => {
   return (
-    <Profiler id={id} onRender={onRender}>
+    <Profiler id={id} onRender={handleRender}>
       {children}
     </Profiler>
   );

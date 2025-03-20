@@ -33,10 +33,10 @@ export const usePerformanceMetrics = (
 
     setMetrics(newMetrics);
 
-    console.table({
-      component: componentName,
-      ...newMetrics,
-    });
+    // console.table({
+    //   component: componentName,
+    //   ...newMetrics,
+    // });
 
     startTime.current = performance.now();
   }, [componentName]);

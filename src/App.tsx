@@ -13,6 +13,7 @@ function App() {
   const [sortBy, setSortBy] = useState("");
 
   useEffect(() => {
+    // ProfileLogger.clearMetrics();
     return () => {
       ProfileLogger.updateReadme().catch(console.error);
     };
@@ -49,7 +50,7 @@ function App() {
   return (
     <ProfileWrapper id="App">
       <div className="container">
-        <ProfileWrapper id="Filters">
+        <ProfileWrapper id="Filters" interaction="user-changed-filter">
           <Filters
             searchQuery={searchQuery}
             selectedRegion={selectedRegion}
