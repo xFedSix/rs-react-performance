@@ -13,7 +13,8 @@
     "preview": "vite preview",
     "format:fix": "prettier --write .",
     "prepare": "husky",
-    "update-metrics": "ts-node --project tsnode.config.json src/utils/updateReadme.ts"
+    "update-metrics": "ts-node --project tsnode.config.json src/utils/updateReadme.ts",
+    "analyze-profile": "ts-node --project tsconfig.analyze.json src/utils/analyzeProfile.ts"
   },
   "dependencies": {
     "express": "^4.21.2",
