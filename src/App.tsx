@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import "./App.css";
 import { useFetchCountries } from "./api/fetchCountries";
 import { Filters } from "./components/filters/filters";
@@ -18,34 +18,47 @@ function App() {
       ProfileLogger.updateReadme().catch(console.error);
     };
   }, []);
+  const handleSearchChange = useCallback((value: string) => {
+    setSearchQuery(value);
+  }, []);
+
+  const handleRegionChange = useCallback((value: string) => {
+    setSelectedRegion(value);
+  }, []);
+
+  const handleSortChange = useCallback((value: string) => {
+    setSortBy(value);
+  }, []);
+
+  const filteredCountries = useMemo(() => {
+    return countries
+      .filter((country) => {
+        const matchesSearch = country.name.common
+          .toLowerCase()
+          .includes(searchQuery.toLowerCase());
+        const matchesRegion = selectedRegion
+          ? country.region === selectedRegion
+          : true;
+        return matchesSearch && matchesRegion;
+      })
+      .sort((a, b) => {
+        switch (sortBy) {
+          case "name-asc":
+            return a.name.common.localeCompare(b.name.common);
+          case "name-desc":
+            return b.name.common.localeCompare(a.name.common);
+          case "population-asc":
+            return a.population - b.population;
+          case "population-desc":
+            return b.population - a.population;
+          default:
+            return 0;
+        }
+      });
+  }, [countries, searchQuery, selectedRegion, sortBy]);
 
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
-
-  const filteredCountries = countries
-    .filter((country) => {
-      const matchesSearch = country.name.common
-        .toLowerCase()
-        .includes(searchQuery.toLowerCase());
-      const matchesRegion = selectedRegion
-        ? country.region === selectedRegion
-        : true;
-      return matchesSearch && matchesRegion;
-    })
-    .sort((a, b) => {
-      switch (sortBy) {
-        case "name-asc":
-          return a.name.common.localeCompare(b.name.common);
-        case "name-desc":
-          return b.name.common.localeCompare(a.name.common);
-        case "population-asc":
-          return a.population - b.population;
-        case "population-desc":
-          return b.population - a.population;
-        default:
-          return 0;
-      }
-    });
 
   return (
     <ProfileWrapper id="App">
@@ -55,20 +68,19 @@ function App() {
             searchQuery={searchQuery}
             selectedRegion={selectedRegion}
             sortBy={sortBy}
-            onSearchChange={setSearchQuery}
-            onRegionChange={setSelectedRegion}
-            onSortChange={setSortBy}
+            onSearchChange={handleSearchChange}
+            onRegionChange={handleRegionChange}
+            onSortChange={handleSortChange}
           />
         </ProfileWrapper>
         <ProfileWrapper id="CountriesGrid">
           <div className="countries-grid">
             {filteredCountries.map((country) => (
               <ProfileWrapper
-                id={`CountryCard-${country.name.common}`}
                 key={country.name.common}
+                id={`CountryCard-${country.name.common}`}
               >
                 <CountryCard
-                  key={country.name.common}
                   name={country.name.common}
                   flagUrl={country.flags.png}
                   population={country.population}

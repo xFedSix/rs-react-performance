@@ -1,3 +1,5 @@
+import { memo } from "react";
+
 interface FiltersProps {
   searchQuery: string;
   selectedRegion: string;
@@ -6,49 +8,68 @@ interface FiltersProps {
   onRegionChange: (value: string) => void;
   onSortChange: (value: string) => void;
 }
+const regions = [
+  { value: "", label: "All regions" },
+  { value: "Africa", label: "Africa" },
+  { value: "Americas", label: "America" },
+  { value: "Asia", label: "Asia" },
+  { value: "Europe", label: "Europe" },
+  { value: "Oceania", label: "Oceania" },
+] as const;
 
-export const Filters = ({
-  searchQuery,
-  selectedRegion,
-  sortBy,
-  onSearchChange,
-  onRegionChange,
-  onSortChange,
-}: FiltersProps) => {
-  return (
-    <div className="filters">
-      <input
-        type="text"
-        placeholder="Country search..."
-        value={searchQuery}
-        onChange={(e) => onSearchChange(e.target.value)}
-        className="search-input"
-      />
+const sortOptions = [
+  { value: "", label: "Sorting" },
+  { value: "name-asc", label: "By name (A-Z)" },
+  { value: "name-desc", label: "By name (Z-A)" },
+  { value: "population-asc", label: "By population (increase)" },
+  { value: "population-desc", label: "By population (decreasing)" },
+] as const;
 
-      <select
-        value={selectedRegion}
-        onChange={(e) => onRegionChange(e.target.value)}
-        className="region-select"
-      >
-        <option value="">All regions</option>
-        <option value="Africa">Africa</option>
-        <option value="Americas">America</option>
-        <option value="Asia">Asia</option>
-        <option value="Europe">Europe</option>
-        <option value="Oceania">Oceania</option>
-      </select>
+export const Filters = memo(
+  ({
+    searchQuery,
+    selectedRegion,
+    sortBy,
+    onSearchChange,
+    onRegionChange,
+    onSortChange,
+  }: FiltersProps) => {
+    return (
+      <div className="filters">
+        <input
+          type="text"
+          placeholder="Country search..."
+          value={searchQuery}
+          onChange={(e) => onSearchChange(e.target.value)}
+          className="search-input"
+        />
 
-      <select
-        value={sortBy}
-        onChange={(e) => onSortChange(e.target.value)}
-        className="sort-select"
-      >
-        <option value="">Sorting</option>
-        <option value="name-asc">By name (A-Z)</option>
-        <option value="name-desc">By name (Z-A)</option>
-        <option value="population-asc">By population (increase)</option>
-        <option value="population-desc">By population (decreasing)</option>
-      </select>
-    </div>
-  );
-};
+        <select
+          value={selectedRegion}
+          onChange={(e) => onRegionChange(e.target.value)}
+          className="region-select"
+        >
+          {regions.map(({ value, label }) => (
+            <option key={`region-${value || "all"}`} value={value}>
+              {label}
+            </option>
+          ))}
+        </select>
+
+        <select
+          value={sortBy}
+          onChange={(e) => onSortChange(e.target.value)}
+          className="sort-select"
+        >
+          {sortOptions.map(({ value, label }) => (
+            <option key={`sort-${value || "default"}`} value={value}>
+              {label}
+            </option>
+          ))}
+        </select>
+      </div>
+    );
+  },
+);
+
+Filters.displayName = "Filters";
