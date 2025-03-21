@@ -1,4 +1,4 @@
-import { existsSync, readFileSync } from "fs";
+import { existsSync, readdirSync, readFileSync } from "fs";
 import { resolve } from "path";
 
 interface ProfileData {
@@ -89,13 +89,18 @@ function analyzeProfile(filepath: string) {
 
 function analyzeProfiles() {
   try {
-    const profileFiles = [
-      "profiling-data.20.03.2025.22-55-09.json",
-      "profiling-data.21.03.2025.11-29-52.json",
-    ];
+    const currentDir = process.cwd();
+    const files = readdirSync(currentDir);
+    const profileFiles = files.filter((file) =>
+      file.startsWith("profiling-data"),
+    );
 
+    if (profileFiles.length === 0) {
+      console.log("Файлы, начинающиеся с 'profiling-data', не найдены.");
+      return;
+    }
     profileFiles.forEach((filename) => {
-      const filepath = resolve(process.cwd(), filename);
+      const filepath = resolve(currentDir, filename);
 
       if (!existsSync(filepath)) {
         console.log(`Файл ${filename} не найден`);
