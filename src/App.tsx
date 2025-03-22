@@ -1,10 +1,10 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import "./App.css";
 import { useFetchCountries } from "./api/fetchCountries";
 import { Filters } from "./components/filters/filters";
 import { CountryCard } from "./components/countryCard/countryCard";
 import { ProfileWrapper } from "./utils/profiler";
-import { ProfileLogger } from "./utils/profileLogger";
+// import { ProfileLogger } from "./utils/profileLogger";
 
 function App() {
   const { countries, isLoading, error } = useFetchCountries();
@@ -12,12 +12,20 @@ function App() {
   const [selectedRegion, setSelectedRegion] = useState("");
   const [sortBy, setSortBy] = useState("");
 
-  useEffect(() => {
-    // ProfileLogger.clearMetrics();
-    return () => {
-      ProfileLogger.updateReadme().catch(console.error);
-    };
-  }, []);
+  //This comment for myself: Use for update ReadmeFile of React metrics.
+  //Add to the package.json
+  // "dev:server": "ts-node --project tsconfig.node.json src/server/index.ts",
+  // "dev:vite": "vite",
+  // "dev:init": "npm run update-metrics && wait-on tcp:3001",
+  // "dev": "concurrently \"npm run dev:init\" \"npm run dev:server\" \"npm run dev:vite\"",
+
+  // useEffect(() => {
+  //   // ProfileLogger.clearMetrics();
+  //   return () => {
+  //     ProfileLogger.updateReadme().catch(console.error);
+  //   };
+  // }, []);
+
   const handleSearchChange = useCallback((value: string) => {
     setSearchQuery(value);
   }, []);

@@ -8,11 +8,7 @@ app.use(express.json());
 app.post("/api/metrics", (req, res) => {
   try {
     const { metrics } = req.body;
-    writeFileSync(
-      resolve(process.cwd(), "metrics-temp-before.json"),
-      metrics,
-      "utf8",
-    );
+    writeFileSync(resolve(process.cwd(), "metrics-temp.json"), metrics, "utf8");
     res.json({ success: true });
   } catch (error) {
     console.error("Ошибка сохранения метрик:", error);
