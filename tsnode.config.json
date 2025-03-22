@@ -1,0 +1,9 @@
+{
+  "type": "commonjs",
+  "compilerOptions": {
+    "module": "CommonJS"
+  },
+  "ts-node": {
+    "esm": false
+  }
+}
